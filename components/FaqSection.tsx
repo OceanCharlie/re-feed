@@ -30,15 +30,15 @@ export default function FaqSection() {
   };
 
   return (
-    <section id="faq" className="py-20 bg-[#F6F5F0] relative">
+    <section id="faq" className="py-16 sm:py-20 bg-[#F6F5F0] relative">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center mb-12 space-y-2.5">
+        <div className="text-center mb-8 sm:mb-12 space-y-2">
           <span className="inline-block px-3 py-1 rounded-full bg-[#E8F4DA] text-[#105e3a] text-xs font-black uppercase tracking-wider">
             FAQ
           </span>
-          <h2 className="text-3xl font-black text-[#16241C] tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-black text-[#16241C] tracking-tight">
             Pertanyaan Umum
           </h2>
         </div>
@@ -50,22 +50,22 @@ export default function FaqSection() {
             return (
               <div
                 key={idx}
-                className="rounded-2xl border border-[#DCE4D3] bg-white overflow-hidden transition-all duration-200"
+                className="rounded-2xl border border-[#DCE4D3] bg-white overflow-hidden transition-all duration-200 shadow-2xs"
               >
                 <button
                   onClick={() => toggleFaq(idx)}
-                  className="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none"
+                  className="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-3 cursor-pointer focus:outline-none select-none active:bg-[#FCFAF7]"
                 >
-                  <span className="text-sm sm:text-base font-black text-[#16241C]">
+                  <span className="text-xs sm:text-base font-black text-[#16241C] leading-snug">
                     {faq.q}
                   </span>
-                  <div className={`p-1.5 rounded-full bg-[#E8F4DA] text-[#105e3a] transition-transform duration-200 shrink-0 ${isOpen ? 'rotate-180' : ''}`}>
+                  <div className={`p-1.5 rounded-full bg-[#EBF5E4] text-[#105e3a] transition-transform duration-200 shrink-0 ${isOpen ? 'rotate-180' : ''}`}>
                     <ChevronDown className="w-4 h-4" />
                   </div>
                 </button>
 
                 {isOpen && (
-                  <div className="px-4 sm:px-5 pb-5 text-xs sm:text-sm text-[#5A6960] leading-relaxed border-t border-[#F6F5F0] pt-3 animate-in fade-in duration-200">
+                  <div className="px-4 sm:px-5 pb-4 sm:pb-5 text-xs sm:text-sm text-[#5A6960] leading-relaxed border-t border-[#F6F5F0] pt-3 animate-in fade-in duration-200">
                     {faq.a}
                   </div>
                 )}

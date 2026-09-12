@@ -3,13 +3,10 @@
 import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
-import PartnerMarquee from '@/components/PartnerMarquee';
-import DualEcosystem from '@/components/DualEcosystem';
-import HowItWorks from '@/components/HowItWorks';
-import AppSimulator from '@/components/AppSimulator';
 import ImpactStats from '@/components/ImpactStats';
-import PartnerCalculator from '@/components/PartnerCalculator';
-import FaqSection from '@/components/FaqSection';
+import DualEcosystem from '@/components/DualEcosystem';
+import ScenicStoryBanner from '@/components/ScenicStoryBanner';
+import PartnerLogosStrip from '@/components/PartnerLogosStrip';
 import DownloadCta from '@/components/DownloadCta';
 import Footer from '@/components/Footer';
 import DownloadModal from '@/components/DownloadModal';
@@ -22,56 +19,44 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-[#FAF9F6] selection:bg-[#105e3a] selection:text-white">
-      {/* 1. Sticky Minimal Navbar */}
+      {/* 1. Minimal Header Navbar */}
       <Navbar
         onOpenDownloadModal={() => setIsDownloadModalOpen(true)}
         onOpenPartnerModal={() => setIsPartnerModalOpen(true)}
       />
 
       <main className="flex-grow">
-        {/* 2. Crisp, Light, Breathtaking Hero Section */}
+        {/* 2. Hero Section with Mockup & Hero Sprout Mascot */}
         <HeroSection
           onOpenDownloadModal={() => setIsDownloadModalOpen(true)}
           onOpenPartnerModal={() => setIsPartnerModalOpen(true)}
         />
 
-        {/* 3. Subtle Category Partner Marquee */}
-        <PartnerMarquee />
+        {/* 3. 4-Metric Floating Metrics Strip */}
+        <ImpactStats />
 
-        {/* 4. The 2 Core Solutions (Marketplace & Waste Hub) */}
+        {/* 4. Langkah Kecil, Dampak Besar (3 Action Cards) */}
         <DualEcosystem
           onOpenDownloadModal={() => setIsDownloadModalOpen(true)}
           onOpenPartnerModal={() => setIsPartnerModalOpen(true)}
         />
 
-        {/* 5. 3-Step Simple Flow */}
-        <HowItWorks
-          onOpenDownloadModal={() => setIsDownloadModalOpen(true)}
+        {/* 5. Panoramic Nature Hero Banner ("Lebih dari Sekadar Makanan") */}
+        <ScenicStoryBanner
           onOpenPartnerModal={() => setIsPartnerModalOpen(true)}
         />
 
-        {/* 6. Clean 5-Screen Interactive App Showcase */}
-        <AppSimulator />
+        {/* 6. Partner Brands Strip */}
+        <PartnerLogosStrip />
 
-        {/* 7. High-Impact Environmental Metrics */}
-        <ImpactStats />
-
-        {/* 8. Merchant B2B Partnership & ROI */}
-        <PartnerCalculator
-          onOpenPartnerModal={() => setIsPartnerModalOpen(true)}
-        />
-
-        {/* 9. Clean FAQ Accordion */}
-        <FaqSection />
-
-        {/* 10. Focused Download Banner */}
+        {/* 7. Bottom Mascot CTA Card ("Yuk, Mulai Selamatkan Makanan Hari Ini!") */}
         <DownloadCta
           onOpenDownloadModal={() => setIsDownloadModalOpen(true)}
           onOpenPartnerModal={() => setIsPartnerModalOpen(true)}
         />
       </main>
 
-      {/* 11. Minimal Footer */}
+      {/* 8. Minimalist Clean Footer */}
       <Footer
         onOpenDownloadModal={() => setIsDownloadModalOpen(true)}
         onOpenPartnerModal={() => setIsPartnerModalOpen(true)}

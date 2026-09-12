@@ -53,8 +53,12 @@ export default function RootLayout({
     <html
       lang="id"
       className={`${bricolage.variable} ${inter.variable} h-full antialiased scroll-smooth`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-[#F6F5F0] text-[#16241C] font-sans">
+      <body 
+        className="min-h-full flex flex-col bg-[#F6F5F0] text-[#16241C] font-sans"
+        suppressHydrationWarning
+      >
         {children}
       </body>
     </html>

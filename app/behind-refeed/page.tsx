@@ -24,6 +24,7 @@ import Footer from '@/components/Footer';
 import DownloadModal from '@/components/DownloadModal';
 import PartnerModal from '@/components/PartnerModal';
 import FloatingCta from '@/components/FloatingCta';
+import { GooglePlayIcon } from '@/components/BrandLogo';
 
 export default function BehindReFeedPage() {
   const [isDownloadModalOpen, setIsDownloadModalOpen] = useState(false);
@@ -150,59 +151,59 @@ export default function BehindReFeedPage() {
       <main className="flex-grow">
         
         {/* 1. Header Section */}
-        <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-[#FCFAF7] text-center border-b border-[#E8EDE5]">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+        <section className="pt-24 pb-12 sm:pt-32 sm:pb-16 md:pt-40 md:pb-20 bg-[#FCFAF7] text-center border-b border-[#E8EDE5]">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3 sm:space-y-4">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#E8EDE5] text-[#57655B] text-xs font-bold hover:text-[#105e3a] transition-all shadow-xs"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E8EDE5] text-[#57655B] text-xs font-bold hover:text-[#105e3a] transition-all shadow-2xs"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
               <span>Kembali ke Beranda</span>
             </Link>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#141A16]">
+            <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#141A16] leading-tight">
               Di Balik Gerakan <span className="text-[#105e3a]">ReFeed</span>
             </h1>
 
-            <p className="text-base sm:text-lg text-[#57655B] max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xs sm:text-base md:text-lg text-[#57655B] max-w-2xl mx-auto leading-relaxed">
               Inovasi anak bangsa dari Universitas Tarumanagara (UNTAR) untuk menghentikan pemborosan makanan dan menyelamatkan lingkungan hidup.
             </p>
           </div>
         </section>
 
         {/* 2. Team & Advisor Section */}
-        <section className="py-20 md:py-28 bg-white border-b border-[#E8EDE5]">
+        <section className="py-16 sm:py-20 md:py-28 bg-white border-b border-[#E8EDE5]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             {/* Section Header */}
-            <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
+            <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16 space-y-2.5 sm:space-y-3">
               <span className="inline-block px-3.5 py-1.5 rounded-full bg-[#EBF5E4] text-[#105e3a] text-xs font-bold uppercase tracking-wider border border-[#C8D9C2]">
                 Tim Pengembang & Pembimbing
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#141A16] tracking-tight">
+              <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-black text-[#141A16] tracking-tight">
                 Orang-Orang di Balik RE-FEED
               </h2>
-              <p className="text-base text-[#57655B]">
+              <p className="text-xs sm:text-base text-[#57655B]">
                 Kolaborasi talenta muda dan bimbingan akademis Universitas Tarumanagara (UNTAR).
               </p>
             </div>
 
-            {/* Team Members Grid (5 Columns) */}
-            <div className="mb-16">
-              <div className="text-left mb-8 flex items-center gap-2.5">
-                <div className="w-9 h-9 rounded-xl bg-[#EBF5E4] text-[#105e3a] flex items-center justify-center font-bold">
+            {/* Team Members Grid (2 Columns on mobile, 5 on desktop) */}
+            <div className="mb-12 sm:mb-16">
+              <div className="text-left mb-6 sm:mb-8 flex items-center gap-2.5">
+                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-[#EBF5E4] text-[#105e3a] flex items-center justify-center font-bold">
                   <Users className="w-4 h-4" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-black text-[#141A16]">
+                <h3 className="text-lg sm:text-2xl font-black text-[#141A16]">
                   Anggota Tim RE-FEED
                 </h3>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-6">
                 {teamMembers.map((member, idx) => (
                   <div
                     key={idx}
-                    className="app-card rounded-3xl overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1.5"
+                    className="app-card rounded-2xl sm:rounded-3xl overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1"
                   >
                     {/* Portrait Image (4:5 Aspect) */}
                     <div className="relative aspect-[4/5] w-full bg-gradient-to-b from-[#EBF5E4] via-[#F4F9F0] to-[#FAFBF9] flex items-end justify-center overflow-hidden border-b border-[#E8EDE5]">
@@ -216,14 +217,14 @@ export default function BehindReFeedPage() {
                     </div>
 
                     {/* Content Box */}
-                    <div className="p-4 sm:p-5 bg-white text-left space-y-1">
-                      <span className="text-[10px] font-bold px-2 py-0.5 rounded-md bg-[#FCFAF7] border border-[#E8EDE5] text-[#57655B] uppercase">
+                    <div className="p-3 sm:p-5 bg-white text-left space-y-0.5 sm:space-y-1">
+                      <span className="text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded-md bg-[#FCFAF7] border border-[#E8EDE5] text-[#57655B] uppercase inline-block">
                         {member.tag}
                       </span>
-                      <h4 className="text-sm sm:text-base font-black text-[#141A16] pt-1 leading-snug">
+                      <h4 className="text-xs sm:text-base font-black text-[#141A16] pt-0.5 leading-snug truncate">
                         {member.name}
                       </h4>
-                      <div className="text-xs font-bold text-[#105e3a]">
+                      <div className="text-[10px] sm:text-xs font-bold text-[#105e3a] truncate">
                         {member.role}
                       </div>
                     </div>
@@ -233,19 +234,19 @@ export default function BehindReFeedPage() {
             </div>
 
             {/* Dosen Pembimbing Grid */}
-            <div className="pt-8 border-t border-[#E8EDE5]">
-              <div className="text-left mb-8 flex items-center gap-2.5">
-                <div className="w-9 h-9 rounded-xl bg-[#EBF5E4] text-[#105e3a] flex items-center justify-center font-bold">
-                  <GraduationCap className="w-5 h-5" />
+            <div className="pt-6 sm:pt-8 border-t border-[#E8EDE5]">
+              <div className="text-left mb-6 sm:mb-8 flex items-center gap-2.5">
+                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-[#EBF5E4] text-[#105e3a] flex items-center justify-center font-bold">
+                  <GraduationCap className="w-4 h-4" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-black text-[#141A17]">
+                <h3 className="text-lg sm:text-2xl font-black text-[#141A17]">
                   Dosen Pembimbing
                 </h3>
               </div>
 
-              <div className="app-card rounded-3xl overflow-hidden max-w-2xl mx-auto flex flex-col sm:flex-row items-center p-6 sm:p-8 gap-6 sm:gap-8 bg-gradient-to-r from-white via-[#FCFAF7] to-[#F4F9F0]">
+              <div className="app-card rounded-2xl sm:rounded-3xl overflow-hidden max-w-2xl mx-auto flex flex-col sm:flex-row items-center p-5 sm:p-8 gap-5 sm:gap-8 bg-gradient-to-r from-white via-[#FCFAF7] to-[#F4F9F0]">
                 {/* Advisor Photo */}
-                <div className="relative w-40 sm:w-48 aspect-[4/5] rounded-2xl overflow-hidden bg-gradient-to-b from-[#EBF5E4] to-[#FAFBF9] shrink-0 border border-[#E8EDE5]">
+                <div className="relative w-36 sm:w-48 aspect-[4/5] rounded-2xl overflow-hidden bg-gradient-to-b from-[#EBF5E4] to-[#FAFBF9] shrink-0 border border-[#E8EDE5]">
                   <Image
                     src={advisor.image}
                     alt={advisor.name}
@@ -259,10 +260,10 @@ export default function BehindReFeedPage() {
                   <span className="inline-block px-3 py-1 rounded-full bg-[#EBF5E4] text-[#105e3a] text-xs font-bold uppercase tracking-wider border border-[#C8D9C2]">
                     Dosen Pembimbing
                   </span>
-                  <h4 className="text-2xl font-black text-[#141A16]">
+                  <h4 className="text-xl sm:text-2xl font-black text-[#141A16]">
                     {advisor.name}
                   </h4>
-                  <div className="text-sm font-bold text-[#105e3a]">
+                  <div className="text-xs sm:text-sm font-bold text-[#105e3a]">
                     {advisor.role} • <span className="text-[#57655B] font-semibold">{advisor.institution}</span>
                   </div>
                   <p className="text-xs sm:text-sm text-[#57655B] leading-relaxed pt-1">
@@ -276,42 +277,42 @@ export default function BehindReFeedPage() {
         </section>
 
         {/* 3. The Genesis Story */}
-        <section className="py-24 bg-[#FCFAF7] border-b border-[#E8EDE5]">
+        <section className="py-16 sm:py-24 bg-[#FCFAF7] border-b border-[#E8EDE5]">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
               
-              <div className="md:col-span-7 space-y-5 text-left">
+              <div className="md:col-span-7 space-y-4 sm:space-y-5 text-left">
                 <span className="inline-block px-3.5 py-1.5 rounded-full bg-[#EBF5E4] text-[#105e3a] text-xs font-bold uppercase tracking-wider border border-[#C8D9C2]">
                   Paradoks Pangan
                 </span>
 
-                <h2 className="text-3xl sm:text-4xl font-black text-[#141A16] tracking-tight">
+                <h2 className="text-2xl xs:text-3xl sm:text-4xl font-black text-[#141A16] tracking-tight">
                   Mengapa ReFeed Harus Ada?
                 </h2>
 
-                <p className="text-sm sm:text-base text-[#57655B] leading-relaxed">
+                <p className="text-xs sm:text-sm md:text-base text-[#57655B] leading-relaxed">
                   Berdasarkan kajian Bappenas, Indonesia membuang antara <b>23 hingga 48 juta ton makanan setiap tahunnya</b> — setara dengan kerugian ekonomi sebesar <b>Rp 330 Triliun</b>.
                 </p>
 
-                <p className="text-sm sm:text-base text-[#57655B] leading-relaxed">
+                <p className="text-xs sm:text-sm md:text-base text-[#57655B] leading-relaxed">
                   Di saat yang sama, jutaan keluarga masih menghadapi kerentanan pangan. Sampah makanan yang membusuk di TPA melepaskan <b>gas metana (CH₄)</b> — pemicu pemanasan global yang 28 kali lebih agresif dibanding CO₂.
                 </p>
 
-                <div className="p-4 rounded-2xl bg-white border border-[#E8EDE5] text-xs sm:text-sm text-[#105e3a] font-bold flex items-center gap-3 shadow-2xs">
-                  <ShieldCheck className="w-6 h-6 text-[#105e3a] shrink-0" />
+                <div className="p-3.5 sm:p-4 rounded-2xl bg-white border border-[#E8EDE5] text-xs sm:text-sm text-[#105e3a] font-bold flex items-center gap-3 shadow-2xs">
+                  <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6 text-[#105e3a] shrink-0" />
                   <span>ReFeed hadir menghubungkan surplus makanan dengan konsumen secara cepat, higienis, dan terjangkau.</span>
                 </div>
               </div>
 
-              <div className="md:col-span-5 space-y-4">
-                <div className="app-card p-6 sm:p-8 rounded-3xl text-left space-y-2">
-                  <div className="text-3xl sm:text-4xl font-black text-[#105e3a]">48 Juta Ton</div>
+              <div className="md:col-span-5 space-y-3 sm:space-y-4">
+                <div className="app-card p-5 sm:p-8 rounded-2xl sm:rounded-3xl text-left space-y-1 sm:space-y-2">
+                  <div className="text-2xl sm:text-4xl font-black text-[#105e3a]">48 Juta Ton</div>
                   <div className="text-xs font-bold text-[#141A16] uppercase tracking-wider">Makanan Terbuang / Tahun di RI</div>
                   <div className="text-[11px] text-[#57655B]">Sumber: Kajian Food Loss Bappenas</div>
                 </div>
 
-                <div className="app-card p-6 sm:p-8 rounded-3xl text-left space-y-2">
-                  <div className="text-3xl sm:text-4xl font-black text-[#FE6708]">28x Lipat</div>
+                <div className="app-card p-5 sm:p-8 rounded-2xl sm:rounded-3xl text-left space-y-1 sm:space-y-2">
+                  <div className="text-2xl sm:text-4xl font-black text-[#FE6708]">28x Lipat</div>
                   <div className="text-xs font-bold text-[#141A16] uppercase tracking-wider">Dampak Gas Metana TPA vs CO₂</div>
                   <div className="text-[11px] text-[#57655B]">Dihasilkan dari pembusukan sisa makanan basah</div>
                 </div>
@@ -322,31 +323,31 @@ export default function BehindReFeedPage() {
         </section>
 
         {/* 4. Tiga Pilar Ekosistem */}
-        <section className="py-24 bg-white border-b border-[#E8EDE5]">
+        <section className="py-16 sm:py-24 bg-white border-b border-[#E8EDE5]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
+            <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16 space-y-2.5 sm:space-y-3">
               <span className="inline-block px-3.5 py-1.5 rounded-full bg-[#EBF5E4] text-[#105e3a] text-xs font-bold uppercase tracking-wider border border-[#C8D9C2]">
                 Model Ekosistem Sirkular
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#141A16] tracking-tight">
+              <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-black text-[#141A16] tracking-tight">
                 Tiga Pilar Penyelamatan Pangan
               </h2>
-              <p className="text-base text-[#57655B]">
+              <p className="text-xs sm:text-base text-[#57655B]">
                 Solusi menyeluruh dari hulu ke hilir untuk memastikan tidak ada makanan yang terbuang sia-sia.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
               {pillars.map((pillar, idx) => {
                 const Icon = pillar.icon;
                 return (
                   <div
                     key={idx}
-                    className="app-card rounded-3xl overflow-hidden flex flex-col justify-between text-left"
+                    className="app-card rounded-2xl sm:rounded-3xl overflow-hidden flex flex-col justify-between text-left"
                   >
                     <div>
-                      <div className="relative h-48 w-full bg-slate-100 border-b border-[#E8EDE5]">
+                      <div className="relative h-44 sm:h-48 w-full bg-slate-100 border-b border-[#E8EDE5]">
                         <Image
                           src={pillar.asset}
                           alt={pillar.title}
@@ -358,11 +359,11 @@ export default function BehindReFeedPage() {
                         </div>
                       </div>
 
-                      <div className="p-6 space-y-2">
+                      <div className="p-5 sm:p-6 space-y-1.5 sm:space-y-2">
                         <div className="text-xs font-bold text-[#105e3a] uppercase tracking-wider">
                           {pillar.subtitle}
                         </div>
-                        <h3 className="text-xl font-bold text-[#141A16]">
+                        <h3 className="text-lg sm:text-xl font-bold text-[#141A16]">
                           {pillar.title}
                         </h3>
                         <p className="text-xs sm:text-sm text-[#57655B] leading-relaxed">
@@ -371,7 +372,7 @@ export default function BehindReFeedPage() {
                       </div>
                     </div>
 
-                    <div className="p-6 pt-0">
+                    <div className="p-5 sm:p-6 pt-0">
                       <div className="pt-3 border-t border-[#E8EDE5] flex items-center gap-1.5 text-xs font-bold text-[#105e3a]">
                         <CheckCircle2 className="w-4 h-4 text-[#105e3a]" />
                         <span>Sistem Terverifikasi ReFeed</span>
@@ -386,33 +387,33 @@ export default function BehindReFeedPage() {
         </section>
 
         {/* 5. Teknologi */}
-        <section className="py-24 bg-[#FCFAF7] border-b border-[#E8EDE5]">
+        <section className="py-16 sm:py-24 bg-[#FCFAF7] border-b border-[#E8EDE5]">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
+            <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16 space-y-2.5 sm:space-y-3">
               <span className="inline-block px-3.5 py-1.5 rounded-full bg-[#EBF5E4] text-[#105e3a] text-xs font-bold uppercase tracking-wider border border-[#C8D9C2]">
                 Inovasi Teknologi
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#141A16] tracking-tight">
+              <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-black text-[#141A16] tracking-tight">
                 Teknologi di Balik ReFeed
               </h2>
-              <p className="text-base text-[#57655B]">
+              <p className="text-xs sm:text-base text-[#57655B]">
                 Memadukan kecerdasan buatan dan geolokasi mikro untuk penyelamatan makanan yang efisien.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
               {technologies.map((tech, idx) => {
                 const Icon = tech.icon;
                 return (
                   <div
                     key={idx}
-                    className="app-card rounded-3xl p-6 sm:p-8 text-left space-y-3"
+                    className="app-card rounded-2xl sm:rounded-3xl p-5 sm:p-8 text-left space-y-2.5 sm:space-y-3"
                   >
-                    <div className="w-12 h-12 rounded-2xl bg-[#EBF5E4] text-[#105e3a] flex items-center justify-center font-bold">
-                      <Icon className="w-6 h-6" />
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-[#EBF5E4] text-[#105e3a] flex items-center justify-center font-bold">
+                      <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
-                    <h3 className="text-lg font-bold text-[#141A16]">
+                    <h3 className="text-base sm:text-lg font-bold text-[#141A16]">
                       {tech.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-[#57655B] leading-relaxed">
@@ -427,28 +428,28 @@ export default function BehindReFeedPage() {
         </section>
 
         {/* 6. Nilai Inti */}
-        <section className="py-24 bg-white border-b border-[#E8EDE5]">
+        <section className="py-16 sm:py-24 bg-white border-b border-[#E8EDE5]">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
+            <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16 space-y-2.5 sm:space-y-3">
               <span className="inline-block px-3.5 py-1.5 rounded-full bg-[#EBF5E4] text-[#105e3a] text-xs font-bold uppercase tracking-wider border border-[#C8D9C2]">
                 Prinsip Kami
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#141A16] tracking-tight">
+              <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-black text-[#141A16] tracking-tight">
                 Nilai yang Kami Pegang Teguh
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               {values.map((val, idx) => (
                 <div
                   key={idx}
-                  className="app-card rounded-3xl p-6 sm:p-8 text-left space-y-2"
+                  className="app-card rounded-2xl sm:rounded-3xl p-5 sm:p-8 text-left space-y-1.5 sm:space-y-2"
                 >
-                  <span className="text-2xl font-black text-[#105e3a]">
+                  <span className="text-xl sm:text-2xl font-black text-[#105e3a]">
                     {val.number}
                   </span>
-                  <h3 className="text-lg font-bold text-[#141A16]">
+                  <h3 className="text-base sm:text-lg font-bold text-[#141A16]">
                     {val.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-[#57655B] leading-relaxed">
@@ -462,29 +463,29 @@ export default function BehindReFeedPage() {
         </section>
 
         {/* 7. CTA */}
-        <section className="py-20 bg-gradient-to-br from-[#105e3a] to-[#0b4d2e] text-white text-center">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-            <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-white">
+        <section className="py-14 sm:py-20 bg-gradient-to-br from-[#105e3a] to-[#0b4d2e] text-white text-center">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 sm:space-y-6">
+            <h2 className="text-2xl xs:text-3xl sm:text-4xl font-black tracking-tight text-white">
               Jadilah Bagian dari Gerakan Food Hero
             </h2>
-            <p className="text-sm sm:text-base text-[#EBF5E4]/90 max-w-lg mx-auto">
+            <p className="text-xs sm:text-base text-[#EBF5E4]/90 max-w-lg mx-auto leading-relaxed">
               Unduh aplikasi ReFeed sekarang di Google Play atau daftarkan gerai kuliner Anda menjadi mitra resmi ReFeed.
             </p>
 
-            <div className="flex flex-wrap items-center justify-center gap-3.5 pt-2">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-3.5 pt-2">
               <a
                 href="https://play.google.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-4 bg-white text-[#105e3a] font-bold text-sm rounded-2xl shadow-lg flex items-center gap-2 hover:bg-[#FCFAF7] transition-all"
+                className="w-full sm:w-auto px-7 py-3.5 sm:py-4 bg-white text-[#105e3a] font-black text-xs sm:text-sm rounded-2xl shadow-lg flex items-center justify-center gap-2.5 hover:bg-[#FCFAF7] transition-all active:scale-98"
               >
-                <Play className="w-4 h-4 fill-[#105e3a] text-[#105e3a]" />
+                <GooglePlayIcon size={18} />
                 <span>Unduh di Google Play</span>
               </a>
 
               <button
                 onClick={() => setIsPartnerModalOpen(true)}
-                className="px-6 py-4 bg-white/15 hover:bg-white/25 border border-white/30 text-white font-bold text-sm rounded-2xl transition-all flex items-center gap-2"
+                className="w-full sm:w-auto px-6 py-3.5 sm:py-4 bg-white/15 hover:bg-white/25 border border-white/30 text-white font-bold text-xs sm:text-sm rounded-2xl transition-all flex items-center justify-center gap-2 active:scale-98"
               >
                 <Store className="w-4 h-4 text-[#8fc22a]" />
                 <span>Daftar Mitra Resto</span>

@@ -31,35 +31,35 @@ export default function PersonalSavingsCalculator({ onOpenDownloadModal }: Perso
   };
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-16 sm:py-24 bg-white relative overflow-hidden">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="bg-[#111c15] text-white rounded-[40px] p-6 sm:p-12 shadow-2xl border border-[#2D3E33] relative overflow-hidden">
+        <div className="bg-[#111c15] text-white rounded-[28px] sm:rounded-[40px] p-5 xs:p-6 sm:p-12 shadow-2xl border border-[#2D3E33] relative overflow-hidden">
           {/* Ambient Radial Glow */}
           <div className="absolute -top-20 -right-20 w-80 h-80 bg-[#8fc22a]/20 rounded-full blur-3xl pointer-events-none" />
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center relative z-10">
             
             {/* Left Column: Interactive Dual Sliders */}
-            <div className="lg:col-span-7 space-y-6 text-left">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-[#8fc22a] text-xs font-black uppercase tracking-wider border border-white/15">
+            <div className="lg:col-span-7 space-y-5 sm:space-y-6 text-left">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-[#8fc22a] text-[11px] sm:text-xs font-black uppercase tracking-wider border border-white/15">
                 <Sparkles className="w-3.5 h-3.5 text-[#8fc22a]" />
                 Kalkulator Dampak & Penghematan
               </div>
 
-              <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight leading-tight">
+              <h3 className="text-xl xs:text-2xl sm:text-3xl font-black text-white tracking-tight leading-tight">
                 Hitung Manfaat Nyata untuk Kantong & Bumi
               </h3>
 
               {/* Slider 1: Rescued Meals */}
-              <div className="space-y-2.5 pt-2">
+              <div className="space-y-2 pt-1 sm:pt-2">
                 <div className="flex items-center justify-between">
                   <label className="text-xs sm:text-sm font-bold text-[#DCE4D3] flex items-center gap-1.5">
                     <ShoppingBag className="w-4 h-4 text-[#8fc22a]" />
-                    Porsi Surplus yang Kamu Beli:
+                    Porsi Surplus Kamu Beli:
                   </label>
-                  <span className="px-3 py-1 bg-[#105e3a] text-white rounded-xl font-black text-xs sm:text-sm border border-[#8fc22a]/40 shadow-xs">
-                    {mealsPerWeek} Porsi / Minggu
+                  <span className="px-2.5 sm:px-3 py-1 bg-[#105e3a] text-white rounded-xl font-black text-xs border border-[#8fc22a]/40 shadow-xs">
+                    {mealsPerWeek} Porsi / Mgg
                   </span>
                 </div>
 
@@ -81,14 +81,14 @@ export default function PersonalSavingsCalculator({ onOpenDownloadModal }: Perso
               </div>
 
               {/* Slider 2: Organic Waste */}
-              <div className="space-y-2.5 pt-1">
+              <div className="space-y-2 pt-1">
                 <div className="flex items-center justify-between">
                   <label className="text-xs sm:text-sm font-bold text-[#DCE4D3] flex items-center gap-1.5">
                     <Zap className="w-4 h-4 text-[#fe6708]" />
-                    Sampah Organik Dapur Disetor:
+                    Sampah Organik Disetor:
                   </label>
-                  <span className="px-3 py-1 bg-[#0c5536] text-white rounded-xl font-black text-xs sm:text-sm border border-[#fe6708]/40 shadow-xs">
-                    {wasteKgPerMonth} kg / Bulan
+                  <span className="px-2.5 sm:px-3 py-1 bg-[#0c5536] text-white rounded-xl font-black text-xs border border-[#fe6708]/40 shadow-xs">
+                    {wasteKgPerMonth} kg / Bln
                   </span>
                 </div>
 
@@ -105,22 +105,22 @@ export default function PersonalSavingsCalculator({ onOpenDownloadModal }: Perso
                 <div className="flex justify-between text-[10px] text-[#DCE4D3]/60 font-medium">
                   <span>0 kg</span>
                   <span>10 kg (Rumah Tangga)</span>
-                  <span>20 kg (Aktif Memasak)</span>
+                  <span>20 kg (Aktif)</span>
                 </div>
               </div>
 
-              <p className="text-[11px] text-[#DCE4D3]/70 leading-relaxed pt-1">
-                *Estimasi rata-rata penghematan 65% per porsi dari resto & bakery mitra ReFeed, serta standar konversi emisi metana TPA.
+              <p className="text-[10px] sm:text-[11px] text-[#DCE4D3]/70 leading-relaxed pt-1">
+                *Estimasi rata-rata penghematan 65% per porsi dari resto mitra ReFeed & konversi metana TPA.
               </p>
             </div>
 
             {/* Right Column: Live Computed Result Cards */}
-            <div className="lg:col-span-5 p-6 rounded-[32px] bg-white/10 backdrop-blur-xl border border-white/15 space-y-4 text-center">
+            <div className="lg:col-span-5 p-5 sm:p-6 rounded-2xl sm:rounded-[32px] bg-white/10 backdrop-blur-xl border border-white/15 space-y-3.5 sm:space-y-4 text-center">
               <div>
                 <span className="text-[10px] uppercase font-black tracking-wider text-[#8fc22a]">
-                  Total Uang Kamu Hemat / Bulan
+                  Total Uang Hemat / Bulan
                 </span>
-                <div className="text-3xl sm:text-4xl font-black text-white tracking-tight mt-0.5">
+                <div className="text-2xl xs:text-3xl sm:text-4xl font-black text-white tracking-tight mt-0.5">
                   {formatRupiah(monthlySavings)}
                 </div>
                 <div className="text-[11px] text-[#bef264] font-bold mt-0.5">
@@ -128,29 +128,29 @@ export default function PersonalSavingsCalculator({ onOpenDownloadModal }: Perso
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-2.5 pt-3 border-t border-white/10 text-left">
-                <div className="p-3 rounded-2xl bg-black/40 border border-white/10">
-                  <div className="flex items-center gap-1.5 text-[10px] text-[#8fc22a] font-bold mb-0.5">
-                    <Leaf className="w-3.5 h-3.5" />
+              <div className="grid grid-cols-2 gap-2 sm:gap-2.5 pt-3 border-t border-white/10 text-left">
+                <div className="p-2.5 sm:p-3 rounded-xl sm:rounded-2xl bg-black/40 border border-white/10">
+                  <div className="flex items-center gap-1 text-[10px] text-[#8fc22a] font-bold mb-0.5">
+                    <Leaf className="w-3 h-3" />
                     <span>CO₂e Dicegah</span>
                   </div>
-                  <div className="text-sm font-black text-white">
+                  <div className="text-xs sm:text-sm font-black text-white">
                     {monthlyCo2} kg /bln
                   </div>
                 </div>
 
-                <div className="p-3 rounded-2xl bg-black/40 border border-white/10">
-                  <div className="flex items-center gap-1.5 text-[10px] text-[#bef264] font-bold mb-0.5">
-                    <Trees className="w-3.5 h-3.5" />
+                <div className="p-2.5 sm:p-3 rounded-xl sm:rounded-2xl bg-black/40 border border-white/10">
+                  <div className="flex items-center gap-1 text-[10px] text-[#bef264] font-bold mb-0.5">
+                    <Trees className="w-3 h-3" />
                     <span>Setara Pohon</span>
                   </div>
-                  <div className="text-sm font-black text-white">
+                  <div className="text-xs sm:text-sm font-black text-white">
                     {yearlyTrees} Pohon /thn
                   </div>
                 </div>
               </div>
 
-              <div className="p-3 rounded-2xl bg-[#105e3a]/60 border border-[#8fc22a]/30 text-left flex items-center justify-between">
+              <div className="p-3 rounded-xl sm:rounded-2xl bg-[#105e3a]/60 border border-[#8fc22a]/30 text-left flex items-center justify-between">
                 <div className="text-[11px] font-bold text-[#E8F4DA]">
                   ⚡ Reward Eco-Points
                 </div>
@@ -161,7 +161,7 @@ export default function PersonalSavingsCalculator({ onOpenDownloadModal }: Perso
 
               <button
                 onClick={onOpenDownloadModal}
-                className="w-full py-3.5 px-4 bg-gradient-btn hover:opacity-95 text-white font-black text-xs sm:text-sm rounded-2xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer hover:scale-102"
+                className="w-full py-3.5 px-4 bg-gradient-btn hover:opacity-95 text-white font-black text-xs sm:text-sm rounded-2xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer active:scale-98"
               >
                 <span>Mulai Berhemat di Google Play</span>
                 <ArrowRight className="w-4 h-4" />

@@ -2,8 +2,20 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Store, Menu, X, Play } from 'lucide-react';
-import { BrandLogo } from './BrandLogo';
+import { 
+  Store, 
+  Menu, 
+  X, 
+  Play, 
+  ShoppingBag, 
+  HelpCircle, 
+  Smartphone, 
+  Leaf, 
+  Users, 
+  ArrowRight,
+  Sparkles
+} from 'lucide-react';
+import { BrandLogo, GooglePlayIcon } from './BrandLogo';
 
 interface NavbarProps {
   onOpenDownloadModal: () => void;
@@ -23,28 +35,28 @@ export default function Navbar({ onOpenDownloadModal, onOpenPartnerModal }: Navb
   }, []);
 
   const navLinks = [
-    { label: 'Solusi', href: '/#solutions' },
-    { label: 'Cara Kerja', href: '/#how-it-works' },
-    { label: 'Aplikasi', href: '/#app' },
-    { label: 'Dampak Lingkungan', href: '/#impact' },
-    { label: 'Mitra Resto', href: '/#merchant' },
-    { label: 'Behind ReFeed', href: '/behind-refeed' },
+    { label: 'Solusi', href: '/#solutions', icon: ShoppingBag },
+    { label: 'Cara Kerja', href: '/#how-it-works', icon: Sparkles },
+    { label: 'Aplikasi', href: '/#app', icon: Smartphone },
+    { label: 'Dampak Lingkungan', href: '/#impact', icon: Leaf },
+    { label: 'Mitra Resto', href: '/#merchant', icon: Store },
+    { label: 'Behind ReFeed', href: '/behind-refeed', icon: Users },
   ];
 
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-[#FCFAF7]/90 backdrop-blur-xl py-3 shadow-sm border-b border-[#E8EDE5]' 
-          : 'bg-[#FCFAF7] py-4 border-b border-[#E8EDE5]/80'
+        isScrolled || mobileMenuOpen
+          ? 'bg-[#FCFAF7]/95 backdrop-blur-xl py-2.5 sm:py-3 shadow-xs border-b border-[#E8EDE5]' 
+          : 'bg-[#FCFAF7] py-3.5 sm:py-4 border-b border-[#E8EDE5]/80'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 flex items-center justify-between">
         
         {/* Brand Logo with Version Pill */}
-        <div className="flex items-center gap-3">
-          <Link href="/" className="group">
-            <BrandLogo markSize={32} textColor="#141A16" showTagline={false} />
+        <div className="flex items-center gap-2.5 sm:gap-3">
+          <Link href="/" className="group" onClick={() => setMobileMenuOpen(false)}>
+            <BrandLogo markSize={30} textColor="#141A16" showTagline={false} />
           </Link>
           <div className="hidden lg:inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#EBF5E4] text-[10px] font-bold text-[#105e3a] border border-[#C8D9C2]">
             <span className="w-1.5 h-1.5 rounded-full bg-[#105e3a] animate-pulse" />
@@ -53,7 +65,7 @@ export default function Navbar({ onOpenDownloadModal, onOpenPartnerModal }: Navb
         </div>
 
         {/* Desktop Nav Links */}
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-5 lg:gap-6">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -65,11 +77,11 @@ export default function Navbar({ onOpenDownloadModal, onOpenPartnerModal }: Navb
           ))}
         </nav>
 
-        {/* Right Action Buttons */}
+        {/* Desktop Right Action Buttons */}
         <div className="hidden sm:flex items-center gap-3">
           <button
             onClick={onOpenPartnerModal}
-            className="px-4 py-2 text-xs sm:text-sm font-bold text-[#105e3a] hover:bg-[#EBF5E4] rounded-xl transition-all flex items-center gap-1.5 cursor-pointer"
+            className="px-3.5 py-2 text-xs sm:text-sm font-bold text-[#105e3a] hover:bg-[#EBF5E4] rounded-xl transition-all flex items-center gap-1.5 cursor-pointer"
           >
             <Store className="w-4 h-4" />
             <span>Gabung Mitra</span>
@@ -77,26 +89,32 @@ export default function Navbar({ onOpenDownloadModal, onOpenPartnerModal }: Navb
 
           <button
             onClick={onOpenDownloadModal}
-            className="btn-app-primary px-4.5 py-2 text-xs sm:text-sm font-bold rounded-xl shadow-sm transition-all flex items-center gap-2 cursor-pointer"
+            className="btn-app-primary px-4 py-2 text-xs sm:text-sm font-bold rounded-xl shadow-xs transition-all flex items-center gap-2 cursor-pointer"
           >
-            <Play className="w-3.5 h-3.5 fill-white text-white" />
+            <div className="w-4 h-4 rounded bg-white flex items-center justify-center shrink-0">
+              <GooglePlayIcon size={12} />
+            </div>
             <span>Google Play</span>
           </button>
         </div>
 
-        {/* Mobile Menu Toggle */}
-        <div className="flex items-center gap-2 sm:hidden">
+        {/* Mobile Menu Toggle & Direct Download Button */}
+        <div className="flex items-center gap-2 md:hidden">
           <button
             onClick={onOpenDownloadModal}
-            className="btn-app-primary px-3 py-1.5 text-xs font-bold rounded-xl flex items-center gap-1 shadow-xs"
+            className="btn-app-primary px-3 py-1.5 text-xs font-bold rounded-xl flex items-center gap-1.5 shadow-2xs cursor-pointer active:scale-95"
+            aria-label="Unduh Aplikasi"
           >
-            <Play className="w-3 h-3 fill-white text-white" />
-            Unduh
+            <div className="w-3.5 h-3.5 rounded bg-white flex items-center justify-center shrink-0">
+              <GooglePlayIcon size={10} />
+            </div>
+            <span>Unduh</span>
           </button>
+          
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-1.5 text-[#141A16] rounded-xl hover:bg-[#EBF5E4] transition-colors"
-            aria-label="Toggle Menu"
+            className="w-9 h-9 flex items-center justify-center text-[#141A16] rounded-xl bg-white border border-[#E8EDE5] hover:bg-[#EBF5E4] transition-colors cursor-pointer active:scale-95"
+            aria-label={mobileMenuOpen ? "Tutup Menu" : "Buka Menu"}
           >
             {mobileMenuOpen ? <X className="w-5 h-5 text-[#105e3a]" /> : <Menu className="w-5 h-5 text-[#141A16]" />}
           </button>
@@ -104,42 +122,60 @@ export default function Navbar({ onOpenDownloadModal, onOpenPartnerModal }: Navb
 
       </div>
 
-      {/* Mobile Menu Dropdown */}
+      {/* Mobile Menu Dropdown with Modern Card Styling */}
       {mobileMenuOpen && (
-        <div className="sm:hidden bg-[#FCFAF7] border-t border-[#E8EDE5] px-4 pt-3 pb-5 mt-2 space-y-3 shadow-lg">
-          <div className="flex flex-col space-y-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="px-3 py-2 text-sm font-semibold text-[#141A16] hover:text-[#105e3a] hover:bg-[#EBF5E4] rounded-xl transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
+        <div className="md:hidden bg-[#FCFAF7] border-t border-[#E8EDE5] px-4 pt-3 pb-6 space-y-4 shadow-xl max-h-[80vh] overflow-y-auto animate-in slide-in-from-top-2 duration-200">
+          <div className="grid grid-cols-1 gap-1">
+            {navLinks.map((link) => {
+              const Icon = link.icon;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="px-3.5 py-2.5 text-sm font-bold text-[#141A16] hover:text-[#105e3a] hover:bg-[#EBF5E4] rounded-xl transition-all flex items-center justify-between group"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-7 h-7 rounded-lg bg-[#EBF5E4] text-[#105e3a] flex items-center justify-center group-hover:bg-[#105e3a] group-hover:text-white transition-colors">
+                      <Icon className="w-4 h-4" />
+                    </div>
+                    <span>{link.label}</span>
+                  </div>
+                  <ArrowRight className="w-4 h-4 text-slate-300 group-hover:text-[#105e3a] group-hover:translate-x-0.5 transition-all" />
+                </Link>
+              );
+            })}
           </div>
 
-          <div className="pt-2 border-t border-[#E8EDE5] flex flex-col gap-2">
+          <div className="pt-3 border-t border-[#E8EDE5] flex flex-col gap-2.5">
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
                 onOpenPartnerModal();
               }}
-              className="w-full py-2.5 text-xs font-bold text-[#105e3a] bg-white rounded-xl border border-[#E8EDE5]"
+              className="w-full py-3 px-4 text-xs font-bold text-[#105e3a] bg-white rounded-xl border border-[#C8D9C2] flex items-center justify-center gap-2 shadow-2xs cursor-pointer active:scale-98"
             >
-              Gabung Mitra Merchant
+              <Store className="w-4 h-4 text-[#105e3a]" />
+              <span>Gabung Mitra Usaha Kuliner</span>
             </button>
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
                 onOpenDownloadModal();
               }}
-              className="btn-app-primary w-full py-2.5 text-xs font-bold rounded-xl flex items-center justify-center gap-1.5 shadow-xs"
+              className="btn-app-primary w-full py-3 px-4 text-xs font-bold rounded-xl flex items-center justify-center gap-2 shadow-sm cursor-pointer active:scale-98"
             >
-              <Play className="w-3.5 h-3.5 fill-white text-white" />
-              Unduh di Google Play
+              <div className="w-4 h-4 rounded bg-white flex items-center justify-center shrink-0">
+                <GooglePlayIcon size={12} />
+              </div>
+              <span>Unduh Aplikasi di Google Play</span>
             </button>
+          </div>
+
+          <div className="text-center pt-1">
+            <span className="text-[11px] text-[#57655B] font-semibold">
+              🟢 Tersedia di Google Play Store & Direct APK
+            </span>
           </div>
         </div>
       )}

@@ -53,10 +53,10 @@ export default function Testimonials() {
             ⭐ Cerita Pengguna & Mitra
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#16241C] tracking-tight">
-            Dipercaya Lebih dari 50.000+ Food Heroes
+            Cerita & Antusiasme Komunitas ReFeed
           </h2>
           <p className="text-[#5A6960] text-base sm:text-lg">
-            Dengar langsung cerita nyata bagaimana ReFeed menghadirkan manfaat ekonomi sekaligus kebaikan bagi lingkungan.
+            Bagaimana ekosistem ReFeed menghadirkan manfaat ekonomi hemat sekaligus aksi nyata bagi kelestarian lingkungan.
           </p>
         </div>
 

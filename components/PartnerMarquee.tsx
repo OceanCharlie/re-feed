@@ -17,7 +17,7 @@ export default function PartnerMarquee() {
     <section className="py-7 bg-[#FFFFFF] border-y border-[#E8EDE5] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 mb-3 text-center">
         <span className="text-xs font-bold text-[#57655B] tracking-wide">
-          Bermitra dengan Ratusan Gerai Kuliner & Pengolah Limbah di Kota Besar
+          Kategori Makanan Surplus & Pengelolaan Limbah yang Didukung ReFeed
         </span>
       </div>
 
