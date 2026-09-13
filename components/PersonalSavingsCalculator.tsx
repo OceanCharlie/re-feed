@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Sparkles, DollarSign, Leaf, Trees, ArrowRight, Check, Zap, ShoppingBag } from 'lucide-react';
+import { Sparkles, Leaf, Trees, ArrowRight, Zap, ShoppingBag } from 'lucide-react';
 
 interface PersonalSavingsCalculatorProps {
   onOpenDownloadModal: () => void;

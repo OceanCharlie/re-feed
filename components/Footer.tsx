@@ -5,11 +5,11 @@ import { Mail } from 'lucide-react';
 import { BrandLogo } from './BrandLogo';
 
 interface FooterProps {
-  onOpenDownloadModal: () => void;
-  onOpenPartnerModal: () => void;
+  onOpenDownloadModal?: () => void;
+  onOpenPartnerModal?: () => void;
 }
 
-export default function Footer({ onOpenDownloadModal, onOpenPartnerModal }: FooterProps) {
+export default function Footer({}: FooterProps) {
   return (
     <footer className="border-t border-[#C8D9C2]/50 py-8 sm:py-10 text-[#57655B] relative">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-[#8fc22a]/60 to-transparent" />

@@ -6,10 +6,10 @@ import { Search, CreditCard, ShoppingBag, ArrowRight } from 'lucide-react';
 
 interface HowItWorksProps {
   onOpenDownloadModal: () => void;
-  onOpenPartnerModal: () => void;
+  onOpenPartnerModal?: () => void;
 }
 
-export default function HowItWorks({ onOpenDownloadModal, onOpenPartnerModal }: HowItWorksProps) {
+export default function HowItWorks({ onOpenDownloadModal }: HowItWorksProps) {
   const steps = [
     {
       step: '01',

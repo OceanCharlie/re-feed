@@ -18,7 +18,7 @@ interface NavbarProps {
   onOpenPartnerModal: () => void;
 }
 
-export default function Navbar({ onOpenDownloadModal, onOpenPartnerModal }: NavbarProps) {
+export default function Navbar({ onOpenPartnerModal }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 

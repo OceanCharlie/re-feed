@@ -1,16 +1,14 @@
 'use client';
 
 import React from 'react';
-import { Store, ShoppingBag, Coffee, Utensils, Zap, Heart } from 'lucide-react';
-
 export default function PartnerMarquee() {
   const categories = [
-    { label: '🥐 Artisan Bakery & Pastry', icon: ShoppingBag },
-    { label: '☕ Specialty Coffee & Toast', icon: Coffee },
-    { label: '🍱 Japanese & Gourmet Bento', icon: Utensils },
-    { label: '🥗 Fresh Salad & Healthy Bowls', icon: Store },
-    { label: '⚡ Waste-to-Energy Biogas Hub', icon: Zap },
-    { label: '🛒 Organic Supermarket & Fresh Groceries', icon: Heart },
+    { label: '🥐 Artisan Bakery & Pastry' },
+    { label: '☕ Specialty Coffee & Toast' },
+    { label: '🍱 Japanese & Gourmet Bento' },
+    { label: '🥗 Fresh Salad & Healthy Bowls' },
+    { label: '⚡ Waste-to-Energy Biogas Hub' },
+    { label: '🛒 Organic Supermarket & Fresh Groceries' },
   ];
 
   return (
@@ -24,7 +22,6 @@ export default function PartnerMarquee() {
       <div className="relative w-full overflow-hidden flex">
         <div className="animate-marquee flex items-center gap-3.5 py-1">
           {[...categories, ...categories, ...categories].map((item, idx) => {
-            const Icon = item.icon;
             return (
               <div
                 key={idx}

@@ -2,11 +2,11 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { ShoppingBag, Leaf, Recycle, ArrowRight, Sparkles } from 'lucide-react';
+import { ShoppingBag, Leaf, Recycle, ArrowRight } from 'lucide-react';
 
 interface DualEcosystemProps {
   onOpenDownloadModal: () => void;
-  onOpenPartnerModal: () => void;
+  onOpenPartnerModal?: () => void;
 }
 
 export default function DualEcosystem({ onOpenDownloadModal }: DualEcosystemProps) {

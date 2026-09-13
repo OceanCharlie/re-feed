@@ -1,22 +1,13 @@
 'use client';
 
-import React from 'react';
-import Image from 'next/image';
 import { 
   Sparkles, 
-  MapPin, 
-  ChefHat, 
   ShieldCheck, 
   BarChart3, 
-  Coins, 
-  Flame, 
   Clock, 
-  Leaf, 
   CheckCircle,
   Bell,
-  RefreshCw,
-  Zap,
-  ShoppingBag
+  Zap
 } from 'lucide-react';
 import { BrandMarkSvg } from './BrandLogo';
 

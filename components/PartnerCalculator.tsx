@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Store, ArrowRight, ShieldCheck, TrendingUp } from 'lucide-react';
+import { ArrowRight, ShieldCheck } from 'lucide-react';
 
 interface PartnerCalculatorProps {
   onOpenPartnerModal: () => void;

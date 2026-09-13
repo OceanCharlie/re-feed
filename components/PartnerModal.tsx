@@ -1,9 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import { X, Store, CheckCircle, Sparkles, Building2, Phone, Mail, MapPin } from 'lucide-react';
+import { X, Store, CheckCircle, Sparkles } from 'lucide-react';
 import confetti from 'canvas-confetti';
-import { BrandMarkSvg } from './BrandLogo';
 
 interface PartnerModalProps {
   isOpen: boolean;

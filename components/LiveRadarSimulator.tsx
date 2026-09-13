@@ -1,18 +1,11 @@
 'use client';
 
 import React, { useState } from 'react';
-import Image from 'next/image';
 import { 
   Sparkles, 
   MapPin, 
-  Clock, 
   ShoppingBag, 
   ArrowRight, 
-  TrendingDown, 
-  ShieldCheck, 
-  Zap, 
-  Store,
-  CheckCircle2,
   Gift
 } from 'lucide-react';
 
