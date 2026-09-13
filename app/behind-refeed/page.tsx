@@ -102,28 +102,82 @@ export default function BehindReFeedPage() {
 
   const pillars = [
     {
+      roleName: 'Food Rescue Hero',
       title: 'Pilar 1: Surplus Food Marketplace',
       subtitle: 'Pencegahan di Hulu',
       icon: ShoppingBag,
       tag: 'Ekonomi Sirkular',
-      desc: 'Menghubungkan restoran, bakery, kafe, dan supermarket untuk menjual makanan segar berlebih sebelum tutup dengan diskon 50-70%.',
+      badgeColor: 'bg-[#EBF5E4] text-[#105e3a] border-[#C8D9C2]',
+      desc: 'Garda terdepan penyelamat surplus makanan segar yang siap santap langsung dari produsen sebelum jam operasional gerai ditutup.',
       asset: '/images/food-hero.webp',
+      responsibilities: [
+        {
+          label: 'Penyelamatan Surplus Pangan',
+          detail: 'Menghubungkan restoran, bakery, kafe, dan supermarket untuk menjual surplus makanan segar berlebih.',
+        },
+        {
+          label: 'Flash Sale Terjangkau',
+          detail: 'Menjual makanan berkualitas prima ke masyarakat sekitar dengan diskon 50–70% via aplikasi ReFeed.',
+        },
+        {
+          label: 'Pencegahan Kerugian Mitra',
+          detail: 'Mengubah potensi kerugian merchant menjadi pendapatan alternatif serta menekan jejak karbon hulu.',
+        },
+      ],
+      impactHighlight: 'Diskon 50-70% & Zero Food Loss di Hulu',
+      focusArea: 'Restoran, Bakery, Supermarket & Konsumen',
     },
     {
+      roleName: 'Eco-Energy Transformer',
       title: 'Pilar 2: Waste-to-Energy Hub',
       subtitle: 'Pengolahan di Hilir',
       icon: Zap,
       tag: 'Energi Terbarukan',
-      desc: 'Untuk bahan makanan yang sudah tak layak konsumsi (kulit buah, sayur layu, ampas kopi), ReFeed menyediakan jaringan Waste Hub untuk dikonversi menjadi biogas dan pupuk organik.',
+      badgeColor: 'bg-[#FEF5ED] text-[#E05300] border-[#FBD9C2]',
+      desc: 'Inovator hijau yang mengonversi sisa bahan makanan tak layak konsumsi menjadi energi baru terbarukan dan nutrisi tanah.',
       asset: '/images/energy.webp',
+      responsibilities: [
+        {
+          label: 'Pengumpulan Residu Organik',
+          detail: 'Menampung kulit buah, sisa sayuran, ampas kopi, dan bahan organik non-konsumsi dari dapur mitra resto.',
+        },
+        {
+          label: 'Konversi Biogas & Listrik',
+          detail: 'Mengolah biomassa via anaerobic digester menjadi energi biogas ramah lingkungan dan pasokan listrik mandiri.',
+        },
+        {
+          label: 'Produksi Pupuk Kompos',
+          detail: 'Menghasilkan pupuk organik cair dan padat untuk menyuburkan kembali tanah pertanian dan perkebunan lokal.',
+        },
+      ],
+      impactHighlight: 'Reduksi Gas Metana (CH₄) & Energi Bersih',
+      focusArea: 'Waste Hub, Biodigester & Lahan Tani',
     },
     {
+      roleName: 'Food Bank Ambassador',
       title: 'Pilar 3: Food Bank & Donasi Sosial',
       subtitle: 'Solidaritas Sosial',
       icon: HeartHandshake,
       tag: 'Aksi Kemanusiaan',
-      desc: 'Memfasilitasi donasi makanan berlebih layak konsumsi dari katering, hotel, dan perorangan untuk disalurkan ke yayasan sosial dan masyarakat yang membutuhkan.',
+      badgeColor: 'bg-[#EBF3FE] text-[#0A66C2] border-[#C5DCFA]',
+      desc: 'Duta solidaritas sosial yang menjembatani kebaikan donasi makanan berlebih layak santap bagi mereka yang membutuhkan.',
       asset: '/images/drop-point.webp',
+      responsibilities: [
+        {
+          label: 'Mobilisasi Donasi Pangan',
+          detail: 'Memfasilitasi penyerahan donasi makanan layak konsumsi dari katering pesta, hotel, korporasi, dan perorangan.',
+        },
+        {
+          label: 'Uji Kelayakan & Higienitas',
+          detail: 'Memverifikasi keamanan pangan, standar kebersihan, serta pengemasan higienis sebelum disalurkan.',
+        },
+        {
+          label: 'Distribusi Tepat Sasaran',
+          detail: 'Menyalurkan paket makanan bernutrisi secara cepat ke panti asuhan, yayasan sosial, dan warga prasejahtera.',
+        },
+      ],
+      impactHighlight: 'Pemberantasan Kelaparan & Keadilan Pangan',
+      focusArea: 'Katering, Yayasan Sosial & Komunitas',
     },
   ];
 
@@ -515,63 +569,101 @@ export default function BehindReFeedPage() {
           </div>
         </section>
 
-        {/* 4. Tiga Pilar Ekosistem */}
-        <section className="py-16 sm:py-24 bg-white/85 border-b border-[#E8EDE5]/70">
+        {/* 4. Tiga Pilar Ekosistem & Peran Karakter */}
+        <section className="py-20 sm:py-28 bg-[#FCFDFB] border-b border-[#E8EDE5]/70 relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16 space-y-2.5 sm:space-y-3">
+            <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20 space-y-2.5 sm:space-y-3">
               <span className="badge-glow inline-flex px-3.5 py-1.5 rounded-full text-[#105e3a] text-xs font-bold uppercase tracking-wider">
                 Model Ekosistem Sirkular
               </span>
               <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-black text-[#141A16] tracking-tight">
                 Tiga Pilar Penyelamatan Pangan
               </h2>
-              <p className="text-xs sm:text-base text-[#57655B]">
-                Solusi menyeluruh dari hulu ke hilir untuk memastikan tidak ada makanan yang terbuang sia-sia.
+              <p className="text-xs sm:text-base text-[#57655B] leading-relaxed max-w-2xl mx-auto">
+                Solusi menyeluruh dari hulu ke hilir dengan peran strategis setiap karakter untuk memastikan tidak ada makanan yang terbuang sia-sia.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+            {/* Grid 3 Kolom: Gambar di atas (unboxed, full render), teks di bawah menjelaskan role */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-12 lg:gap-14 max-w-6xl mx-auto items-start">
               {pillars.map((pillar, idx) => {
                 const Icon = pillar.icon;
                 return (
                   <div
                     key={idx}
-                    className="app-card rounded-2xl sm:rounded-3xl overflow-hidden flex flex-col justify-between text-left"
+                    className="group flex flex-col items-center text-center sm:text-left transition-all duration-300"
                   >
-                    <div>
-                      <div className="relative h-44 sm:h-48 w-full bg-slate-100 border-b border-[#E8EDE5]">
+                    {/* Visual Mascot di Atas (Bukan Card, Full View, Ambient Halo Glow) */}
+                    <div className="relative w-full max-w-[260px] xs:max-w-[280px] sm:max-w-[300px] aspect-square mx-auto mb-6 sm:mb-7 flex items-center justify-center">
+                      {/* Ambient soft background halo */}
+                      <div className="absolute inset-2 sm:inset-3 rounded-full bg-gradient-to-b from-[#EEF6EC] via-[#E8F3E4] to-[#DFECDB]/50 -z-10 border border-[#D5E2CE]/70 shadow-xs group-hover:scale-105 group-hover:border-[#105e3a]/35 group-hover:shadow-md transition-all duration-500 ease-out" />
+
+                      {/* 3D Mascot Image with subtle hover float */}
+                      <div className="relative w-full h-full p-3 sm:p-4 flex items-center justify-center">
                         <Image
                           src={pillar.asset}
-                          alt={pillar.title}
+                          alt={`${pillar.roleName} - ${pillar.title}`}
                           fill
-                          className="object-cover"
+                          priority={idx === 0}
+                          unoptimized
+                          className="object-contain object-center drop-shadow-sm group-hover:scale-105 group-hover:-translate-y-2 transition-transform duration-500 ease-out"
                         />
-                        <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/90 text-[#141A16] text-[10px] font-black uppercase shadow-xs">
-                          {pillar.tag}
-                        </div>
-                        <div className="absolute -bottom-5 left-5 w-10 h-10 rounded-2xl bg-white text-[#105e3a] flex items-center justify-center shadow-md border border-[#E8EDE5]">
-                          <Icon className="w-5 h-5" />
-                        </div>
                       </div>
 
-                      <div className="p-5 sm:p-6 pt-4 space-y-1.5 sm:space-y-2">
-                        <div className="text-xs font-bold text-[#105e3a] uppercase tracking-wider">
-                          {pillar.subtitle}
-                        </div>
-                        <h3 className="text-lg sm:text-xl font-bold text-[#141A16]">
-                          {pillar.title}
-                        </h3>
-                        <p className="text-xs sm:text-sm text-[#57655B] leading-relaxed">
-                          {pillar.desc}
-                        </p>
+                      {/* Domain Badge Pill */}
+                      <div className="absolute -bottom-2.5 px-3.5 py-1 rounded-full bg-white/95 backdrop-blur-md shadow-xs border border-[#C8D9C2] flex items-center gap-1.5 text-[11px] font-bold text-[#141A16] group-hover:border-[#105e3a]/50 transition-colors">
+                        <Icon className="w-3.5 h-3.5 text-[#105e3a]" />
+                        <span>{pillar.tag}</span>
                       </div>
                     </div>
 
-                    <div className="p-5 sm:p-6 pt-0">
-                      <div className="pt-3 border-t border-[#E8EDE5] flex items-center gap-1.5 text-xs font-bold text-[#105e3a]">
-                        <CheckCircle2 className="w-4 h-4 text-[#105e3a]" />
-                        <span>Sistem Terverifikasi ReFeed</span>
+                    {/* Teks di Bawah: Menjelaskan Role Karakter & Pilar */}
+                    <div className="w-full space-y-3.5 sm:space-y-4 px-1">
+                      {/* Header Role & Pilar */}
+                      <div className="space-y-1 text-center sm:text-left">
+                        <div className="inline-block text-[11px] sm:text-xs font-extrabold uppercase tracking-wider text-[#105e3a]">
+                          {pillar.subtitle}
+                        </div>
+                        <h3 className="text-xl sm:text-2xl font-black text-[#141A16] tracking-tight leading-snug">
+                          {pillar.roleName}
+                        </h3>
+                        <p className="text-xs sm:text-sm font-bold text-[#57655B]">
+                          {pillar.title}
+                        </p>
+                      </div>
+
+                      {/* Deskripsi Ringkas Misi Role */}
+                      <p className="text-xs sm:text-sm text-[#57655B] leading-relaxed text-left">
+                        {pillar.desc}
+                      </p>
+
+                      {/* Rincian Tugas & Peran di Ekosistem */}
+                      <div className="pt-3 border-t border-[#E8EDE5] text-left space-y-2.5">
+                        <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-wider text-[#105e3a] block">
+                          Tugas & Peran di Ekosistem:
+                        </span>
+                        <div className="space-y-2">
+                          {pillar.responsibilities.map((resp, rIdx) => (
+                            <div key={rIdx} className="flex items-start gap-2 text-xs leading-relaxed text-[#57655B]">
+                              <span className="w-1.5 h-1.5 rounded-full bg-[#105e3a] mt-1.5 shrink-0" />
+                              <div>
+                                <strong className="text-[#141A16] font-bold">{resp.label}: </strong>
+                                <span>{resp.detail}</span>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Dampak Langsung */}
+                      <div className="pt-1 text-left">
+                        <div className="p-2.5 rounded-xl bg-[#F4F9F0] border border-[#E8EDE5] text-[11px] flex items-center gap-2">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-[#105e3a] shrink-0" />
+                          <span className="text-[#57655B] leading-tight">
+                            <strong className="text-[#105e3a]">Dampak:</strong> {pillar.impactHighlight}
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>

@@ -84,7 +84,7 @@ export default function HeroSection({ onOpenDownloadModal }: HeroSectionProps) {
             <div className="glow-orb w-64 h-64 sm:w-80 sm:h-80 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10" />
 
             {/* Doodle Speech Bubble (Top Right of Mascot) */}
-            <div className="absolute -top-2 right-2 sm:right-6 z-30 max-w-[170px] text-[11px] font-bold text-[#141A16] floating-badge px-3 py-2 rounded-2xl transform rotate-2 hidden xs:block">
+            <div className="absolute -top-4 right-0 sm:right-4 lg:right-6 z-40 max-w-[170px] text-[11px] font-bold text-[#141A16] floating-badge px-3 py-2 rounded-2xl transform rotate-2 hidden xs:block">
               <span>Lebih hemat, lebih berdampak bersama ReFeed!</span>
               <div className="absolute -bottom-1.5 left-6 w-3 h-3 bg-white border-b border-r border-[#C8D9C2] transform rotate-45" />
             </div>
@@ -110,15 +110,15 @@ export default function HeroSection({ onOpenDownloadModal }: HeroSectionProps) {
               </div>
             </div>
 
-            {/* Floating ReFeed Hero Mascot Character (Right Side of Phone) */}
-            <div className="absolute -right-6 sm:-right-14 bottom-4 sm:bottom-10 z-30 w-40 xs:w-48 sm:w-56 h-48 xs:h-56 sm:h-64 pointer-events-none drop-shadow-2xl">
+            {/* Floating ReFeed Hero Mascot Character (Feede) */}
+            <div className="absolute -right-6 xs:-right-10 sm:-right-16 lg:-right-20 -bottom-2 sm:bottom-0 lg:bottom-2 z-30 w-44 xs:w-52 sm:w-64 md:w-72 lg:w-80 h-64 xs:h-72 sm:h-88 md:h-96 lg:h-[420px] pointer-events-none drop-shadow-2xl">
               <Image
-                src="/images/energy.webp"
-                alt="ReFeed Energy Mascot Hero"
+                src="/images/feede.png"
+                alt="Feede - Maskot Resmi ReFeed"
                 fill
                 priority
-                sizes="(max-width: 640px) 190px, 240px"
-                className="object-contain"
+                sizes="(max-width: 640px) 210px, (max-width: 1024px) 280px, 320px"
+                className="object-contain object-bottom"
               />
             </div>
 
