@@ -1,0 +1,9 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Host
+Host: https://refeed-indonesia.com
+
+# Sitemaps
+Sitemap: https://refeed-indonesia.com/sitemap.xml
