@@ -100,13 +100,13 @@ export default function Footer({ onOpenDownloadModal, onOpenPartnerModal }: Foot
                 <Image src="/images/Logo-Untar-new.webp" alt="Universitas Tarumanagara" fill className="object-contain" unoptimized />
               </div>
               <div className="relative h-6 w-24">
-                <Image src="/images/dikti.png" alt="Diktisaintek" fill className="object-contain" unoptimized />
+                <Image src="/images/dikti.webp" alt="Diktisaintek" fill className="object-contain" unoptimized />
               </div>
               <div className="relative h-6 w-16">
-                <Image src="/images/Logo PKM Hor - Warna.9d2ca75b.png" alt="PKM" fill className="object-contain" unoptimized />
+                <Image src="/images/Logo PKM Hor - Warna.9d2ca75b.webp" alt="PKM" fill className="object-contain" unoptimized />
               </div>
               <div className="relative h-6 w-24">
-                <Image src="/images/logo-simbelmawa.png" alt="SIMBelmawa" fill className="object-contain" unoptimized />
+                <Image src="/images/logo-simbelmawa.webp" alt="SIMBelmawa" fill className="object-contain" unoptimized />
               </div>
             </div>
           </div>

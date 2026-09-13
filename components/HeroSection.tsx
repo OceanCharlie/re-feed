@@ -16,7 +16,7 @@ export default function HeroSection({ onOpenDownloadModal }: HeroSectionProps) {
       {/* Background Eco-City Panorama Image */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <Image
-          src="/bg.png"
+          src="/bg.webp"
           alt="ReFeed Eco Green Landscape Background"
           fill
           priority
@@ -100,7 +100,7 @@ export default function HeroSection({ onOpenDownloadModal }: HeroSectionProps) {
               {/* Screen Image */}
               <div className="relative w-full h-[560px] xs:h-[590px] bg-white rounded-[38px] overflow-hidden">
                 <Image
-                  src="/images/1.png"
+                  src="/images/1.webp"
                   alt="ReFeed Mobile App Screen"
                   fill
                   priority

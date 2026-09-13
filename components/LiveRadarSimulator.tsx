@@ -60,7 +60,7 @@ export default function LiveRadarSimulator({ onOpenDownloadModal }: LiveRadarSim
         itemsLeft: 2,
         contents: '1x Salmon Teriyaki Set, 1x Chicken Katsu, 1x Fresh Tamagoyaki Bento',
         co2Saved: '2.4 kg CO₂e',
-        img: '/images/1.png',
+        img: '/images/1.webp',
       },
       {
         store: 'Green Pantry Organic Salad & Juice',
@@ -74,7 +74,7 @@ export default function LiveRadarSimulator({ onOpenDownloadModal }: LiveRadarSim
         itemsLeft: 5,
         contents: '2x Roasted Sesame Salad Bowl, 1x Cold-Pressed Green Detox Juice',
         co2Saved: '1.2 kg CO₂e',
-        img: '/images/2.png',
+        img: '/images/2.webp',
       },
     ],
     bsd: [
@@ -104,7 +104,7 @@ export default function LiveRadarSimulator({ onOpenDownloadModal }: LiveRadarSim
         itemsLeft: 3,
         contents: '1x Truffle Beef Panini, 1x Iced Salted Caramel Latte (Bottled)',
         co2Saved: '1.4 kg CO₂e',
-        img: '/images/1.png',
+        img: '/images/1.webp',
       },
     ],
     bandung: [
@@ -134,7 +134,7 @@ export default function LiveRadarSimulator({ onOpenDownloadModal }: LiveRadarSim
         itemsLeft: 3,
         contents: '1x Spaghetti Carbonara, 1x Caesar Salad, 1x Cold Brew Coffee',
         co2Saved: '2.1 kg CO₂e',
-        img: '/images/2.png',
+        img: '/images/2.webp',
       },
     ],
     surabaya: [
@@ -164,7 +164,7 @@ export default function LiveRadarSimulator({ onOpenDownloadModal }: LiveRadarSim
         itemsLeft: 4,
         contents: '1x Gyudon Beef Bowl, 1x Chicken Karaage, 1x Ocha Cold Tea',
         co2Saved: '1.9 kg CO₂e',
-        img: '/images/1.png',
+        img: '/images/1.webp',
       },
     ],
   };

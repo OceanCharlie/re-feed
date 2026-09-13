@@ -20,7 +20,7 @@ export default function ScenicStoryBanner({ onOpenPartnerModal }: ScenicStoryBan
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
             <Image
-              src="/images/nature_story_banner.png"
+              src="/images/nature_story_banner.webp"
               alt="ReFeed Nature Impact Landscape"
               fill
               priority

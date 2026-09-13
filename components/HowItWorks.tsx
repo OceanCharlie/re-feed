@@ -16,21 +16,21 @@ export default function HowItWorks({ onOpenDownloadModal, onOpenPartnerModal }: 
       icon: Search,
       title: 'Pilih Makanan di Radar',
       desc: 'Buka ReFeed dan temukan surplus lezat dari bakery, resto, atau supermarket terdekat.',
-      image: '/images/1.png',
+      image: '/images/1.webp',
     },
     {
       step: '02',
       icon: CreditCard,
       title: 'Pesan & Bayar Hemat 70%',
       desc: 'Lakukan pembayaran mudah dan aman dengan QRIS atau e-wallet untuk mengamankan pesanan.',
-      image: '/images/2.png',
+      image: '/images/2.webp',
     },
     {
       step: '03',
       icon: ShoppingBag,
       title: 'Ambil di Toko & Nikmati',
       desc: 'Datang ke gerai saat jam pickup, tunjukkan kode pesanan di aplikasi, dan selamat menikmati.',
-      image: '/images/4.png',
+      image: '/images/4.webp',
     },
   ];
 

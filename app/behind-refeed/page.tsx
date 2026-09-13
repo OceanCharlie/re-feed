@@ -41,7 +41,7 @@ export default function BehindReFeedPage() {
     {
       name: 'Ocean Charlie Gunawan',
       role: 'Front End Developer',
-      image: '/images/ocean.png',
+      image: '/images/ocean.webp',
       icon: Code2,
       skills: ['React Native', 'NextJs', 'Expo', 'Tailwind CSS'],
       bio: 'Mengembangkan antarmuka interaktif yang responsif, performa tinggi, dan ramah pengguna.',
@@ -49,7 +49,7 @@ export default function BehindReFeedPage() {
     {
       name: 'Chandra Wijaya',
       role: 'UI/UX Designer',
-      image: '/images/chandra.png',
+      image: '/images/chandra.webp',
       icon: Palette,
       skills: ['Figma', 'Design System', 'User Flow'],
       bio: 'Merancang identitas visual sistemik, estetika sirkular, dan kenyamanan navigasi aplikasi.',
@@ -57,7 +57,7 @@ export default function BehindReFeedPage() {
     {
       name: 'Jessica',
       role: 'Project Manager',
-      image: '/images/jes.png',
+      image: '/images/jes.webp',
       icon: Sparkles,
       skills: ['Product Roadmap', 'Agile', 'Operations'],
       bio: 'Mengorkestrasi milestone riset, koordinasi lintas fungsi, dan manajemen eksekusi ekosistem.',
@@ -65,7 +65,7 @@ export default function BehindReFeedPage() {
     {
       name: 'Akemi Belva Sutanto',
       role: 'Integration Engineer',
-      image: '/images/akemi.png',
+      image: '/images/akemi.webp',
       icon: Layers,
       skills: ['API Pipeline', 'Cloud Services', 'Data Sync'],
       bio: 'Menghubungkan arsitektur frontend dengan pipeline integrasi data analitik dan backend.',
@@ -73,7 +73,7 @@ export default function BehindReFeedPage() {
     {
       name: 'Danniel',
       role: 'Back End Developer',
-      image: '/images/danniel.png',
+      image: '/images/danniel.webp',
       icon: Database,
       skills: ['Node.js', 'PostgreSQL', 'Microservices'],
       bio: 'Membangun arsitektur server terdistribusi, basis data efisien, dan keamanan endpoint.',
@@ -85,7 +85,7 @@ export default function BehindReFeedPage() {
     role: 'Strategic Advisor',
     faculty: 'Fakultas Teknologi Informasi',
     university: 'Universitas Tarumanagara (UNTAR)',
-    image: '/images/tony.png',
+    image: '/images/tony.webp',
   };
 
   const pillars = [
@@ -205,7 +205,7 @@ export default function BehindReFeedPage() {
                 {/* DIKTI */}
                 <div className="relative h-8 sm:h-9 w-26 sm:w-30 flex items-center justify-center">
                   <Image
-                    src="/images/dikti.png"
+                    src="/images/dikti.webp"
                     alt="Diktisaintek Berdampak - Kemendikbudristek"
                     fill
                     className="object-contain"
@@ -216,7 +216,7 @@ export default function BehindReFeedPage() {
                 {/* SIMBelmawa */}
                 <div className="relative h-8 sm:h-9 w-26 sm:w-30 flex items-center justify-center">
                   <Image
-                    src="/images/logo-simbelmawa.png"
+                    src="/images/logo-simbelmawa.webp"
                     alt="SIMBelmawa"
                     fill
                     className="object-contain"
@@ -227,7 +227,7 @@ export default function BehindReFeedPage() {
                 {/* PKM */}
                 <div className="relative h-8 sm:h-9 w-20 sm:w-24 flex items-center justify-center">
                   <Image
-                    src="/images/Logo PKM Hor - Warna.9d2ca75b.png"
+                    src="/images/Logo PKM Hor - Warna.9d2ca75b.webp"
                     alt="Program Kreativitas Mahasiswa (PKM)"
                     fill
                     className="object-contain"

@@ -2,16 +2,14 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { 
-  Store, 
-  Menu, 
-  X, 
-  ShoppingBag, 
-  Smartphone, 
-  Leaf, 
-  Users, 
-  ArrowRight,
-  Sparkles
+import {
+  Store,
+  Menu,
+  X,
+  ShoppingBag,
+  Leaf,
+  Users,
+  ArrowRight
 } from 'lucide-react';
 import { BrandLogo } from './BrandLogo';
 
@@ -34,8 +32,6 @@ export default function Navbar({ onOpenDownloadModal, onOpenPartnerModal }: Navb
 
   const navLinks = [
     { label: 'Solusi', href: '/#solutions', icon: ShoppingBag },
-    { label: 'Cara Kerja', href: '/#how-it-works', icon: Sparkles },
-    { label: 'Aplikasi', href: '/#app', icon: Smartphone },
     { label: 'Dampak Lingkungan', href: '/#impact', icon: Leaf },
     { label: 'Mitra Resto', href: '/#merchant', icon: Store },
     { label: 'Behind ReFeed', href: '/behind-refeed', icon: Users },

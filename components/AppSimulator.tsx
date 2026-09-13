@@ -18,7 +18,7 @@ export default function AppSimulator() {
   const screens = [
     {
       id: 1,
-      image: '/images/1.png',
+      image: '/images/1.webp',
       tag: 'Radar Surplus',
       title: 'Temukan Makanan di Radius 1-5 km',
       summary: 'Pantau diskon 50-70% makanan lezat dari gerai terdekat sebelum toko tutup.',
@@ -26,7 +26,7 @@ export default function AppSimulator() {
     },
     {
       id: 2,
-      image: '/images/2.png',
+      image: '/images/2.webp',
       tag: 'Surprise Bag',
       title: 'Detail Porsi & Info Jam Pickup',
       summary: 'Lihat estimasi porsi makanan, harga hemat, dan waktu penjemputan yang transparan.',
@@ -34,7 +34,7 @@ export default function AppSimulator() {
     },
     {
       id: 3,
-      image: '/images/3.png',
+      image: '/images/3.webp',
       tag: 'Waste Hub',
       title: 'Peta Drop Point Sampah Organik',
       summary: 'Salurkan sisa organik dapur ke Waste Hub dan dapatkan +50 Poin reward per kg.',
@@ -42,7 +42,7 @@ export default function AppSimulator() {
     },
     {
       id: 4,
-      image: '/images/4.png',
+      image: '/images/4.webp',
       tag: 'Pembayaran',
       title: 'Checkout Cepat via QRIS & E-Wallet',
       summary: 'Pembayaran instan dengan kode tiket penjemputan digital otomatis.',
@@ -50,7 +50,7 @@ export default function AppSimulator() {
     },
     {
       id: 5,
-      image: '/images/5.png',
+      image: '/images/5.webp',
       tag: 'Jejak Karbon',
       title: 'Sertifikat & Level Food Hero',
       summary: 'Pantau akumulasi kg makanan diselamatkan dan pohon yang kamu lindungi.',

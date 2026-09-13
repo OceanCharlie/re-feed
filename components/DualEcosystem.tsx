@@ -18,7 +18,7 @@ export default function DualEcosystem({ onOpenDownloadModal }: DualEcosystemProp
       icon: ShoppingBag,
       iconColor: 'text-[#105e3a]',
       iconBg: 'bg-gradient-to-br from-[#E2EED9] to-[#C8DFBC]',
-      image: '/images/croissant_food.png',
+      image: '/images/croissant_food.webp',
       badge: '🥐 Hemat hingga 70%',
     },
     {
@@ -28,7 +28,7 @@ export default function DualEcosystem({ onOpenDownloadModal }: DualEcosystemProp
       icon: Leaf,
       iconColor: 'text-[#105e3a]',
       iconBg: 'bg-gradient-to-br from-[#EAEEDF] to-[#D5E2CB]',
-      image: '/images/earth_leaves.png',
+      image: '/images/earth_leaves.webp',
       badge: null,
     },
     {
@@ -38,7 +38,7 @@ export default function DualEcosystem({ onOpenDownloadModal }: DualEcosystemProp
       icon: Recycle,
       iconColor: 'text-[#1e8939]',
       iconBg: 'bg-gradient-to-br from-[#E2EED9] to-[#C8DFBC]',
-      image: '/images/biogas_dome.png',
+      image: '/images/biogas_dome.webp',
       badge: null,
     },
   ];
