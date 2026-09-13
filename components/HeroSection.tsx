@@ -12,7 +12,7 @@ interface HeroSectionProps {
 
 export default function HeroSection({ onOpenDownloadModal }: HeroSectionProps) {
   return (
-    <section className="relative pt-24 pb-12 sm:pt-32 sm:pb-16 lg:pt-36 lg:pb-20 overflow-hidden bg-[#FAF9F6]">
+    <section className="relative pt-24 pb-12 sm:pt-32 sm:pb-16 lg:pt-36 lg:pb-20 overflow-hidden">
       {/* Background Eco-City Panorama Image */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <Image
@@ -24,8 +24,8 @@ export default function HeroSection({ onOpenDownloadModal }: HeroSectionProps) {
           className="object-cover object-center opacity-85"
         />
         {/* Soft Gradients to ensure text contrast on left while keeping scenery vivid on right */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#FAF9F6] via-[#FAF9F6]/80 to-transparent lg:via-[#FAF9F6]/50" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#FAF9F6]/40 via-transparent to-[#FAF9F6]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#FDFCFA] via-[#FDFCFA]/80 to-transparent lg:via-[#FDFCFA]/50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#FDFCFA]/40 via-transparent to-[#FDFCFA]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -34,12 +34,6 @@ export default function HeroSection({ onOpenDownloadModal }: HeroSectionProps) {
           {/* LEFT COLUMN: Main Typography & CTAs */}
           <div className="lg:col-span-6 text-left space-y-5 sm:space-y-6">
             
-            {/* Pill Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF5E4] text-[#105e3a] text-xs font-bold border border-[#C8D9C2] shadow-2xs">
-              <span>🍃</span>
-              <span>Inisiatif Penyelamat Makanan & Nol Limbah</span>
-            </div>
-
             {/* Bold Headline */}
             <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#141A16] leading-[1.12]">
               Selamatkan <br />
@@ -58,37 +52,22 @@ export default function HeroSection({ onOpenDownloadModal }: HeroSectionProps) {
                 href="https://play.google.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3.5 bg-[#105e3a] hover:bg-[#0c5536] text-white rounded-2xl flex items-center justify-center gap-3 shadow-md hover:shadow-lg transition-all active:scale-98 cursor-pointer group"
+                className="h-14 px-6 bg-black hover:bg-neutral-900 text-white rounded-2xl flex items-center justify-center gap-3 shadow-md hover:shadow-lg transition-all active:scale-98 cursor-pointer group"
               >
-                <div className="w-8 h-8 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-xs">
-                  <GooglePlayIcon size={20} />
-                </div>
+                <GooglePlayIcon size={24} className="shrink-0" />
                 <div className="text-left">
-                  <div className="text-[10px] text-[#DCE4D3] font-bold uppercase tracking-wider leading-none">Download di</div>
+                  <div className="text-[10px] text-neutral-300 font-bold uppercase tracking-wider leading-none">Download di</div>
                   <div className="text-sm sm:text-base font-black leading-tight text-white mt-0.5">Google Play Store</div>
                 </div>
               </a>
 
               <button
                 onClick={onOpenDownloadModal}
-                className="px-5 py-3.5 bg-white hover:bg-[#F6F5F0] text-[#141A16] border border-[#DCE4D3] rounded-2xl flex items-center justify-center gap-2.5 shadow-2xs transition-all active:scale-98 cursor-pointer font-bold text-xs sm:text-sm"
+                className="h-14 px-6 bg-white hover:bg-[#F6F5F0] text-[#141A16] border border-[#DCE4D3] rounded-2xl flex items-center justify-center gap-2.5 shadow-2xs transition-all active:scale-98 cursor-pointer font-bold text-xs sm:text-sm"
               >
-                <QrCode className="w-4 h-4 text-[#105e3a]" />
+                <QrCode className="w-5 h-5 text-[#105e3a] shrink-0" />
                 <span>Pindai QR / Unduh APK</span>
               </button>
-            </div>
-
-            {/* Bottom Status Tags */}
-            <div className="flex flex-wrap items-center gap-2 text-xs text-[#57655B] pt-2">
-              <span className="inline-flex items-center gap-1.5 bg-[#EBF5E4] text-[#105e3a] px-3 py-1 rounded-full font-bold border border-[#C8D9C2]">
-                <span>🌱</span>
-                <span>Android (v1.0 Ready)</span>
-              </span>
-              <span className="text-slate-300">•</span>
-              <span className="inline-flex items-center gap-1.5 bg-white text-[#57655B] px-3 py-1 rounded-full font-medium border border-[#E8EDE5]">
-                <span>🍃</span>
-                <span>What we recover today, feeds tomorrow!</span>
-              </span>
             </div>
 
           </div>

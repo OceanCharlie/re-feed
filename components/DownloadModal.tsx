@@ -13,7 +13,7 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3.5 sm:p-4 bg-black/65 backdrop-blur-md animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3.5 sm:p-4 bg-black/75 animate-in fade-in duration-200" onClick={onClose}>
       <div 
         className="relative w-full max-w-lg p-5 sm:p-8 bg-white rounded-[28px] sm:rounded-[32px] shadow-2xl border border-[#DCE4D3] overflow-hidden max-h-[92vh] overflow-y-auto no-scrollbar text-[#16241C]"
         onClick={(e) => e.stopPropagation()}

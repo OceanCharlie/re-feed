@@ -6,19 +6,17 @@ import {
   Store, 
   Menu, 
   X, 
-  Play, 
   ShoppingBag, 
-  HelpCircle, 
   Smartphone, 
   Leaf, 
   Users, 
   ArrowRight,
   Sparkles
 } from 'lucide-react';
-import { BrandLogo, GooglePlayIcon } from './BrandLogo';
+import { BrandLogo } from './BrandLogo';
 
 interface NavbarProps {
-  onOpenDownloadModal: () => void;
+  onOpenDownloadModal?: () => void;
   onOpenPartnerModal: () => void;
 }
 
@@ -47,21 +45,17 @@ export default function Navbar({ onOpenDownloadModal, onOpenPartnerModal }: Navb
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled || mobileMenuOpen
-          ? 'bg-[#FCFAF7]/95 backdrop-blur-xl py-2.5 sm:py-3 shadow-xs border-b border-[#E8EDE5]' 
-          : 'bg-[#FCFAF7] py-3.5 sm:py-4 border-b border-[#E8EDE5]/80'
+          ? 'bg-white/85 backdrop-blur-xl py-2.5 sm:py-3 shadow-[0_1px_0_0_rgba(16,94,58,0.08),0_8px_24px_-12px_rgba(16,94,58,0.15)] border-b border-[#E8EDE5]'
+          : 'bg-white/50 backdrop-blur-md py-3.5 sm:py-4 border-b border-white/40'
       }`}
     >
       <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 flex items-center justify-between">
         
-        {/* Brand Logo with Version Pill */}
+        {/* Brand Logo */}
         <div className="flex items-center gap-2.5 sm:gap-3">
           <Link href="/" className="group" onClick={() => setMobileMenuOpen(false)}>
             <BrandLogo markSize={30} textColor="#141A16" showTagline={false} />
           </Link>
-          <div className="hidden lg:inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#EBF5E4] text-[10px] font-bold text-[#105e3a] border border-[#C8D9C2]">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#105e3a] animate-pulse" />
-            <span>v1.0 di Android</span>
-          </div>
         </div>
 
         {/* Desktop Nav Links */}
@@ -81,34 +75,22 @@ export default function Navbar({ onOpenDownloadModal, onOpenPartnerModal }: Navb
         <div className="hidden sm:flex items-center gap-3">
           <button
             onClick={onOpenPartnerModal}
-            className="px-3.5 py-2 text-xs sm:text-sm font-bold text-[#105e3a] hover:bg-[#EBF5E4] rounded-xl transition-all flex items-center gap-1.5 cursor-pointer"
+            className="btn-app-primary px-4 py-2 text-xs sm:text-sm font-bold rounded-xl shadow-xs transition-all flex items-center gap-1.5 cursor-pointer"
           >
             <Store className="w-4 h-4" />
             <span>Gabung Mitra</span>
           </button>
-
-          <button
-            onClick={onOpenDownloadModal}
-            className="btn-app-primary px-4 py-2 text-xs sm:text-sm font-bold rounded-xl shadow-xs transition-all flex items-center gap-2 cursor-pointer"
-          >
-            <div className="w-4 h-4 rounded bg-white flex items-center justify-center shrink-0">
-              <GooglePlayIcon size={12} />
-            </div>
-            <span>Google Play</span>
-          </button>
         </div>
 
-        {/* Mobile Menu Toggle & Direct Download Button */}
+        {/* Mobile Menu Toggle & Action Button */}
         <div className="flex items-center gap-2 md:hidden">
           <button
-            onClick={onOpenDownloadModal}
+            onClick={onOpenPartnerModal}
             className="btn-app-primary px-3 py-1.5 text-xs font-bold rounded-xl flex items-center gap-1.5 shadow-2xs cursor-pointer active:scale-95"
-            aria-label="Unduh Aplikasi"
+            aria-label="Gabung Mitra"
           >
-            <div className="w-3.5 h-3.5 rounded bg-white flex items-center justify-center shrink-0">
-              <GooglePlayIcon size={10} />
-            </div>
-            <span>Unduh</span>
+            <Store className="w-3.5 h-3.5" />
+            <span>Mitra</span>
           </button>
           
           <button
@@ -124,7 +106,7 @@ export default function Navbar({ onOpenDownloadModal, onOpenPartnerModal }: Navb
 
       {/* Mobile Menu Dropdown with Modern Card Styling */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#FCFAF7] border-t border-[#E8EDE5] px-4 pt-3 pb-6 space-y-4 shadow-xl max-h-[80vh] overflow-y-auto animate-in slide-in-from-top-2 duration-200">
+        <div className="md:hidden bg-white/95 backdrop-blur-xl border-t border-[#E8EDE5] px-4 pt-3 pb-6 space-y-4 shadow-xl max-h-[80vh] overflow-y-auto animate-in slide-in-from-top-2 duration-200">
           <div className="grid grid-cols-1 gap-1">
             {navLinks.map((link) => {
               const Icon = link.icon;
@@ -153,29 +135,11 @@ export default function Navbar({ onOpenDownloadModal, onOpenPartnerModal }: Navb
                 setMobileMenuOpen(false);
                 onOpenPartnerModal();
               }}
-              className="w-full py-3 px-4 text-xs font-bold text-[#105e3a] bg-white rounded-xl border border-[#C8D9C2] flex items-center justify-center gap-2 shadow-2xs cursor-pointer active:scale-98"
+              className="btn-app-primary w-full py-3 px-4 text-xs font-bold rounded-xl flex items-center justify-center gap-2 shadow-2xs cursor-pointer active:scale-98"
             >
-              <Store className="w-4 h-4 text-[#105e3a]" />
+              <Store className="w-4 h-4 text-white" />
               <span>Gabung Mitra Usaha Kuliner</span>
             </button>
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenDownloadModal();
-              }}
-              className="btn-app-primary w-full py-3 px-4 text-xs font-bold rounded-xl flex items-center justify-center gap-2 shadow-sm cursor-pointer active:scale-98"
-            >
-              <div className="w-4 h-4 rounded bg-white flex items-center justify-center shrink-0">
-                <GooglePlayIcon size={12} />
-              </div>
-              <span>Unduh Aplikasi di Google Play</span>
-            </button>
-          </div>
-
-          <div className="text-center pt-1">
-            <span className="text-[11px] text-[#57655B] font-semibold">
-              🟢 Tersedia di Google Play Store & Direct APK
-            </span>
           </div>
         </div>
       )}

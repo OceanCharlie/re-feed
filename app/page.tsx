@@ -18,7 +18,7 @@ export default function HomePage() {
   const [isPartnerModalOpen, setIsPartnerModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAF9F6] selection:bg-[#105e3a] selection:text-white">
+    <div className="min-h-screen flex flex-col selection:bg-[#105e3a] selection:text-white">
       {/* 1. Minimal Header Navbar */}
       <Navbar
         onOpenDownloadModal={() => setIsDownloadModalOpen(true)}
@@ -46,8 +46,10 @@ export default function HomePage() {
           onOpenPartnerModal={() => setIsPartnerModalOpen(true)}
         />
 
-        {/* 6. Partner Brands Strip */}
-        <PartnerLogosStrip />
+        {/* 6. Pioneer Partner Invitation Section */}
+        <PartnerLogosStrip
+          onOpenPartnerModal={() => setIsPartnerModalOpen(true)}
+        />
 
         {/* 7. Bottom Mascot CTA Card ("Yuk, Mulai Selamatkan Makanan Hari Ini!") */}
         <DownloadCta

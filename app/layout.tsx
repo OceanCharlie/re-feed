@@ -55,10 +55,11 @@ export default function RootLayout({
       className={`${bricolage.variable} ${inter.variable} h-full antialiased scroll-smooth`}
       suppressHydrationWarning
     >
-      <body 
-        className="min-h-full flex flex-col bg-[#F6F5F0] text-[#16241C] font-sans"
+      <body
+        className="min-h-full flex flex-col text-[#16241C] font-sans"
         suppressHydrationWarning
       >
+        <div className="bg-mesh-canvas" aria-hidden="true" />
         {children}
       </body>
     </html>

@@ -44,7 +44,7 @@ export default function PartnerModal({ isOpen, onClose }: PartnerModalProps) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3.5 sm:p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3.5 sm:p-4 bg-black/75 animate-in fade-in duration-200" onClick={onClose}>
       <div 
         className="relative w-full max-w-xl p-5 sm:p-8 bg-white rounded-[28px] sm:rounded-3xl shadow-2xl border border-[#DCE4D3] max-h-[92vh] overflow-y-auto no-scrollbar text-[#16241C]"
         onClick={(e) => e.stopPropagation()}

@@ -9,30 +9,30 @@ export default function ImpactStats() {
       icon: Utensils,
       value: 'Ribuan+',
       label: 'Porsi Makanan Terselamatkan',
-      iconBg: 'bg-[#EBF5E4] text-[#105e3a]',
+      iconBg: 'bg-gradient-to-br from-[#EBF5E4] to-[#DCEAD1] text-[#105e3a]',
     },
     {
       icon: Leaf,
       value: 'Ton+',
       label: 'Emisi CO₂ Berkurang',
-      iconBg: 'bg-[#EBF5E4] text-[#105e3a]',
+      iconBg: 'bg-gradient-to-br from-[#EBF5E4] to-[#DCEAD1] text-[#105e3a]',
     },
     {
       icon: Users,
       value: 'Ratusan+',
       label: 'Mitra Resto & Retail',
-      iconBg: 'bg-[#EBF5E4] text-[#105e3a]',
+      iconBg: 'bg-gradient-to-br from-[#EBF5E4] to-[#DCEAD1] text-[#105e3a]',
     },
     {
       icon: Globe,
       value: 'Satu Tujuan',
       label: 'Bumi yang Lebih Baik',
-      iconBg: 'bg-[#EBF5E4] text-[#105e3a]',
+      iconBg: 'bg-gradient-to-br from-[#EBF5E4] to-[#DCEAD1] text-[#105e3a]',
     },
   ];
 
   return (
-    <section id="impact" className="py-6 sm:py-8 bg-[#FAF9F6]">
+    <section id="impact" className="py-6 sm:py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Clean 4-Column Horizontal Floating Strip Card */}

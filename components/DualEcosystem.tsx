@@ -47,18 +47,13 @@ export default function DualEcosystem({ onOpenDownloadModal }: DualEcosystemProp
   ];
 
   return (
-    <section id="solutions" className="py-16 sm:py-24 bg-[#FAF9F6] relative">
+    <section id="solutions" className="py-16 sm:py-24 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 sm:gap-12 items-center">
           
           {/* LEFT COLUMN: Section Header & Narrative */}
           <div className="lg:col-span-4 text-left space-y-4 sm:space-y-5">
-            <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#EBF5E4] text-[#105e3a] text-xs font-bold border border-[#C8D9C2]">
-              <span>🍃</span>
-              <span>Solusi untuk Masa Depan yang Lebih Baik</span>
-            </div>
-
             <h2 className="text-3xl xs:text-4xl sm:text-5xl font-black text-[#141A16] tracking-tight leading-[1.15]">
               Langkah Kecil, <br />
               Dampak Besar

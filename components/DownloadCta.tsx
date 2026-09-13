@@ -12,17 +12,17 @@ interface DownloadCtaProps {
 
 export default function DownloadCta({ onOpenDownloadModal }: DownloadCtaProps) {
   return (
-    <section className="py-12 sm:py-16 bg-[#FAF9F6] relative overflow-hidden">
+    <section className="py-12 sm:py-16 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Soft Green Rounded Container Card */}
-        <div className="rounded-[32px] sm:rounded-[40px] bg-[#EFF6E9] border border-[#DCE8D4] p-6 sm:p-10 lg:p-12 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative overflow-hidden">
+        <div className="rounded-[32px] sm:rounded-[40px] bg-gradient-to-br from-[#F2F8ED] via-[#EFF6E9] to-[#E4EFDC] border border-[#DCE8D4] p-6 sm:p-10 lg:p-12 shadow-[0_20px_50px_-20px_rgba(16,94,58,0.18)] grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative overflow-hidden">
           
           {/* Left Column: Cute Mascot with Grocery Bag */}
           <div className="lg:col-span-3 flex items-center justify-center relative">
-            <div className="relative w-40 sm:w-48 lg:w-56 h-40 sm:h-48 lg:h-56 drop-shadow-lg">
+            <div className="relative w-40 sm:w-48 lg:w-56 h-40 sm:h-48 lg:h-56">
               <Image
-                src="/images/mascot_bag.png"
+                src="/images/mitra.webp"
                 alt="ReFeed Sprout Mascot with Grocery Bag"
                 fill
                 priority
@@ -67,13 +67,11 @@ export default function DownloadCta({ onOpenDownloadModal }: DownloadCtaProps) {
               href="https://play.google.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full py-3.5 px-5 bg-[#105e3a] hover:bg-[#0c5536] text-white rounded-2xl flex items-center justify-center gap-3 shadow-md hover:shadow-lg transition-all active:scale-98 cursor-pointer group"
+              className="w-full h-14 px-5 bg-black hover:bg-neutral-900 text-white rounded-2xl flex items-center justify-center gap-3 shadow-md hover:shadow-lg transition-all active:scale-98 cursor-pointer group"
             >
-              <div className="w-8 h-8 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-xs">
-                <GooglePlayIcon size={20} />
-              </div>
+              <GooglePlayIcon size={24} className="shrink-0" />
               <div className="text-left">
-                <div className="text-[9px] text-[#DCE4D3] font-bold uppercase tracking-wider leading-none">Download di</div>
+                <div className="text-[9px] text-neutral-300 font-bold uppercase tracking-wider leading-none">Download di</div>
                 <div className="text-xs sm:text-sm font-black leading-tight text-white mt-0.5">Google Play Store</div>
               </div>
             </a>
@@ -81,7 +79,7 @@ export default function DownloadCta({ onOpenDownloadModal }: DownloadCtaProps) {
             {/* QR Scanner Card */}
             <button
               onClick={onOpenDownloadModal}
-              className="w-full py-3 px-4 bg-white hover:bg-[#FAF9F6] text-[#141A16] border border-[#DCE8D4] rounded-2xl flex items-center justify-center gap-3 shadow-2xs transition-all active:scale-98 cursor-pointer"
+              className="w-full h-14 px-4 bg-white hover:bg-[#FAF9F6] text-[#141A16] border border-[#DCE8D4] rounded-2xl flex items-center justify-center gap-3 shadow-2xs transition-all active:scale-98 cursor-pointer"
             >
               <QrCode className="w-5 h-5 text-[#105e3a] shrink-0" />
               <div className="text-left text-xs font-bold leading-tight">

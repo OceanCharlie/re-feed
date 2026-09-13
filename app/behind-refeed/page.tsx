@@ -17,7 +17,13 @@ import {
   Compass,
   CheckCircle2,
   Users,
-  GraduationCap
+  GraduationCap,
+  Code2,
+  Palette,
+  Layers,
+  Database,
+  Building2,
+  Sparkles
 } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -36,40 +42,50 @@ export default function BehindReFeedPage() {
       name: 'Ocean Charlie Gunawan',
       role: 'Front End Developer',
       image: '/images/ocean.png',
-      tag: 'Front End',
+      icon: Code2,
+      skills: ['Expo', 'NextJs', 'React Native', 'Tailwind CSS'],
+      bio: 'Mengembangkan antarmuka interaktif yang responsif, performa tinggi, dan ramah pengguna.',
     },
     {
       name: 'Chandra Wijaya',
       role: 'UI/UX Designer',
       image: '/images/chandra.png',
-      tag: 'UI/UX Design',
+      icon: Palette,
+      skills: ['Figma', 'Design System', 'User Flow'],
+      bio: 'Merancang identitas visual sistemik, estetika sirkular, dan kenyamanan navigasi aplikasi.',
     },
     {
       name: 'Jessica',
       role: 'Project Manager',
       image: '/images/jes.png',
-      tag: 'Project Lead',
+      icon: Sparkles,
+      skills: ['Product Roadmap', 'Agile', 'Operations'],
+      bio: 'Mengorkestrasi milestone riset, koordinasi lintas fungsi, dan manajemen eksekusi ekosistem.',
     },
     {
       name: 'Akemi Belva Sutanto',
       role: 'Integration Engineer',
       image: '/images/akemi.png',
-      tag: 'Integration',
+      icon: Layers,
+      skills: ['API Pipeline', 'Cloud Services', 'Data Sync'],
+      bio: 'Menghubungkan arsitektur frontend dengan pipeline integrasi data analitik dan backend.',
     },
     {
       name: 'Danniel',
       role: 'Back End Developer',
       image: '/images/danniel.png',
-      tag: 'Back End',
+      icon: Database,
+      skills: ['Node.js', 'PostgreSQL', 'Microservices'],
+      bio: 'Membangun arsitektur server terdistribusi, basis data efisien, dan keamanan endpoint.',
     },
   ];
 
   const advisor = {
     name: 'Tony, Ph.D.',
-    role: 'Strategic Advisor & Dosen Pembimbing',
-    institution: 'Universitas Tarumanagara (UNTAR)',
+    role: 'Strategic Advisor',
+    faculty: 'Fakultas Teknologi Informasi',
+    university: 'Universitas Tarumanagara (UNTAR)',
     image: '/images/tony.png',
-    desc: 'Mengarahkan visi strategis, validasi metodologi riset, dan pengawasan arsitektur sistem ekonomi sirkular ReFeed.',
   };
 
   const pillars = [
@@ -141,7 +157,7 @@ export default function BehindReFeedPage() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FCFAF7] text-[#141A16] selection:bg-[#105e3a] selection:text-white">
+    <div className="min-h-screen flex flex-col text-[#141A16] selection:bg-[#105e3a] selection:text-white">
       {/* Navbar */}
       <Navbar
         onOpenDownloadModal={() => setIsDownloadModalOpen(true)}
@@ -151,7 +167,7 @@ export default function BehindReFeedPage() {
       <main className="flex-grow">
         
         {/* 1. Header Section */}
-        <section className="pt-24 pb-12 sm:pt-32 sm:pb-16 md:pt-40 md:pb-20 bg-[#FCFAF7] text-center border-b border-[#E8EDE5]">
+        <section className="pt-24 pb-12 sm:pt-32 sm:pb-16 md:pt-40 md:pb-20 text-center border-b border-[#E8EDE5]/70">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3 sm:space-y-4">
             <Link
               href="/"
@@ -168,108 +184,179 @@ export default function BehindReFeedPage() {
             <p className="text-xs sm:text-base md:text-lg text-[#57655B] max-w-2xl mx-auto leading-relaxed">
               Inovasi anak bangsa dari Universitas Tarumanagara (UNTAR) untuk menghentikan pemborosan makanan dan menyelamatkan lingkungan hidup.
             </p>
+
+            {/* Supporting Institutional Logos */}
+            <div className="pt-6 sm:pt-8 flex flex-col items-center">
+              <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#57655B] mb-3.5">
+                Didukung & Dibina Oleh
+              </span>
+              <div className="inline-flex flex-wrap items-center justify-center gap-5 sm:gap-7 md:gap-9 px-6 sm:px-9 py-3.5 rounded-2xl bg-white border border-[#E8EDE5] shadow-2xs">
+                {/* Kemendikbudristek / Ministry */}
+                <div className="relative h-8 sm:h-9 w-8 sm:w-9 flex items-center justify-center">
+                  <Image
+                    src="/images/Logo_of_Ministry_of_Education_and_Culture_of_Republic_of_Indonesia.svg.webp"
+                    alt="Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi"
+                    fill
+                    className="object-contain"
+                    unoptimized
+                  />
+                </div>
+
+                {/* DIKTI */}
+                <div className="relative h-8 sm:h-9 w-26 sm:w-30 flex items-center justify-center">
+                  <Image
+                    src="/images/dikti.png"
+                    alt="Diktisaintek Berdampak - Kemendikbudristek"
+                    fill
+                    className="object-contain"
+                    unoptimized
+                  />
+                </div>
+
+                {/* SIMBelmawa */}
+                <div className="relative h-8 sm:h-9 w-26 sm:w-30 flex items-center justify-center">
+                  <Image
+                    src="/images/logo-simbelmawa.png"
+                    alt="SIMBelmawa"
+                    fill
+                    className="object-contain"
+                    unoptimized
+                  />
+                </div>
+
+                {/* PKM */}
+                <div className="relative h-8 sm:h-9 w-20 sm:w-24 flex items-center justify-center">
+                  <Image
+                    src="/images/Logo PKM Hor - Warna.9d2ca75b.png"
+                    alt="Program Kreativitas Mahasiswa (PKM)"
+                    fill
+                    className="object-contain"
+                    unoptimized
+                  />
+                </div>
+
+                {/* UNTAR */}
+                <div className="relative h-8 sm:h-9 w-24 sm:w-28 flex items-center justify-center">
+                  <Image
+                    src="/images/Logo-Untar-new.webp"
+                    alt="Universitas Tarumanagara (UNTAR)"
+                    fill
+                    className="object-contain"
+                    unoptimized
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
         {/* 2. Team & Advisor Section */}
-        <section className="py-16 sm:py-20 md:py-28 bg-white border-b border-[#E8EDE5]">
+        <section className="py-20 sm:py-28 border-b border-[#E8EDE5]/70 relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            {/* Section Header */}
-            <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16 space-y-2.5 sm:space-y-3">
-              <span className="inline-block px-3.5 py-1.5 rounded-full bg-[#EBF5E4] text-[#105e3a] text-xs font-bold uppercase tracking-wider border border-[#C8D9C2]">
-                Tim Pengembang & Pembimbing
-              </span>
-              <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-black text-[#141A16] tracking-tight">
-                Orang-Orang di Balik RE-FEED
+            {/* Clean Section Header */}
+            <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20 space-y-3">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF5E4] text-[#105e3a] text-xs font-bold border border-[#C8D9C2]">
+                <Users className="w-3.5 h-3.5" />
+                <span>Universitas Tarumanagara</span>
+              </div>
+              <h2 className="text-3xl xs:text-4xl sm:text-5xl font-black text-[#141A16] tracking-tight">
+                Orang-Orang di Balik <span className="whitespace-nowrap text-[#105e3a]">RE-FEED</span>
               </h2>
-              <p className="text-xs sm:text-base text-[#57655B]">
-                Kolaborasi talenta muda dan bimbingan akademis Universitas Tarumanagara (UNTAR).
+              <p className="text-xs sm:text-base text-[#57655B] leading-relaxed">
+                Inisiatif inovasi mahasiswa dan dosen pembimbing dari Fakultas Teknologi Informasi, Universitas Tarumanagara (UNTAR).
               </p>
             </div>
 
-            {/* Team Members Grid (2 Columns on mobile, 5 on desktop) */}
-            <div className="mb-12 sm:mb-16">
-              <div className="text-left mb-6 sm:mb-8 flex items-center gap-2.5">
-                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-[#EBF5E4] text-[#105e3a] flex items-center justify-center font-bold">
-                  <Users className="w-4 h-4" />
-                </div>
-                <h3 className="text-lg sm:text-2xl font-black text-[#141A16]">
-                  Anggota Tim RE-FEED
-                </h3>
-              </div>
-
-              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-6">
-                {teamMembers.map((member, idx) => (
-                  <div
-                    key={idx}
-                    className="app-card rounded-2xl sm:rounded-3xl overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1"
-                  >
-                    {/* Portrait Image (4:5 Aspect) */}
-                    <div className="relative aspect-[4/5] w-full bg-gradient-to-b from-[#EBF5E4] via-[#F4F9F0] to-[#FAFBF9] flex items-end justify-center overflow-hidden border-b border-[#E8EDE5]">
-                      <Image
-                        src={member.image}
-                        alt={member.name}
-                        fill
-                        priority
-                        className="object-contain object-bottom group-hover:scale-105 transition-transform duration-500"
-                      />
-                    </div>
-
-                    {/* Content Box */}
-                    <div className="p-3 sm:p-5 bg-white text-left space-y-0.5 sm:space-y-1">
-                      <span className="text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded-md bg-[#FCFAF7] border border-[#E8EDE5] text-[#57655B] uppercase inline-block">
-                        {member.tag}
-                      </span>
-                      <h4 className="text-xs sm:text-base font-black text-[#141A16] pt-0.5 leading-snug truncate">
-                        {member.name}
-                      </h4>
-                      <div className="text-[10px] sm:text-xs font-bold text-[#105e3a] truncate">
-                        {member.role}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Dosen Pembimbing Grid */}
-            <div className="pt-6 sm:pt-8 border-t border-[#E8EDE5]">
-              <div className="text-left mb-6 sm:mb-8 flex items-center gap-2.5">
-                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-[#EBF5E4] text-[#105e3a] flex items-center justify-center font-bold">
-                  <GraduationCap className="w-4 h-4" />
-                </div>
-                <h3 className="text-lg sm:text-2xl font-black text-[#141A17]">
+            {/* Dosen Pembimbing (Tony, Ph.D.) - Ringkas, Tanpa Fluff */}
+            <div className="pt-12 sm:pt-14 border-t border-[#E8EDE5]">
+              <div className="text-center mb-8 sm:mb-10">
+                <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#105e3a]">
                   Dosen Pembimbing
-                </h3>
+                </span>
               </div>
 
-              <div className="app-card rounded-2xl sm:rounded-3xl overflow-hidden max-w-2xl mx-auto flex flex-col sm:flex-row items-center p-5 sm:p-8 gap-5 sm:gap-8 bg-gradient-to-r from-white via-[#FCFAF7] to-[#F4F9F0]">
-                {/* Advisor Photo */}
-                <div className="relative w-36 sm:w-48 aspect-[4/5] rounded-2xl overflow-hidden bg-gradient-to-b from-[#EBF5E4] to-[#FAFBF9] shrink-0 border border-[#E8EDE5]">
+              <div className="flex flex-col items-center group cursor-default">
+                <div className="relative w-44 sm:w-48 aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-to-b from-[#EEF4E8] to-[#DFE9DA] mb-3.5 shadow-xs border border-[#D5E2CE]/60">
                   <Image
                     src={advisor.image}
                     alt={advisor.name}
                     fill
-                    className="object-contain object-bottom"
+                    priority
+                    unoptimized
+                    className="object-contain object-bottom group-hover:scale-105 transition-transform duration-500 ease-out"
                   />
+                  <div className="absolute top-2.5 right-2.5 w-8 h-8 rounded-xl bg-white/90 backdrop-blur-sm text-[#105e3a] flex items-center justify-center shadow-xs border border-white">
+                    <GraduationCap className="w-4 h-4" />
+                  </div>
                 </div>
 
-                {/* Advisor Details */}
-                <div className="space-y-2 text-center sm:text-left">
-                  <span className="inline-block px-3 py-1 rounded-full bg-[#EBF5E4] text-[#105e3a] text-xs font-bold uppercase tracking-wider border border-[#C8D9C2]">
-                    Dosen Pembimbing
-                  </span>
-                  <h4 className="text-xl sm:text-2xl font-black text-[#141A16]">
-                    {advisor.name}
-                  </h4>
-                  <div className="text-xs sm:text-sm font-bold text-[#105e3a]">
-                    {advisor.role} • <span className="text-[#57655B] font-semibold">{advisor.institution}</span>
-                  </div>
-                  <p className="text-xs sm:text-sm text-[#57655B] leading-relaxed pt-1">
-                    {advisor.desc}
-                  </p>
-                </div>
+                <h3 className="text-lg sm:text-xl font-black text-[#141A16] tracking-tight group-hover:text-[#105e3a] transition-colors">
+                  {advisor.name}
+                </h3>
+                <p className="text-xs sm:text-sm font-bold text-[#105e3a] mt-0.5">
+                  {advisor.role}
+                </p>
+                <p className="text-xs text-[#57655B] mt-0.5 inline-flex items-center gap-1.5">
+                  <Building2 className="w-3.5 h-3.5 shrink-0" />
+                  <span>{advisor.faculty} • {advisor.university}</span>
+                </p>
+              </div>
+            </div>
+
+            {/* Tim Pengembang Mahasiswa (5 Anggota) */}
+            <div className="pt-12 sm:pt-14 border-t border-[#E8EDE5]">
+              <div className="text-center mb-8 sm:mb-10">
+                <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#105e3a]">
+                  Tim Pengembang Mahasiswa
+                </span>
+              </div>
+
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 sm:gap-6 lg:gap-7 items-start text-center">
+                {teamMembers.map((member, idx) => {
+                  const Icon = member.icon;
+                  return (
+                    <div key={idx} className="flex flex-col items-center group cursor-default">
+                      <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-to-b from-[#EEF4E8] to-[#DFE9DA] mb-3.5 shadow-xs border border-[#D5E2CE]/60">
+                        <Image
+                          src={member.image}
+                          alt={member.name}
+                          fill
+                          unoptimized
+                          className="object-contain object-bottom group-hover:scale-105 transition-transform duration-500 ease-out"
+                        />
+                        <div className="absolute top-2.5 right-2.5 w-8 h-8 rounded-xl bg-white/90 backdrop-blur-sm text-[#105e3a] flex items-center justify-center shadow-xs border border-white">
+                          <Icon className="w-4 h-4" />
+                        </div>
+                        {/* Bio reveal on hover (desktop) */}
+                        <div className="absolute inset-x-0 bottom-0 p-3 pt-8 bg-gradient-to-t from-[#0b4d2e]/95 via-[#105e3a]/75 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          <p className="text-[10px] sm:text-[11px] text-white leading-snug text-left">
+                            {member.bio}
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="space-y-1.5">
+                        <h4 className="text-sm sm:text-base font-black text-[#141A16] tracking-tight group-hover:text-[#105e3a] transition-colors leading-snug">
+                          {member.name}
+                        </h4>
+                        <p className="text-xs sm:text-sm font-bold text-[#105e3a]">
+                          {member.role}
+                        </p>
+                        <div className="flex flex-wrap items-center justify-center gap-1 pt-0.5">
+                          {member.skills.slice(0, 2).map((skill) => (
+                            <span
+                              key={skill}
+                              className="text-[9px] sm:text-[10px] font-semibold text-[#57655B] bg-[#F4F9F0] border border-[#E8EDE5] px-2 py-0.5 rounded-full"
+                            >
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
 
@@ -277,10 +364,10 @@ export default function BehindReFeedPage() {
         </section>
 
         {/* 3. The Genesis Story */}
-        <section className="py-16 sm:py-24 bg-[#FCFAF7] border-b border-[#E8EDE5]">
+        <section className="py-16 sm:py-24 border-b border-[#E8EDE5]/70">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
-              
+
               <div className="md:col-span-7 space-y-4 sm:space-y-5 text-left">
                 <span className="inline-block px-3.5 py-1.5 rounded-full bg-[#EBF5E4] text-[#105e3a] text-xs font-bold uppercase tracking-wider border border-[#C8D9C2]">
                   Paradoks Pangan
@@ -323,9 +410,9 @@ export default function BehindReFeedPage() {
         </section>
 
         {/* 4. Tiga Pilar Ekosistem */}
-        <section className="py-16 sm:py-24 bg-white border-b border-[#E8EDE5]">
+        <section className="py-16 sm:py-24 bg-white/85 border-b border-[#E8EDE5]/70">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
+
             <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16 space-y-2.5 sm:space-y-3">
               <span className="inline-block px-3.5 py-1.5 rounded-full bg-[#EBF5E4] text-[#105e3a] text-xs font-bold uppercase tracking-wider border border-[#C8D9C2]">
                 Model Ekosistem Sirkular
@@ -357,9 +444,12 @@ export default function BehindReFeedPage() {
                         <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/90 text-[#141A16] text-[10px] font-black uppercase shadow-xs">
                           {pillar.tag}
                         </div>
+                        <div className="absolute -bottom-5 left-5 w-10 h-10 rounded-2xl bg-white text-[#105e3a] flex items-center justify-center shadow-md border border-[#E8EDE5]">
+                          <Icon className="w-5 h-5" />
+                        </div>
                       </div>
 
-                      <div className="p-5 sm:p-6 space-y-1.5 sm:space-y-2">
+                      <div className="p-5 sm:p-6 pt-4 space-y-1.5 sm:space-y-2">
                         <div className="text-xs font-bold text-[#105e3a] uppercase tracking-wider">
                           {pillar.subtitle}
                         </div>
@@ -387,9 +477,9 @@ export default function BehindReFeedPage() {
         </section>
 
         {/* 5. Teknologi */}
-        <section className="py-16 sm:py-24 bg-[#FCFAF7] border-b border-[#E8EDE5]">
+        <section className="py-16 sm:py-24 border-b border-[#E8EDE5]/70">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            
+
             <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16 space-y-2.5 sm:space-y-3">
               <span className="inline-block px-3.5 py-1.5 rounded-full bg-[#EBF5E4] text-[#105e3a] text-xs font-bold uppercase tracking-wider border border-[#C8D9C2]">
                 Inovasi Teknologi
@@ -428,9 +518,9 @@ export default function BehindReFeedPage() {
         </section>
 
         {/* 6. Nilai Inti */}
-        <section className="py-16 sm:py-24 bg-white border-b border-[#E8EDE5]">
+        <section className="py-16 sm:py-24 bg-white/85 border-b border-[#E8EDE5]/70">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            
+
             <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16 space-y-2.5 sm:space-y-3">
               <span className="inline-block px-3.5 py-1.5 rounded-full bg-[#EBF5E4] text-[#105e3a] text-xs font-bold uppercase tracking-wider border border-[#C8D9C2]">
                 Prinsip Kami

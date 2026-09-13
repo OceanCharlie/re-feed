@@ -1,6 +1,5 @@
-'use client';
-
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Mail } from 'lucide-react';
 import { BrandLogo } from './BrandLogo';
@@ -12,7 +11,7 @@ interface FooterProps {
 
 export default function Footer({ onOpenDownloadModal, onOpenPartnerModal }: FooterProps) {
   return (
-    <footer className="bg-[#FAF9F6] border-t border-[#E8EDE5] py-8 sm:py-10 text-[#57655B]">
+    <footer className="border-t border-[#E8EDE5] py-8 sm:py-10 text-[#57655B]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
@@ -84,6 +83,35 @@ export default function Footer({ onOpenDownloadModal, onOpenPartnerModal }: Foot
             </a>
           </div>
 
+        </div>
+
+        {/* Supporting Institutional Logos Strip */}
+        <div className="mt-8 pt-6 border-t border-[#E8EDE5] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#57655B]">
+          <div className="flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left">
+            <span className="font-semibold text-xs text-[#57655B]">
+              Didukung oleh:
+            </span>
+            <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 opacity-85 hover:opacity-100 transition-opacity">
+              <div className="relative h-6 w-6">
+                <Image src="/images/Logo_of_Ministry_of_Education_and_Culture_of_Republic_of_Indonesia.svg.webp" alt="Kemendikbudristek" fill className="object-contain" unoptimized />
+              </div>
+              <div className="relative h-6 w-20">
+                <Image src="/images/Logo-Untar-new.webp" alt="Universitas Tarumanagara" fill className="object-contain" unoptimized />
+              </div>
+              <div className="relative h-6 w-24">
+                <Image src="/images/dikti.png" alt="Diktisaintek" fill className="object-contain" unoptimized />
+              </div>
+              <div className="relative h-6 w-16">
+                <Image src="/images/Logo PKM Hor - Warna.9d2ca75b.png" alt="PKM" fill className="object-contain" unoptimized />
+              </div>
+              <div className="relative h-6 w-24">
+                <Image src="/images/logo-simbelmawa.png" alt="SIMBelmawa" fill className="object-contain" unoptimized />
+              </div>
+            </div>
+          </div>
+          <span className="text-[11px] text-[#57655B]/80 text-center sm:text-right">
+            &copy; {new Date().getFullYear()} ReFeed. All rights reserved.
+          </span>
         </div>
 
       </div>
