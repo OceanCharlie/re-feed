@@ -6,6 +6,9 @@
   RewriteCond %{HTTPS} off
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+  # Redirect robot.txt (typo/singular) to robots.txt (standard SEO)
+  RewriteRule ^robot\.txt$ /robots.txt [L,R=301]
+
   # If requested resource exists as a file or directory, serve it directly
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
