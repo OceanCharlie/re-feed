@@ -23,7 +23,8 @@ import {
   Layers,
   Database,
   Building2,
-  Sparkles
+  Sparkles,
+  ExternalLink
 } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -31,6 +32,14 @@ import DownloadModal from '@/components/DownloadModal';
 import PartnerModal from '@/components/PartnerModal';
 import FloatingCta from '@/components/FloatingCta';
 import { GooglePlayIcon } from '@/components/BrandLogo';
+
+function LinkedinIcon({ className = "w-3.5 h-3.5" }: { className?: string }) {
+  return (
+    <svg className={className} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64a1.66 1.66 0 1 0-.01 3.32 1.66 1.66 0 0 0 .01-3.32Z" />
+    </svg>
+  );
+}
 
 export default function BehindReFeedPage() {
   const [isDownloadModalOpen, setIsDownloadModalOpen] = useState(false);
@@ -45,6 +54,7 @@ export default function BehindReFeedPage() {
       icon: Code2,
       skills: ['React Native', 'NextJs', 'Expo', 'Tailwind CSS'],
       bio: 'Mengembangkan antarmuka interaktif yang responsif, performa tinggi, dan ramah pengguna.',
+      linkedin: 'https://www.linkedin.com/in/oceancharliegunawan/',
     },
     {
       name: 'Chandra Wijaya',
@@ -53,6 +63,7 @@ export default function BehindReFeedPage() {
       icon: Palette,
       skills: ['Figma', 'Design System', 'User Flow'],
       bio: 'Merancang identitas visual sistemik, estetika sirkular, dan kenyamanan navigasi aplikasi.',
+      linkedin: 'https://www.linkedin.com/in/chandra-wijaya',
     },
     {
       name: 'Jessica',
@@ -61,6 +72,7 @@ export default function BehindReFeedPage() {
       icon: Sparkles,
       skills: ['Product Roadmap', 'Agile', 'Operations'],
       bio: 'Mengorkestrasi milestone riset, koordinasi lintas fungsi, dan manajemen eksekusi ekosistem.',
+      linkedin: 'https://www.linkedin.com/in/jessica-jessica',
     },
     {
       name: 'Akemi Belva Sutanto',
@@ -69,6 +81,7 @@ export default function BehindReFeedPage() {
       icon: Layers,
       skills: ['API Pipeline', 'Cloud Services', 'Data Sync'],
       bio: 'Menghubungkan arsitektur frontend dengan pipeline integrasi data analitik dan backend.',
+      linkedin: 'https://www.linkedin.com/in/akemi-belva-sutanto-064061296/',
     },
     {
       name: 'Danniel',
@@ -77,6 +90,7 @@ export default function BehindReFeedPage() {
       icon: Database,
       skills: ['Node.js', 'PostgreSQL', 'Microservices'],
       bio: 'Membangun arsitektur server terdistribusi, basis data efisien, dan keamanan endpoint.',
+      linkedin: 'https://www.linkedin.com/in/danniel-a5a918252/',
     },
   ];
 
@@ -86,6 +100,7 @@ export default function BehindReFeedPage() {
     faculty: 'Fakultas Teknologi Informasi',
     university: 'Universitas Tarumanagara (UNTAR)',
     image: '/images/tony.webp',
+    linkedin: 'https://www.linkedin.com/in/tony-lie-b57a195/',
   };
 
   const pillars = [
@@ -276,8 +291,14 @@ export default function BehindReFeedPage() {
                 </span>
               </div>
 
-              <div className="flex flex-col items-center group cursor-default">
-                <div className="relative w-44 sm:w-48 aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-to-b from-[#EEF4E8] to-[#DFE9DA] mb-3.5 shadow-xs border border-[#D5E2CE]/60">
+              <a
+                href={advisor.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center group cursor-pointer max-w-xs mx-auto"
+                title={`Kunjungi profil LinkedIn ${advisor.name}`}
+              >
+                <div className="relative w-44 sm:w-48 aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-to-b from-[#EEF4E8] to-[#DFE9DA] mb-3.5 shadow-xs border border-[#D5E2CE]/60 transition-all duration-300 group-hover:shadow-md group-hover:border-[#105e3a]/40">
                   <Image
                     src={advisor.image}
                     alt={advisor.name}
@@ -286,14 +307,22 @@ export default function BehindReFeedPage() {
                     unoptimized
                     className="object-contain object-bottom group-hover:scale-105 transition-transform duration-500 ease-out"
                   />
+                  {/* LinkedIn badge top-left */}
+                  <div className="absolute top-2.5 left-2.5 w-8 h-8 rounded-xl bg-white/90 backdrop-blur-sm text-[#0A66C2] flex items-center justify-center shadow-xs border border-white group-hover:bg-[#0A66C2] group-hover:text-white transition-all">
+                    <LinkedinIcon className="w-4 h-4" />
+                  </div>
+                  {/* Role icon top-right */}
                   <div className="absolute top-2.5 right-2.5 w-8 h-8 rounded-xl bg-white/90 backdrop-blur-sm text-[#105e3a] flex items-center justify-center shadow-xs border border-white">
                     <GraduationCap className="w-4 h-4" />
                   </div>
                 </div>
 
-                <h3 className="text-lg sm:text-xl font-black text-[#141A16] tracking-tight group-hover:text-[#105e3a] transition-colors">
-                  {advisor.name}
-                </h3>
+                <div className="flex items-center gap-1.5">
+                  <h3 className="text-lg sm:text-xl font-black text-[#141A16] tracking-tight group-hover:text-[#0A66C2] transition-colors">
+                    {advisor.name}
+                  </h3>
+                  <ExternalLink className="w-3.5 h-3.5 text-[#57655B] group-hover:text-[#0A66C2] transition-colors" />
+                </div>
                 <p className="text-xs sm:text-sm font-bold text-[#105e3a] mt-0.5">
                   {advisor.role}
                 </p>
@@ -301,7 +330,7 @@ export default function BehindReFeedPage() {
                   <Building2 className="w-3.5 h-3.5 shrink-0" />
                   <span>{advisor.faculty} • {advisor.university}</span>
                 </p>
-              </div>
+              </a>
             </div>
 
             {/* Tim Pengembang Mahasiswa (5 Anggota) */}
@@ -316,8 +345,15 @@ export default function BehindReFeedPage() {
                 {teamMembers.map((member, idx) => {
                   const Icon = member.icon;
                   return (
-                    <div key={idx} className="flex flex-col items-center group cursor-default">
-                      <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-to-b from-[#EEF4E8] to-[#DFE9DA] mb-3.5 shadow-xs border border-[#D5E2CE]/60">
+                    <a
+                      key={idx}
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex flex-col items-center group cursor-pointer"
+                      title={`Kunjungi profil LinkedIn ${member.name}`}
+                    >
+                      <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-to-b from-[#EEF4E8] to-[#DFE9DA] mb-3.5 shadow-xs border border-[#D5E2CE]/60 transition-all duration-300 group-hover:shadow-md group-hover:border-[#105e3a]/40">
                         <Image
                           src={member.image}
                           alt={member.name}
@@ -325,21 +361,33 @@ export default function BehindReFeedPage() {
                           unoptimized
                           className="object-contain object-bottom group-hover:scale-105 transition-transform duration-500 ease-out"
                         />
-                        <div className="absolute top-2.5 right-2.5 w-8 h-8 rounded-xl bg-white/90 backdrop-blur-sm text-[#105e3a] flex items-center justify-center shadow-xs border border-white">
-                          <Icon className="w-4 h-4" />
+                        {/* LinkedIn badge top-left */}
+                        <div className="absolute top-2.5 left-2.5 w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-white/90 backdrop-blur-sm text-[#0A66C2] flex items-center justify-center shadow-xs border border-white group-hover:bg-[#0A66C2] group-hover:text-white transition-all">
+                          <LinkedinIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                        </div>
+                        {/* Role icon top-right */}
+                        <div className="absolute top-2.5 right-2.5 w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-white/90 backdrop-blur-sm text-[#105e3a] flex items-center justify-center shadow-xs border border-white">
+                          <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                         </div>
                         {/* Bio reveal on hover (desktop) */}
                         <div className="absolute inset-x-0 bottom-0 p-3 pt-8 bg-gradient-to-t from-[#0b4d2e]/95 via-[#105e3a]/75 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                           <p className="text-[10px] sm:text-[11px] text-white leading-snug text-left">
                             {member.bio}
                           </p>
+                          <div className="mt-2 inline-flex items-center gap-1 text-[10px] font-bold text-[#8fc22a]">
+                            <span>Buka LinkedIn</span>
+                            <ExternalLink className="w-3 h-3" />
+                          </div>
                         </div>
                       </div>
 
-                      <div className="space-y-1.5">
-                        <h4 className="text-sm sm:text-base font-black text-[#141A16] tracking-tight group-hover:text-[#105e3a] transition-colors leading-snug">
-                          {member.name}
-                        </h4>
+                      <div className="space-y-1.5 w-full">
+                        <div className="flex items-center justify-center gap-1">
+                          <h4 className="text-sm sm:text-base font-black text-[#141A16] tracking-tight group-hover:text-[#0A66C2] transition-colors leading-snug">
+                            {member.name}
+                          </h4>
+                          <ExternalLink className="w-3 h-3 text-[#57655B] opacity-0 group-hover:opacity-100 group-hover:text-[#0A66C2] transition-all" />
+                        </div>
                         <p className="text-xs sm:text-sm font-bold text-[#105e3a]">
                           {member.role}
                         </p>
@@ -354,7 +402,7 @@ export default function BehindReFeedPage() {
                           ))}
                         </div>
                       </div>
-                    </div>
+                    </a>
                   );
                 })}
               </div>
