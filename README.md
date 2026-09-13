@@ -1,36 +1,161 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌱 ReFeed — Selamatkan Makanan, Selamatkan Bumi
 
-## Getting Started
+Website resmi **ReFeed**, platform yang menghubungkan restoran, bakery, dan supermarket dengan konsumen untuk menyelamatkan makanan surplus berkualitas dengan diskon hingga 70%, sekaligus mengelola limbah organik menjadi energi biogas melalui jaringan **Waste Hub**.
 
-First, run the development server:
+Proyek ini merupakan inovasi mahasiswa **Fakultas Teknologi Informasi, Universitas Tarumanagara (UNTAR)** di bawah program **PKM (Program Kreativitas Mahasiswa) Kemendikbudristek**.
+
+🔗 **Live site:** [refeed-indonesia.com](https://refeed-indonesia.com)
+
+---
+
+## ✨ Fitur Utama Website
+
+- **Landing page** lengkap: hero, statistik dampak, ekosistem solusi (surplus food, waste-to-energy, food bank), cerita dampak lingkungan, kemitraan merchant, dan CTA unduh aplikasi.
+- **Kalkulator interaktif** — simulasi penghematan konsumen (`PersonalSavingsCalculator`) dan proyeksi omzet tambahan mitra usaha (`PartnerCalculator`).
+- **Simulator aplikasi** — pratinjau antarmuka mobile ReFeed (`AppSimulator`) dan simulasi radar surplus makanan langsung (`LiveRadarSimulator`).
+- **Halaman "Behind ReFeed"** — profil tim, dosen pembimbing, tiga pilar ekosistem, teknologi, dan nilai inti.
+- **Modal pendaftaran mitra & unduh aplikasi** dengan validasi form dan efek confetti saat submit berhasil.
+- Desain **glassmorphism futuristik** — mesh gradient 4 titik (putih & hijau), kartu kaca (`app-card`, `glass-panel`), dan aksen glow yang konsisten di seluruh halaman, sepenuhnya responsif dari 400px ke atas.
+
+---
+
+## 🛠️ Tech Stack
+
+| Kategori | Teknologi |
+| --- | --- |
+| Framework | [Next.js 16](https://nextjs.org) (App Router, Turbopack, Static Export) |
+| Bahasa | TypeScript |
+| UI Library | React 19 |
+| Styling | Tailwind CSS v4 |
+| Ikon | [lucide-react](https://lucide.dev) |
+| Efek | [canvas-confetti](https://www.npmjs.com/package/canvas-confetti) |
+| Font | Bricolage Grotesque (display) & Inter (body) via `next/font` |
+| Linting | ESLint (`eslint-config-next`) |
+| CI/CD | GitHub Actions → FTP deploy ke cPanel (lihat [`docs/DEPLOYMENT_GUIDE.md`](docs/DEPLOYMENT_GUIDE.md)) |
+
+> Proyek ini dikonfigurasi sebagai **static export** (`output: 'export'` di `next.config.ts`) agar bisa di-hosting di shared hosting cPanel tanpa Node.js runtime.
+
+---
+
+## 📂 Struktur Proyek
+
+```
+re-feed/
+├── app/
+│   ├── page.tsx                # Landing page utama (route "/")
+│   ├── layout.tsx              # Root layout, metadata, font, background mesh
+│   ├── globals.css             # Design system: warna, gradient mesh, utility class
+│   ├── favicon.ico
+│   └── behind-refeed/
+│       └── page.tsx            # Halaman "Behind ReFeed" (profil tim & cerita)
+├── components/
+│   ├── Navbar.tsx               ├── HeroSection.tsx
+│   ├── ImpactStats.tsx          ├── DualEcosystem.tsx
+│   ├── ScenicStoryBanner.tsx    ├── PartnerLogosStrip.tsx
+│   ├── DownloadCta.tsx          ├── Footer.tsx
+│   ├── FloatingCta.tsx          ├── DownloadModal.tsx
+│   ├── PartnerModal.tsx         ├── FeaturesBento.tsx
+│   ├── HowItWorks.tsx           ├── AppSimulator.tsx
+│   ├── LiveRadarSimulator.tsx   ├── PartnerCalculator.tsx
+│   ├── PersonalSavingsCalculator.tsx
+│   ├── Testimonials.tsx         ├── FaqSection.tsx
+│   ├── PartnerMarquee.tsx       └── BrandLogo.tsx
+├── public/
+│   └── images/                  # Aset gambar, mockup, dan logo mitra/institusi
+├── docs/
+│   └── DEPLOYMENT_GUIDE.md      # Panduan lengkap deploy ke cPanel via GitHub Actions
+├── .github/workflows/deploy.yml # Workflow CI/CD (build + FTP sync ke cPanel)
+├── AGENTS.md                    # Catatan versi Next.js untuk AI coding agent
+├── next.config.ts
+└── package.json
+```
+
+> Beberapa komponen (`HowItWorks`, `AppSimulator`, `FeaturesBento`, `Testimonials`, `FaqSection`, `PartnerCalculator`, `PartnerMarquee`, `PersonalSavingsCalculator`, `LiveRadarSimulator`) sudah dibuat tapi belum tentu ter-render di `app/page.tsx` saat ini — cek import di file tersebut sebelum menambah link navigasi baru ke section-nya.
+
+---
+
+## 🚀 Getting Started
+
+### Prasyarat
+- Node.js 20+
+- npm (project menggunakan `package-lock.json`)
+
+### Instalasi
+
+```bash
+git clone https://github.com/<org>/re-feed.git
+cd re-feed
+npm install
+```
+
+### Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Buka [http://localhost:3000](http://localhost:3000) — halaman auto-reload saat file di-edit (mulai dari `app/page.tsx`).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build & Static Export
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+Hasil build statis (HTML/CSS/JS) akan ada di folder `out/`, siap di-upload ke hosting statis mana pun.
 
-To learn more about Next.js, take a look at the following resources:
+### Menjalankan hasil build secara lokal
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npx serve out
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Lint
 
-## Deploy on Vercel
+```bash
+npm run lint
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🌐 Deployment
+
+Website ini di-deploy otomatis ke **cPanel (Biznet Gio)** setiap ada push ke branch `main`, melalui GitHub Actions yang men-build project lalu mengirim isi folder `out/` ke `public_html` via FTP.
+
+Panduan lengkap (konfigurasi `next.config.ts`, `.htaccess`, GitHub Secrets, DNS, SSL, hingga troubleshooting) ada di **[`docs/DEPLOYMENT_GUIDE.md`](docs/DEPLOYMENT_GUIDE.md)**.
+
+Alur update harian:
+
+```bash
+git add .
+git commit -m "update konten halaman utama"
+git push origin main
+```
+
+Dalam ~30–60 detik perubahan otomatis live di [refeed-indonesia.com](https://refeed-indonesia.com).
+
+---
+
+## 🎨 Design System Singkat
+
+Warna & efek visual dipusatkan di `app/globals.css` sebagai CSS variables & utility class, dipakai berulang lintas komponen:
+
+- `--forest-primary`, `--spring-green`, `--lime-accent` — palet hijau utama.
+- `.bg-mesh-canvas` / `.bg-mesh-soft` — gradient mesh 4 titik (putih + hijau) yang jadi identitas visual di belakang seluruh halaman.
+- `.app-card` / `.glass-panel` — kartu glassmorphism dengan efek blur & glow saat hover.
+- `.badge-glow` / `.text-gradient-brand` — badge pill & teks gradien untuk penekanan visual.
+- `.btn-app-primary` / `.btn-app-secondary` — tombol CTA dengan efek shine & glow.
+
+Ubah token warna di `:root` pada `app/globals.css` untuk menyesuaikan tema secara global.
+
+---
+
+## 👥 Tim
+
+Dikembangkan oleh mahasiswa Fakultas Teknologi Informasi, Universitas Tarumanagara (UNTAR) di bawah bimbingan dosen, dengan dukungan Kemendikbudristek, Diktisaintek, dan SIMBelmawa melalui program PKM. Profil lengkap tim ada di halaman [`/behind-refeed`](https://refeed-indonesia.com/behind-refeed).
+
+---
+
+## 📄 Lisensi
+
+Proyek internal tim ReFeed / UNTAR — belum ditentukan lisensi publik. Hubungi tim melalui [pkmkc.refeed@gmail.com](mailto:pkmkc.refeed@gmail.com) untuk pertanyaan penggunaan kode.

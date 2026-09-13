@@ -85,8 +85,8 @@ export default function BehindReFeedPage() {
       role: 'Back End Developer',
       image: '/images/danniel.webp',
       icon: Database,
-      skills: ['Node.js', 'PostgreSQL', 'Microservices'],
-      bio: 'Membangun arsitektur server terdistribusi, basis data efisien, dan keamanan endpoint.',
+      skills: ['Spring Boot', 'MySQL', 'REST API'],
+      bio: 'Membangun arsitektur backend Spring Boot, basis data MySQL efisien, dan keamanan endpoint.',
       linkedin: 'https://www.linkedin.com/in/danniel-a5a918252/',
     },
   ];
