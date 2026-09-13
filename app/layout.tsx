@@ -42,6 +42,9 @@ export const metadata: Metadata = {
     title: "ReFeed - Solusi Penyelamat Surplus Makanan",
     description: "Hemat hingga 70% belanja kuliner & kurangi jejak karbon bersama aplikasi mobile ReFeed.",
   },
+  verification: {
+    google: "cm8M5zlfkecT_bE5fpywJ30VGvJAHbvgvAOUhiqWa7U",
+  },
 };
 
 export default function RootLayout({
