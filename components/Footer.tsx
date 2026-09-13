@@ -48,11 +48,12 @@ export default function Footer({}: FooterProps) {
           <div className="flex items-center gap-3 text-[#141A16]">
             {/* Instagram */}
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/pkmkc.refeed/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 rounded-full glass-panel flex items-center justify-center text-[#57655B] hover:text-[#105e3a] hover:border-[#8fc22a]/60 hover:shadow-[0_0_14px_-2px_rgba(143,194,42,0.5)] transition-all"
               aria-label="Instagram"
+              title="Ikuti Instagram @pkmkc.refeed"
             >
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
