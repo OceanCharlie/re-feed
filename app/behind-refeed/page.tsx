@@ -6,13 +6,11 @@ import Link from 'next/link';
 import {
   ArrowLeft,
   ShieldCheck,
-  Leaf,
   Zap,
   HeartHandshake,
   ShoppingBag,
   Cpu,
   BarChart3,
-  Play,
   Store,
   Compass,
   CheckCircle2,
@@ -22,7 +20,6 @@ import {
   Palette,
   Layers,
   Database,
-  Building2,
   Sparkles,
   ExternalLink
 } from 'lucide-react';
@@ -228,7 +225,7 @@ export default function BehindReFeedPage() {
                   href="https://dikti.kemdikbud.go.id/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative h-8 sm:h-9 w-26 sm:w-30 flex items-center justify-center hover:scale-110 transition-transform duration-200 cursor-pointer"
+                  className="relative h-8 sm:h-9 w-28 sm:w-32 flex items-center justify-center hover:scale-110 transition-transform duration-200 cursor-pointer"
                   title="Direktorat Jenderal Pendidikan Tinggi (DIKTI)"
                 >
                   <Image
@@ -245,7 +242,7 @@ export default function BehindReFeedPage() {
                   href="https://simbelmawa.kemdikbud.go.id/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative h-8 sm:h-9 w-26 sm:w-30 flex items-center justify-center hover:scale-110 transition-transform duration-200 cursor-pointer"
+                  className="relative h-8 sm:h-9 w-20 sm:w-24 flex items-center justify-center hover:scale-110 transition-transform duration-200 cursor-pointer"
                   title="Sistem Informasi Pembelajaran dan Kemahasiswaan (SIMBelmawa)"
                 >
                   <Image
@@ -262,7 +259,7 @@ export default function BehindReFeedPage() {
                   href="https://simbelmawa.kemdikbud.go.id/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative h-8 sm:h-9 w-20 sm:w-24 flex items-center justify-center hover:scale-110 transition-transform duration-200 cursor-pointer"
+                  className="relative h-8 sm:h-9 w-16 sm:w-20 flex items-center justify-center hover:scale-110 transition-transform duration-200 cursor-pointer"
                   title="Program Kreativitas Mahasiswa (PKM)"
                 >
                   <Image
@@ -279,7 +276,7 @@ export default function BehindReFeedPage() {
                   href="https://untar.ac.id/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative h-8 sm:h-9 w-24 sm:w-28 flex items-center justify-center hover:scale-110 transition-transform duration-200 cursor-pointer"
+                  className="relative h-8 sm:h-9 w-28 sm:w-32 flex items-center justify-center hover:scale-110 transition-transform duration-200 cursor-pointer"
                   title="Universitas Tarumanagara (UNTAR)"
                 >
                   <Image
@@ -393,10 +390,11 @@ export default function BehindReFeedPage() {
                 </span>
               </div>
 
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 xs:gap-4 sm:gap-6 lg:gap-7 items-start text-center">
+              <div className="grid grid-cols-2 sm:grid-cols-6 lg:grid-cols-5 gap-3.5 xs:gap-4 sm:gap-6 lg:gap-7 items-start text-center">
                 {teamMembers.map((member, idx) => {
                   const Icon = member.icon;
                   const isLastOddItem = idx === 4;
+                  const isSecondRowStartSm = idx === 3;
                   return (
                     <a
                       key={idx}
@@ -405,8 +403,10 @@ export default function BehindReFeedPage() {
                       rel="noopener noreferrer"
                       className={`flex flex-col items-center group cursor-pointer ${
                         isLastOddItem
-                          ? 'col-span-2 sm:col-span-1 max-w-[190px] xs:max-w-[210px] sm:max-w-none mx-auto w-full'
-                          : 'w-full'
+                          ? 'col-span-2 sm:col-span-2 sm:col-start-auto lg:col-span-1 max-w-[190px] xs:max-w-[210px] sm:max-w-none mx-auto w-full'
+                          : isSecondRowStartSm
+                          ? 'col-span-1 sm:col-span-2 sm:col-start-2 lg:col-span-1 lg:col-start-auto w-full'
+                          : 'col-span-1 sm:col-span-2 lg:col-span-1 w-full'
                       }`}
                       title={`Kunjungi profil LinkedIn ${member.name}`}
                     >
