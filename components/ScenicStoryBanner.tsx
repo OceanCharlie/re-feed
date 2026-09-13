@@ -9,14 +9,14 @@ interface ScenicStoryBannerProps {
   onOpenPartnerModal?: () => void;
 }
 
-export default function ScenicStoryBanner({}: ScenicStoryBannerProps) {
+export default function ScenicStoryBanner({ }: ScenicStoryBannerProps) {
   return (
     <section className="py-8 sm:py-12 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Scenic Panoramic Card */}
         <div className="relative rounded-[32px] sm:rounded-[44px] overflow-hidden min-h-[420px] sm:min-h-[480px] flex flex-col justify-between p-6 sm:p-10 lg:p-14 text-white shadow-[0_24px_60px_-20px_rgba(16,94,58,0.4)] border border-white/10">
-          
+
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
             <Image
@@ -59,7 +59,7 @@ export default function ScenicStoryBanner({}: ScenicStoryBannerProps) {
 
           {/* Bottom Section: 3 Metric Pills + Story Button */}
           <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-5 pt-4 border-t border-white/20">
-            
+
             {/* 3 Metric Pills */}
             <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
               {/* Stat 1 */}
