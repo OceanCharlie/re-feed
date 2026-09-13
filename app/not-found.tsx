@@ -1,7 +1,17 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Home, ArrowLeft, Store, Leaf, HelpCircle, Mail } from 'lucide-react';
+import { Home, Mail } from 'lucide-react';
 import { BrandLogo } from '@/components/BrandLogo';
+
+export const metadata: Metadata = {
+  title: '404 - Halaman Tidak Ditemukan | ReFeed Indonesia',
+  description: 'Halaman yang Anda tuju tidak ditemukan atau telah dipindahkan di ReFeed Indonesia.',
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
 
 function EmptyPlateSvg({ className = '' }: { className?: string }) {
   return (

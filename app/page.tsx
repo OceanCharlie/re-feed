@@ -7,6 +7,7 @@ import ImpactStats from '@/components/ImpactStats';
 import DualEcosystem from '@/components/DualEcosystem';
 import ScenicStoryBanner from '@/components/ScenicStoryBanner';
 import PartnerLogosStrip from '@/components/PartnerLogosStrip';
+import FaqSection from '@/components/FaqSection';
 import DownloadCta from '@/components/DownloadCta';
 import Footer from '@/components/Footer';
 import DownloadModal from '@/components/DownloadModal';
@@ -51,7 +52,10 @@ export default function HomePage() {
           onOpenPartnerModal={() => setIsPartnerModalOpen(true)}
         />
 
-        {/* 7. Bottom Mascot CTA Card ("Yuk, Mulai Selamatkan Makanan Hari Ini!") */}
+        {/* 7. Tanya Jawab & Panduan Umum (FAQ) */}
+        <FaqSection />
+
+        {/* 8. Bottom Mascot CTA Card ("Yuk, Mulai Selamatkan Makanan Hari Ini!") */}
         <DownloadCta
           onOpenDownloadModal={() => setIsDownloadModalOpen(true)}
           onOpenPartnerModal={() => setIsPartnerModalOpen(true)}
