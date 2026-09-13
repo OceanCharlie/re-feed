@@ -207,7 +207,13 @@ export default function BehindReFeedPage() {
               </span>
               <div className="inline-flex flex-wrap items-center justify-center gap-5 sm:gap-7 md:gap-9 px-6 sm:px-9 py-3.5 rounded-2xl glass-panel">
                 {/* Kemendikbudristek / Ministry */}
-                <div className="relative h-8 sm:h-9 w-8 sm:w-9 flex items-center justify-center">
+                <a
+                  href="https://www.kemendikdasmen.go.id/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative h-8 sm:h-9 w-8 sm:w-9 flex items-center justify-center hover:scale-110 transition-transform duration-200 cursor-pointer"
+                  title="Kementerian Pendidikan Dasar dan Menengah / Kemendikbudristek"
+                >
                   <Image
                     src="/images/Logo_of_Ministry_of_Education_and_Culture_of_Republic_of_Indonesia.svg.webp"
                     alt="Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi"
@@ -215,10 +221,16 @@ export default function BehindReFeedPage() {
                     className="object-contain"
                     unoptimized
                   />
-                </div>
+                </a>
 
                 {/* DIKTI */}
-                <div className="relative h-8 sm:h-9 w-26 sm:w-30 flex items-center justify-center">
+                <a
+                  href="https://dikti.kemdikbud.go.id/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative h-8 sm:h-9 w-26 sm:w-30 flex items-center justify-center hover:scale-110 transition-transform duration-200 cursor-pointer"
+                  title="Direktorat Jenderal Pendidikan Tinggi (DIKTI)"
+                >
                   <Image
                     src="/images/dikti.webp"
                     alt="Diktisaintek Berdampak - Kemendikbudristek"
@@ -226,10 +238,16 @@ export default function BehindReFeedPage() {
                     className="object-contain"
                     unoptimized
                   />
-                </div>
+                </a>
 
                 {/* SIMBelmawa */}
-                <div className="relative h-8 sm:h-9 w-26 sm:w-30 flex items-center justify-center">
+                <a
+                  href="https://simbelmawa.kemdikbud.go.id/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative h-8 sm:h-9 w-26 sm:w-30 flex items-center justify-center hover:scale-110 transition-transform duration-200 cursor-pointer"
+                  title="Sistem Informasi Pembelajaran dan Kemahasiswaan (SIMBelmawa)"
+                >
                   <Image
                     src="/images/logo-simbelmawa.webp"
                     alt="SIMBelmawa"
@@ -237,10 +255,16 @@ export default function BehindReFeedPage() {
                     className="object-contain"
                     unoptimized
                   />
-                </div>
+                </a>
 
                 {/* PKM */}
-                <div className="relative h-8 sm:h-9 w-20 sm:w-24 flex items-center justify-center">
+                <a
+                  href="https://simbelmawa.kemdikbud.go.id/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative h-8 sm:h-9 w-20 sm:w-24 flex items-center justify-center hover:scale-110 transition-transform duration-200 cursor-pointer"
+                  title="Program Kreativitas Mahasiswa (PKM)"
+                >
                   <Image
                     src="/images/Logo PKM Hor - Warna.9d2ca75b.webp"
                     alt="Program Kreativitas Mahasiswa (PKM)"
@@ -248,10 +272,16 @@ export default function BehindReFeedPage() {
                     className="object-contain"
                     unoptimized
                   />
-                </div>
+                </a>
 
                 {/* UNTAR */}
-                <div className="relative h-8 sm:h-9 w-24 sm:w-28 flex items-center justify-center">
+                <a
+                  href="https://untar.ac.id/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative h-8 sm:h-9 w-24 sm:w-28 flex items-center justify-center hover:scale-110 transition-transform duration-200 cursor-pointer"
+                  title="Universitas Tarumanagara (UNTAR)"
+                >
                   <Image
                     src="/images/Logo-Untar-new.webp"
                     alt="Universitas Tarumanagara (UNTAR)"
@@ -259,7 +289,7 @@ export default function BehindReFeedPage() {
                     className="object-contain"
                     unoptimized
                   />
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -285,22 +315,21 @@ export default function BehindReFeedPage() {
 
             {/* Dosen Pembimbing (Tony, Ph.D.) */}
             <div className="pt-8 sm:pt-12">
-              <div className="text-center mb-6 sm:mb-8">
-                <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#EBF5E4] text-xs font-bold uppercase tracking-wider text-[#105e3a] border border-[#C8D9C2]">
-                  <GraduationCap className="w-3.5 h-3.5" />
-                  <span>Dosen Pembimbing</span>
+              <div className="text-center mb-8 sm:mb-10">
+                <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#105e3a]">
+                  Dosen Pembimbing
                 </span>
               </div>
 
-              <div className="max-w-md mx-auto px-2">
+              <div className="flex justify-center">
                 <a
                   href={advisor.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative flex flex-col items-center p-6 sm:p-8 rounded-3xl bg-white/90 backdrop-blur-sm border border-[#D5E2CE]/80 shadow-xs hover:shadow-md hover:border-[#105e3a]/40 transition-all duration-300 text-center cursor-pointer"
+                  className="flex flex-col items-center group cursor-pointer max-w-[190px] xs:max-w-[210px] sm:max-w-[220px] w-full text-center"
                   title={`Kunjungi profil LinkedIn ${advisor.name}`}
                 >
-                  <div className="relative w-44 sm:w-52 aspect-[4/5] rounded-2xl overflow-hidden bg-gradient-to-b from-[#EEF4E8] to-[#DFE9DA] mb-4 shadow-xs border border-[#D5E2CE]/60">
+                  <div className="relative w-full aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden bg-gradient-to-b from-[#EEF4E8] to-[#DFE9DA] mb-3 shadow-xs border border-[#D5E2CE]/60 transition-all duration-300 group-hover:shadow-md group-hover:border-[#105e3a]/40">
                     <Image
                       src={advisor.image}
                       alt={advisor.name}
@@ -310,47 +339,51 @@ export default function BehindReFeedPage() {
                       className="object-contain object-bottom group-hover:scale-105 transition-transform duration-500 ease-out"
                     />
                     {/* LinkedIn badge top-left */}
-                    <div className="absolute top-2.5 left-2.5 px-2.5 py-1 rounded-xl bg-white/95 backdrop-blur-sm text-[#0A66C2] flex items-center gap-1.5 shadow-xs border border-white group-hover:bg-[#0A66C2] group-hover:text-white transition-all text-[11px] font-bold">
-                      <LinkedinIcon className="w-3.5 h-3.5" />
-                      <span>LinkedIn</span>
+                    <div className="absolute top-2 left-2 sm:top-2.5 sm:left-2.5 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg sm:rounded-xl bg-white/90 backdrop-blur-sm text-[#0A66C2] flex items-center gap-1 shadow-xs border border-white group-hover:bg-[#0A66C2] group-hover:text-white transition-all text-[10px] sm:text-[11px] font-bold">
+                      <LinkedinIcon className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                      <span className="hidden xs:inline">In</span>
                     </div>
                     {/* Role icon top-right */}
-                    <div className="absolute top-2.5 right-2.5 w-8 h-8 rounded-xl bg-white/90 backdrop-blur-sm text-[#105e3a] flex items-center justify-center shadow-xs border border-white">
-                      <GraduationCap className="w-4 h-4" />
+                    <div className="absolute top-2 right-2 sm:top-2.5 sm:right-2.5 w-6 h-6 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl bg-white/90 backdrop-blur-sm text-[#105e3a] flex items-center justify-center shadow-xs border border-white">
+                      <GraduationCap className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                    </div>
+                    {/* Bio reveal on hover (desktop) */}
+                    <div className="absolute inset-x-0 bottom-0 p-3 pt-8 bg-gradient-to-t from-[#0b4d2e]/95 via-[#105e3a]/75 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden sm:block">
+                      <p className="text-[10px] sm:text-[11px] text-white leading-snug text-left">
+                        Dosen Pembimbing & Penasihat Strategis, Fakultas Teknologi Informasi UNTAR.
+                      </p>
+                      <div className="mt-2 inline-flex items-center gap-1 text-[10px] font-bold text-[#8fc22a]">
+                        <span>Buka LinkedIn</span>
+                        <ExternalLink className="w-3 h-3" />
+                      </div>
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-center gap-1.5">
-                    <h3 className="text-lg sm:text-xl font-black text-[#141A16] tracking-tight group-hover:text-[#0A66C2] transition-colors">
-                      {advisor.name}
-                    </h3>
-                    <ExternalLink className="w-4 h-4 text-[#57655B] group-hover:text-[#0A66C2] transition-colors shrink-0" />
-                  </div>
-
-                  <p className="text-xs sm:text-sm font-bold text-[#105e3a] mt-1">
-                    {advisor.role}
-                  </p>
-
-                  <div className="mt-2 text-xs text-[#57655B] flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-1.5 leading-snug">
-                    <span className="inline-flex items-center gap-1 font-medium">
-                      <Building2 className="w-3.5 h-3.5 text-[#105e3a] shrink-0" />
-                      {advisor.faculty}
-                    </span>
-                    <span className="hidden sm:inline text-[#C8D9C2]">•</span>
-                    <span className="font-medium">{advisor.university}</span>
-                  </div>
-
-                  <div className="mt-4 inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#F4F9F0] text-xs font-bold text-[#0A66C2] group-hover:bg-[#0A66C2] group-hover:text-white transition-all border border-[#E8EDE5]">
-                    <LinkedinIcon className="w-3.5 h-3.5" />
-                    <span>Buka Profil LinkedIn</span>
-                    <ExternalLink className="w-3 h-3" />
+                  <div className="space-y-1 w-full px-0.5">
+                    <div className="flex items-center justify-center gap-1">
+                      <h4 className="text-xs xs:text-sm sm:text-base font-black text-[#141A16] tracking-tight group-hover:text-[#0A66C2] transition-colors leading-snug">
+                        {advisor.name}
+                      </h4>
+                      <ExternalLink className="w-3 h-3 text-[#57655B] group-hover:text-[#0A66C2] shrink-0" />
+                    </div>
+                    <p className="text-[11px] sm:text-sm font-bold text-[#105e3a]">
+                      {advisor.role}
+                    </p>
+                    <div className="flex flex-wrap items-center justify-center gap-1 pt-0.5">
+                      <span className="text-[9px] sm:text-[10px] font-semibold text-[#57655B] bg-[#F4F9F0] border border-[#E8EDE5] px-1.5 py-0.5 rounded-full">
+                        FTI UNTAR
+                      </span>
+                      <span className="text-[9px] sm:text-[10px] font-semibold text-[#57655B] bg-[#F4F9F0] border border-[#E8EDE5] px-1.5 py-0.5 rounded-full">
+                        Dosen Pembimbing
+                      </span>
+                    </div>
                   </div>
                 </a>
               </div>
             </div>
 
             {/* Elegant Soft Divider between Advisor and Students */}
-            <div className="w-full max-w-4xl mx-auto h-px bg-gradient-to-r from-transparent via-[#C8D9C2] to-transparent my-14 sm:my-20" />
+            <div className="w-full max-w-4xl mx-auto h-px bg-gradient-to-r from-transparent via-[#C8D9C2] to-transparent my-12 sm:my-16" />
 
             {/* Tim Pengembang Mahasiswa (5 Anggota) */}
             <div>

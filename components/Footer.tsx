@@ -93,21 +93,21 @@ export default function Footer({ onOpenDownloadModal, onOpenPartnerModal }: Foot
               Didukung oleh:
             </span>
             <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 opacity-85 hover:opacity-100 transition-opacity">
-              <div className="relative h-6 w-6">
+              <a href="https://www.kemendikdasmen.go.id/" target="_blank" rel="noopener noreferrer" className="relative h-6 w-6 hover:scale-110 transition-transform cursor-pointer" title="Kementerian Pendidikan Dasar dan Menengah">
                 <Image src="/images/Logo_of_Ministry_of_Education_and_Culture_of_Republic_of_Indonesia.svg.webp" alt="Kemendikbudristek" fill className="object-contain" unoptimized />
-              </div>
-              <div className="relative h-6 w-20">
+              </a>
+              <a href="https://untar.ac.id/" target="_blank" rel="noopener noreferrer" className="relative h-6 w-20 hover:scale-110 transition-transform cursor-pointer" title="Universitas Tarumanagara">
                 <Image src="/images/Logo-Untar-new.webp" alt="Universitas Tarumanagara" fill className="object-contain" unoptimized />
-              </div>
-              <div className="relative h-6 w-24">
+              </a>
+              <a href="https://dikti.kemdikbud.go.id/" target="_blank" rel="noopener noreferrer" className="relative h-6 w-24 hover:scale-110 transition-transform cursor-pointer" title="Direktorat Jenderal Pendidikan Tinggi">
                 <Image src="/images/dikti.webp" alt="Diktisaintek" fill className="object-contain" unoptimized />
-              </div>
-              <div className="relative h-6 w-16">
+              </a>
+              <a href="https://simbelmawa.kemdikbud.go.id/" target="_blank" rel="noopener noreferrer" className="relative h-6 w-16 hover:scale-110 transition-transform cursor-pointer" title="Program Kreativitas Mahasiswa">
                 <Image src="/images/Logo PKM Hor - Warna.9d2ca75b.webp" alt="PKM" fill className="object-contain" unoptimized />
-              </div>
-              <div className="relative h-6 w-24">
+              </a>
+              <a href="https://simbelmawa.kemdikbud.go.id/" target="_blank" rel="noopener noreferrer" className="relative h-6 w-24 hover:scale-110 transition-transform cursor-pointer" title="SIMBelmawa">
                 <Image src="/images/logo-simbelmawa.webp" alt="SIMBelmawa" fill className="object-contain" unoptimized />
-              </div>
+              </a>
             </div>
           </div>
           <span className="text-[11px] text-[#57655B]/80 text-center sm:text-right">
