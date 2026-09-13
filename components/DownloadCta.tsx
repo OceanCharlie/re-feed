@@ -16,7 +16,10 @@ export default function DownloadCta({ onOpenDownloadModal }: DownloadCtaProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Soft Green Rounded Container Card */}
-        <div className="rounded-[32px] sm:rounded-[40px] bg-gradient-to-br from-[#F2F8ED] via-[#EFF6E9] to-[#E4EFDC] border border-[#DCE8D4] p-6 sm:p-10 lg:p-12 shadow-[0_20px_50px_-20px_rgba(16,94,58,0.18)] grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative overflow-hidden">
+        <div className="app-card rounded-[32px] sm:rounded-[40px] p-6 sm:p-10 lg:p-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative overflow-hidden">
+          {/* Ambient glow accents echoing the 4-point mesh */}
+          <div className="glow-orb -top-16 -left-16 w-56 h-56 opacity-60" />
+          <div className="glow-orb -bottom-20 -right-10 w-64 h-64 opacity-50 [animation-delay:2s]" />
           
           {/* Left Column: Cute Mascot with Grocery Bag */}
           <div className="lg:col-span-3 flex items-center justify-center relative">
@@ -79,7 +82,7 @@ export default function DownloadCta({ onOpenDownloadModal }: DownloadCtaProps) {
             {/* QR Scanner Card */}
             <button
               onClick={onOpenDownloadModal}
-              className="w-full h-14 px-4 bg-white hover:bg-[#FAF9F6] text-[#141A16] border border-[#DCE8D4] rounded-2xl flex items-center justify-center gap-3 shadow-2xs transition-all active:scale-98 cursor-pointer"
+              className="btn-app-secondary w-full h-14 px-4 rounded-2xl flex items-center justify-center gap-3 active:scale-98 cursor-pointer"
             >
               <QrCode className="w-5 h-5 text-[#105e3a] shrink-0" />
               <div className="text-left text-xs font-bold leading-tight">

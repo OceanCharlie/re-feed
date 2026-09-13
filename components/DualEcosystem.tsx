@@ -17,8 +17,7 @@ export default function DualEcosystem({ onOpenDownloadModal }: DualEcosystemProp
       desc: 'Dapatkan makanan lezat dari brand favorit dengan harga hingga 70% lebih murah.',
       icon: ShoppingBag,
       iconColor: 'text-[#105e3a]',
-      iconBg: 'bg-[#E2EED9]',
-      cardBg: 'bg-[#F2F7EC] border-[#E0EBD7]',
+      iconBg: 'bg-gradient-to-br from-[#E2EED9] to-[#C8DFBC]',
       image: '/images/croissant_food.png',
       badge: '🥐 Hemat hingga 70%',
     },
@@ -28,8 +27,7 @@ export default function DualEcosystem({ onOpenDownloadModal }: DualEcosystemProp
       desc: 'Bantu mengurangi makanan yang terbuang sia-sia dan dukung lingkungan yang lebih bersih.',
       icon: Leaf,
       iconColor: 'text-[#105e3a]',
-      iconBg: 'bg-[#EAEEDF]',
-      cardBg: 'bg-[#FBF8F1] border-[#EBE6DA]',
+      iconBg: 'bg-gradient-to-br from-[#EAEEDF] to-[#D5E2CB]',
       image: '/images/earth_leaves.png',
       badge: null,
     },
@@ -38,9 +36,8 @@ export default function DualEcosystem({ onOpenDownloadModal }: DualEcosystemProp
       title: 'Ubah Jadi Energi',
       desc: 'Sisa organik yang tidak dapat dikonsumsi akan disalurkan untuk diolah menjadi biogas.',
       icon: Recycle,
-      iconColor: 'text-[#0284C7]',
-      iconBg: 'bg-[#E1EFF8]',
-      cardBg: 'bg-[#EFF6FC] border-[#DCEAF5]',
+      iconColor: 'text-[#1e8939]',
+      iconBg: 'bg-gradient-to-br from-[#E2EED9] to-[#C8DFBC]',
       image: '/images/biogas_dome.png',
       badge: null,
     },
@@ -66,7 +63,7 @@ export default function DualEcosystem({ onOpenDownloadModal }: DualEcosystemProp
             <div className="pt-2">
               <button
                 onClick={onOpenDownloadModal}
-                className="px-6 py-3.5 bg-[#105e3a] hover:bg-[#0c5536] text-white font-bold text-xs sm:text-sm rounded-2xl shadow-sm transition-all flex items-center gap-2 cursor-pointer active:scale-98"
+                className="btn-app-primary px-6 py-3.5 font-bold text-xs sm:text-sm rounded-2xl transition-all flex items-center gap-2 cursor-pointer active:scale-98"
               >
                 <span>Pelajari Lebih Lanjut</span>
                 <ArrowRight className="w-4 h-4" />
@@ -81,11 +78,11 @@ export default function DualEcosystem({ onOpenDownloadModal }: DualEcosystemProp
               return (
                 <div
                   key={card.id}
-                  className={`rounded-3xl p-5 sm:p-6 ${card.cardBg} border shadow-2xs flex flex-col justify-between text-left transition-all hover:-translate-y-1 hover:shadow-md group`}
+                  className="app-card rounded-3xl p-5 sm:p-6 flex flex-col justify-between text-left group"
                 >
                   <div className="space-y-3">
                     {/* Round Icon Header */}
-                    <div className={`w-11 h-11 rounded-2xl ${card.iconBg} ${card.iconColor} flex items-center justify-center font-bold shadow-2xs`}>
+                    <div className={`w-11 h-11 rounded-2xl ${card.iconBg} ${card.iconColor} flex items-center justify-center font-bold shadow-[0_0_0_1px_rgba(143,194,42,0.2)]`}>
                       <Icon className="w-5 h-5" />
                     </div>
 
@@ -108,7 +105,7 @@ export default function DualEcosystem({ onOpenDownloadModal }: DualEcosystemProp
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       {card.badge && (
-                        <div className="absolute bottom-2 right-2 px-2.5 py-1 rounded-xl bg-white/95 backdrop-blur-md text-[#105e3a] text-[10px] font-black shadow-xs border border-[#E8EDE5]">
+                        <div className="absolute bottom-2 right-2 floating-badge px-2.5 py-1 rounded-xl text-[#105e3a] text-[10px] font-black">
                           {card.badge}
                         </div>
                       )}

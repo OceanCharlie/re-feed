@@ -31,12 +31,13 @@ export default function PersonalSavingsCalculator({ onOpenDownloadModal }: Perso
   };
 
   return (
-    <section className="py-16 sm:py-24 bg-white relative overflow-hidden">
+    <section className="py-16 sm:py-24 relative overflow-hidden">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="bg-[#111c15] text-white rounded-[28px] sm:rounded-[40px] p-5 xs:p-6 sm:p-12 shadow-2xl border border-[#2D3E33] relative overflow-hidden">
+        <div className="bg-[#0c1610] text-white rounded-[28px] sm:rounded-[40px] p-5 xs:p-6 sm:p-12 shadow-[0_30px_70px_-20px_rgba(16,94,58,0.5)] border border-[#1e8939]/30 relative overflow-hidden">
           {/* Ambient Radial Glow */}
-          <div className="absolute -top-20 -right-20 w-80 h-80 bg-[#8fc22a]/20 rounded-full blur-3xl pointer-events-none" />
+          <div className="glow-orb -top-20 -right-20 w-80 h-80 opacity-70" />
+          <div className="glow-orb -bottom-24 -left-16 w-64 h-64 opacity-40 [animation-delay:3s]" />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center relative z-10">
             

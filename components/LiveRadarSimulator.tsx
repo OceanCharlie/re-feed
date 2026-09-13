@@ -173,15 +173,16 @@ export default function LiveRadarSimulator({ onOpenDownloadModal }: LiveRadarSim
   const activeBag = currentBags[activeBagIndex] || currentBags[0];
 
   return (
-    <section className="py-16 sm:py-24 bg-white relative overflow-hidden">
+    <section className="py-16 sm:py-24 relative overflow-hidden">
       {/* Background Glow */}
-      <div className="absolute top-0 right-1/4 w-72 sm:w-96 h-72 sm:h-96 bg-[#8fc22a]/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="glow-orb top-0 right-1/4 w-72 sm:w-96 h-72 sm:h-96 opacity-50" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14 space-y-2.5 sm:space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E8F4DA] text-[#105e3a] text-xs font-black uppercase tracking-wider">
+          <div className="badge-glow px-3.5 py-1.5 rounded-full text-[#105e3a] text-xs font-black uppercase tracking-wider">
+            <span className="badge-glow-dot" />
             <Sparkles className="w-3.5 h-3.5 text-[#105e3a]" />
             Live Discovery Simulator
           </div>
@@ -194,7 +195,7 @@ export default function LiveRadarSimulator({ onOpenDownloadModal }: LiveRadarSim
         </div>
 
         {/* Interactive Simulator Shell */}
-        <div className="max-w-5xl mx-auto rounded-[28px] sm:rounded-[36px] bg-[#F6F5F0] border border-[#DCE4D3] p-4 xs:p-6 sm:p-10 shadow-xl">
+        <div className="glass-panel max-w-5xl mx-auto rounded-[28px] sm:rounded-[36px] p-4 xs:p-6 sm:p-10 shadow-[0_20px_50px_-20px_rgba(16,94,58,0.2)]">
           
           {/* 1. Area Selector Tabs */}
           <div className="mb-6 sm:mb-8">
@@ -215,8 +216,8 @@ export default function LiveRadarSimulator({ onOpenDownloadModal }: LiveRadarSim
                     }}
                     className={`p-3 rounded-2xl text-xs font-black transition-all text-left cursor-pointer border active:scale-95 ${
                       isActive
-                        ? 'bg-[#105e3a] text-white border-[#105e3a] shadow-xs'
-                        : 'bg-white text-[#16241C] border-[#DCE4D3] hover:border-[#105e3a]/40'
+                        ? 'btn-app-primary border-transparent'
+                        : 'bg-white/70 backdrop-blur-sm text-[#16241C] border-[#DCE4D3] hover:border-[#8fc22a]/50'
                     }`}
                   >
                     <div className="font-bold truncate">{area.name}</div>
@@ -250,8 +251,8 @@ export default function LiveRadarSimulator({ onOpenDownloadModal }: LiveRadarSim
                     }}
                     className={`p-3.5 sm:p-4 rounded-2xl border transition-all cursor-pointer flex flex-col xs:flex-row items-start xs:items-center justify-between gap-2.5 sm:gap-4 active:scale-98 ${
                       isSelected
-                        ? 'bg-white border-[#105e3a] shadow-md ring-2 ring-[#105e3a]/15'
-                        : 'bg-white/70 border-[#DCE4D3] hover:bg-white hover:border-[#105e3a]/30'
+                        ? 'bg-white/90 backdrop-blur-sm border-[#8fc22a]/60 shadow-[0_0_0_1px_rgba(143,194,42,0.2),0_8px_20px_-8px_rgba(16,94,58,0.3)]'
+                        : 'bg-white/60 border-[#DCE4D3] hover:bg-white/80 hover:border-[#8fc22a]/40'
                     }`}
                   >
                     <div className="space-y-1 text-left min-w-0">
@@ -283,7 +284,7 @@ export default function LiveRadarSimulator({ onOpenDownloadModal }: LiveRadarSim
 
             {/* Right Column: Interactive Surprise Box Reveal Card */}
             <div className="lg:col-span-6">
-              <div className="rounded-3xl bg-white border border-[#DCE4D3] p-5 sm:p-8 shadow-lg text-left space-y-4 sm:space-y-5 relative overflow-hidden">
+              <div className="rounded-3xl bg-white/85 backdrop-blur-xl border border-white/80 p-5 sm:p-8 shadow-[0_20px_50px_-16px_rgba(16,94,58,0.25)] text-left space-y-4 sm:space-y-5 relative overflow-hidden">
                 
                 {/* Store Header */}
                 <div className="flex items-start justify-between gap-3">
@@ -305,7 +306,7 @@ export default function LiveRadarSimulator({ onOpenDownloadModal }: LiveRadarSim
                 </div>
 
                 {/* Price Breakdown */}
-                <div className="p-3.5 sm:p-4 rounded-2xl bg-[#F6F5F0] border border-[#DCE4D3] flex flex-col xs:flex-row items-start xs:items-center justify-between gap-2.5">
+                <div className="p-3.5 sm:p-4 rounded-2xl glass-panel flex flex-col xs:flex-row items-start xs:items-center justify-between gap-2.5">
                   <div>
                     <div className="text-[11px] text-[#5A6960]">Harga Normal: <span className="line-through">Rp {activeBag.originalPrice.toLocaleString('id-ID')}</span></div>
                     <div className="text-xl sm:text-2xl font-black text-[#105e3a]">
@@ -327,7 +328,7 @@ export default function LiveRadarSimulator({ onOpenDownloadModal }: LiveRadarSim
                       </div>
                       <button
                         onClick={() => setIsRevealed(true)}
-                        className="px-4 py-2 bg-[#105e3a] hover:bg-[#0c5536] text-white text-xs font-black rounded-xl shadow-xs cursor-pointer transition-all active:scale-95"
+                        className="btn-app-primary px-4 py-2 text-xs font-black rounded-xl cursor-pointer active:scale-95"
                       >
                         ✨ Buka & Intip Isi Paket Ini
                       </button>

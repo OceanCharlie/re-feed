@@ -22,12 +22,13 @@ export default function PartnerCalculator({ onOpenPartnerModal }: PartnerCalcula
   };
 
   return (
-    <section id="merchant" className="py-16 sm:py-24 bg-[#FCFAF7] relative">
+    <section id="merchant" className="py-16 sm:py-24 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16 space-y-2.5 sm:space-y-3">
-          <span className="inline-block px-3.5 py-1.5 rounded-full bg-[#EBF5E4] text-[#105e3a] text-xs font-bold uppercase tracking-wider border border-[#C8D9C2]">
+          <span className="badge-glow inline-flex px-3.5 py-1.5 rounded-full text-[#105e3a] text-xs font-bold uppercase tracking-wider">
+            <span className="badge-glow-dot" />
             Kemitraan Usaha Kuliner
           </span>
           <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-black text-[#141A16] tracking-tight">
@@ -74,13 +75,13 @@ export default function PartnerCalculator({ onOpenPartnerModal }: PartnerCalcula
           </div>
 
           {/* Right Column: Clean Mini Simulator */}
-          <div className="md:col-span-6 p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-[#FCFAF7] border border-[#E8EDE5] space-y-5 sm:space-y-6 text-left">
+          <div className="md:col-span-6 p-5 sm:p-8 rounded-2xl sm:rounded-3xl glass-panel space-y-5 sm:space-y-6 text-left">
             <div className="space-y-3">
               <div className="flex items-center justify-between">
                 <label className="text-xs sm:text-sm font-bold text-[#141A17]">
                   Estimasi Surplus / Hari:
                 </label>
-                <span className="px-3 py-1 bg-white border border-[#E8EDE5] rounded-xl text-xs font-bold text-[#105e3a] shadow-2xs">
+                <span className="floating-badge px-3 py-1 rounded-xl text-xs font-bold text-[#105e3a]">
                   {portionsPerDay} Porsi
                 </span>
               </div>
@@ -102,9 +103,9 @@ export default function PartnerCalculator({ onOpenPartnerModal }: PartnerCalcula
               </div>
             </div>
 
-            <div className="p-4 rounded-2xl bg-white border border-[#E8EDE5] text-center shadow-2xs">
+            <div className="p-4 rounded-2xl floating-badge text-center">
               <span className="text-xs text-[#57655B] font-medium">Estimasi Pemasukan Ekstra Bersih</span>
-              <div className="text-xl sm:text-3xl font-black text-[#105e3a] mt-1">
+              <div className="text-xl sm:text-3xl font-black text-gradient-brand mt-1">
                 {formatRupiah(monthlyRevenue)}
                 <span className="text-xs font-normal text-[#57655B]"> /bulan</span>
               </div>
@@ -112,7 +113,7 @@ export default function PartnerCalculator({ onOpenPartnerModal }: PartnerCalcula
 
             <button
               onClick={onOpenPartnerModal}
-              className="btn-app-primary w-full py-3.5 rounded-xl flex items-center justify-center gap-2 text-xs sm:text-sm cursor-pointer shadow-xs active:scale-98"
+              className="btn-app-primary w-full py-3.5 rounded-xl flex items-center justify-center gap-2 text-xs sm:text-sm cursor-pointer active:scale-98"
             >
               <span>Daftarkan Usaha Kuliner Anda</span>
               <ArrowRight className="w-4 h-4" />

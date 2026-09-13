@@ -11,7 +11,8 @@ interface FooterProps {
 
 export default function Footer({ onOpenDownloadModal, onOpenPartnerModal }: FooterProps) {
   return (
-    <footer className="border-t border-[#E8EDE5] py-8 sm:py-10 text-[#57655B]">
+    <footer className="border-t border-[#C8D9C2]/50 py-8 sm:py-10 text-[#57655B] relative">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-[#8fc22a]/60 to-transparent" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
@@ -50,7 +51,7 @@ export default function Footer({ onOpenDownloadModal, onOpenPartnerModal }: Foot
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-8 h-8 rounded-full bg-white border border-[#E8EDE5] flex items-center justify-center text-[#57655B] hover:text-[#105e3a] hover:border-[#105e3a] transition-colors"
+              className="w-8 h-8 rounded-full glass-panel flex items-center justify-center text-[#57655B] hover:text-[#105e3a] hover:border-[#8fc22a]/60 hover:shadow-[0_0_14px_-2px_rgba(143,194,42,0.5)] transition-all"
               aria-label="Instagram"
             >
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -64,7 +65,7 @@ export default function Footer({ onOpenDownloadModal, onOpenPartnerModal }: Foot
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-8 h-8 rounded-full bg-white border border-[#E8EDE5] flex items-center justify-center text-[#57655B] hover:text-[#105e3a] hover:border-[#105e3a] transition-colors"
+              className="w-8 h-8 rounded-full glass-panel flex items-center justify-center text-[#57655B] hover:text-[#105e3a] hover:border-[#8fc22a]/60 hover:shadow-[0_0_14px_-2px_rgba(143,194,42,0.5)] transition-all"
               aria-label="LinkedIn"
             >
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -76,7 +77,7 @@ export default function Footer({ onOpenDownloadModal, onOpenPartnerModal }: Foot
             {/* Email */}
             <a
               href="mailto:pkmkc.refeed@gmail.com"
-              className="w-8 h-8 rounded-full bg-white border border-[#E8EDE5] flex items-center justify-center text-[#57655B] hover:text-[#105e3a] hover:border-[#105e3a] transition-colors"
+              className="w-8 h-8 rounded-full glass-panel flex items-center justify-center text-[#57655B] hover:text-[#105e3a] hover:border-[#8fc22a]/60 hover:shadow-[0_0_14px_-2px_rgba(143,194,42,0.5)] transition-all"
               aria-label="Email"
             >
               <Mail className="w-4 h-4" />

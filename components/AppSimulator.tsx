@@ -61,12 +61,13 @@ export default function AppSimulator() {
   const current = screens.find((s) => s.id === activeScreen) || screens[0];
 
   return (
-    <section id="app" className="py-16 sm:py-24 bg-[#FCFAF7] relative">
+    <section id="app" className="py-16 sm:py-24 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-14 space-y-2.5 sm:space-y-3">
-          <span className="inline-block px-3.5 py-1.5 rounded-full bg-[#EBF5E4] text-[#105e3a] text-xs font-bold uppercase tracking-wider border border-[#C8D9C2]">
+          <span className="badge-glow inline-flex px-3.5 py-1.5 rounded-full text-[#105e3a] text-xs font-bold uppercase tracking-wider">
+            <span className="badge-glow-dot" />
             Antarmuka Aplikasi
           </span>
           <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-black text-[#141A16] tracking-tight">
@@ -88,8 +89,8 @@ export default function AppSimulator() {
                 onClick={() => setActiveScreen(item.id)}
                 className={`px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm flex items-center gap-1.5 sm:gap-2 transition-all cursor-pointer whitespace-nowrap shrink-0 active:scale-95 ${
                   isActive
-                    ? 'bg-[#105e3a] text-white shadow-xs'
-                    : 'bg-[#FFFFFF] text-[#57655B] hover:text-[#141A16] border border-[#E8EDE5]'
+                    ? 'btn-app-primary text-white'
+                    : 'glass-panel text-[#57655B] hover:text-[#141A16] hover:border-[#8fc22a]/50'
                 }`}
               >
                 <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
@@ -133,14 +134,14 @@ export default function AppSimulator() {
             <div className="pt-2 sm:pt-4 flex items-center gap-2.5">
               <button
                 onClick={() => setActiveScreen((prev) => (prev <= 1 ? screens.length : prev - 1))}
-                className="w-10 h-10 rounded-full bg-[#FCFAF7] border border-[#E8EDE5] flex items-center justify-center text-[#141A16] hover:bg-[#EBF5E4] transition-colors cursor-pointer active:scale-95 shadow-2xs"
+                className="glass-panel w-10 h-10 rounded-full flex items-center justify-center text-[#141A16] hover:bg-[#EBF5E4]/70 transition-colors cursor-pointer active:scale-95"
                 aria-label="Previous Screen"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
               <button
                 onClick={() => setActiveScreen((prev) => (prev >= screens.length ? 1 : prev + 1))}
-                className="w-10 h-10 rounded-full bg-[#FCFAF7] border border-[#E8EDE5] flex items-center justify-center text-[#141A16] hover:bg-[#EBF5E4] transition-colors cursor-pointer active:scale-95 shadow-2xs"
+                className="glass-panel w-10 h-10 rounded-full flex items-center justify-center text-[#141A16] hover:bg-[#EBF5E4]/70 transition-colors cursor-pointer active:scale-95"
                 aria-label="Next Screen"
               >
                 <ChevronRight className="w-5 h-5" />

@@ -27,11 +27,12 @@ export default function PartnerLogosStrip({ onOpenPartnerModal }: PartnerLogosSt
   ];
 
   return (
-    <section id="merchant" className="py-16 sm:py-24 border-y border-[#E8EDE5]/70 relative overflow-hidden">
+    <section id="merchant" className="py-16 sm:py-24 border-y border-[#E8EDE5]/60 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-10 sm:mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF5E4] text-[#105e3a] text-xs font-bold border border-[#C8D9C2]">
+          <div className="badge-glow px-3.5 py-1.5 rounded-full text-[#105e3a] text-xs font-bold">
+            <span className="badge-glow-dot" />
             <Store className="w-3.5 h-3.5" />
             <span>Peluang Kemitraan Kuliner</span>
           </div>
@@ -50,9 +51,9 @@ export default function PartnerLogosStrip({ onOpenPartnerModal }: PartnerLogosSt
           {benefits.map((b, idx) => {
             const Icon = b.icon;
             return (
-              <div 
-                key={idx} 
-                className="p-5 sm:p-6 rounded-2xl bg-white border border-[#E8EDE5] shadow-xs hover:border-[#C8D9C2] transition-all"
+              <div
+                key={idx}
+                className="app-card p-5 sm:p-6 rounded-2xl"
               >
                 <div className="w-10 h-10 rounded-xl bg-[#EBF5E4] text-[#105e3a] flex items-center justify-center mb-3.5 font-bold">
                   <Icon className="w-5 h-5" />
@@ -77,13 +78,13 @@ export default function PartnerLogosStrip({ onOpenPartnerModal }: PartnerLogosSt
         </div>
 
         {/* Categories tags */}
-        <div className="mt-8 pt-6 border-t border-[#E8EDE5]/80 flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs text-[#57655B]">
+        <div className="mt-8 pt-6 border-t border-[#E8EDE5]/60 flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs text-[#57655B]">
           <span className="font-semibold text-[#141A16]">Terbuka untuk:</span>
-          <span className="px-3 py-1 rounded-full bg-white border border-[#E8EDE5] font-medium">Restoran & Rumah Makan</span>
-          <span className="px-3 py-1 rounded-full bg-white border border-[#E8EDE5] font-medium">Bakery & Pastry</span>
-          <span className="px-3 py-1 rounded-full bg-white border border-[#E8EDE5] font-medium">Kafe & Kedai Kopi</span>
-          <span className="px-3 py-1 rounded-full bg-white border border-[#E8EDE5] font-medium">Supermarket & Minimarket</span>
-          <span className="px-3 py-1 rounded-full bg-white border border-[#E8EDE5] font-medium">Hotel & Katering</span>
+          <span className="glass-panel px-3 py-1 rounded-full font-medium">Restoran & Rumah Makan</span>
+          <span className="glass-panel px-3 py-1 rounded-full font-medium">Bakery & Pastry</span>
+          <span className="glass-panel px-3 py-1 rounded-full font-medium">Kafe & Kedai Kopi</span>
+          <span className="glass-panel px-3 py-1 rounded-full font-medium">Supermarket & Minimarket</span>
+          <span className="glass-panel px-3 py-1 rounded-full font-medium">Hotel & Katering</span>
         </div>
 
       </div>

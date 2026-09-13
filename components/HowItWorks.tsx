@@ -35,12 +35,13 @@ export default function HowItWorks({ onOpenDownloadModal, onOpenPartnerModal }: 
   ];
 
   return (
-    <section id="how-it-works" className="py-16 sm:py-24 bg-[#FFFFFF] border-y border-[#E8EDE5] relative">
+    <section id="how-it-works" className="py-16 sm:py-24 border-y border-[#E8EDE5]/60 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16 space-y-2.5 sm:space-y-3">
-          <span className="inline-block px-3.5 py-1.5 rounded-full bg-[#EBF5E4] text-[#105e3a] text-xs font-bold uppercase tracking-wider border border-[#C8D9C2]">
+          <span className="badge-glow px-3.5 py-1.5 rounded-full text-[#105e3a] text-xs font-bold uppercase tracking-wider">
+            <span className="badge-glow-dot" />
             Langkah Mudah
           </span>
           <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-black text-[#141A16] tracking-tight">

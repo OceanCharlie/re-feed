@@ -45,8 +45,8 @@ export default function Navbar({ onOpenDownloadModal, onOpenPartnerModal }: Navb
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled || mobileMenuOpen
-          ? 'bg-white/85 backdrop-blur-xl py-2.5 sm:py-3 shadow-[0_1px_0_0_rgba(16,94,58,0.08),0_8px_24px_-12px_rgba(16,94,58,0.15)] border-b border-[#E8EDE5]'
-          : 'bg-white/50 backdrop-blur-md py-3.5 sm:py-4 border-b border-white/40'
+          ? 'bg-white/75 backdrop-blur-xl py-2.5 sm:py-3 shadow-[0_1px_0_0_rgba(255,255,255,0.6)_inset,0_8px_28px_-12px_rgba(16,94,58,0.22)] border-b border-[#C8D9C2]/60'
+          : 'bg-white/40 backdrop-blur-md py-3.5 sm:py-4 border-b border-white/40'
       }`}
     >
       <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -95,7 +95,7 @@ export default function Navbar({ onOpenDownloadModal, onOpenPartnerModal }: Navb
           
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="w-9 h-9 flex items-center justify-center text-[#141A16] rounded-xl bg-white border border-[#E8EDE5] hover:bg-[#EBF5E4] transition-colors cursor-pointer active:scale-95"
+            className="w-9 h-9 flex items-center justify-center text-[#141A16] rounded-xl glass-panel hover:bg-[#EBF5E4]/70 transition-colors cursor-pointer active:scale-95"
             aria-label={mobileMenuOpen ? "Tutup Menu" : "Buka Menu"}
           >
             {mobileMenuOpen ? <X className="w-5 h-5 text-[#105e3a]" /> : <Menu className="w-5 h-5 text-[#141A16]" />}
@@ -106,7 +106,7 @@ export default function Navbar({ onOpenDownloadModal, onOpenPartnerModal }: Navb
 
       {/* Mobile Menu Dropdown with Modern Card Styling */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-xl border-t border-[#E8EDE5] px-4 pt-3 pb-6 space-y-4 shadow-xl max-h-[80vh] overflow-y-auto animate-in slide-in-from-top-2 duration-200">
+        <div className="md:hidden bg-white/85 backdrop-blur-2xl border-t border-[#C8D9C2]/60 px-4 pt-3 pb-6 space-y-4 shadow-xl max-h-[80vh] overflow-y-auto animate-in slide-in-from-top-2 duration-200">
           <div className="grid grid-cols-1 gap-1">
             {navLinks.map((link) => {
               const Icon = link.icon;

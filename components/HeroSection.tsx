@@ -24,8 +24,13 @@ export default function HeroSection({ onOpenDownloadModal }: HeroSectionProps) {
           className="object-cover object-center opacity-85"
         />
         {/* Soft Gradients to ensure text contrast on left while keeping scenery vivid on right */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#FDFCFA] via-[#FDFCFA]/80 to-transparent lg:via-[#FDFCFA]/50" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#FDFCFA]/40 via-transparent to-[#FDFCFA]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#FDFEFC] via-[#FDFEFC]/80 to-transparent lg:via-[#FDFEFC]/50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#FDFEFC]/40 via-transparent to-[#FDFEFC]" />
+        {/* Faint technical grid for a futuristic layer */}
+        <div className="absolute inset-0 bg-grid-tech opacity-70" />
+        {/* Ambient glow orbs — the "4-point" energy reads through the hero too */}
+        <div className="glow-orb -left-24 -top-24 w-72 h-72" />
+        <div className="glow-orb -right-16 top-1/3 w-56 h-56 [animation-delay:1.5s]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -38,7 +43,7 @@ export default function HeroSection({ onOpenDownloadModal }: HeroSectionProps) {
             <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#141A16] leading-[1.12]">
               Selamatkan <br />
               Makanan Lezat, <br />
-              <span className="text-[#105e3a]">Hemat hingga 70%</span>
+              <span className="text-gradient-brand">Hemat hingga 70%</span>
             </h1>
 
             {/* Subtitle Description */}
@@ -63,7 +68,7 @@ export default function HeroSection({ onOpenDownloadModal }: HeroSectionProps) {
 
               <button
                 onClick={onOpenDownloadModal}
-                className="h-14 px-6 bg-white hover:bg-[#F6F5F0] text-[#141A16] border border-[#DCE4D3] rounded-2xl flex items-center justify-center gap-2.5 shadow-2xs transition-all active:scale-98 cursor-pointer font-bold text-xs sm:text-sm"
+                className="btn-app-secondary h-14 px-6 rounded-2xl flex items-center justify-center gap-2.5 active:scale-98 cursor-pointer font-bold text-xs sm:text-sm"
               >
                 <QrCode className="w-5 h-5 text-[#105e3a] shrink-0" />
                 <span>Pindai QR / Unduh APK</span>
@@ -74,16 +79,18 @@ export default function HeroSection({ onOpenDownloadModal }: HeroSectionProps) {
 
           {/* RIGHT COLUMN: Interactive Smartphone Mockup + Hero Mascot */}
           <div className="lg:col-span-6 relative flex items-center justify-center pt-6 lg:pt-0">
-            
+
+            {/* Ambient glow halo behind the phone for a futuristic energy feel */}
+            <div className="glow-orb w-64 h-64 sm:w-80 sm:h-80 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10" />
 
             {/* Doodle Speech Bubble (Top Right of Mascot) */}
-            <div className="absolute -top-2 right-2 sm:right-6 z-30 max-w-[170px] text-[11px] font-bold text-[#141A16] bg-white px-3 py-2 rounded-2xl border border-[#C8D9C2] shadow-md transform rotate-2 hidden xs:block">
+            <div className="absolute -top-2 right-2 sm:right-6 z-30 max-w-[170px] text-[11px] font-bold text-[#141A16] floating-badge px-3 py-2 rounded-2xl transform rotate-2 hidden xs:block">
               <span>Lebih hemat, lebih berdampak bersama ReFeed!</span>
               <div className="absolute -bottom-1.5 left-6 w-3 h-3 bg-white border-b border-r border-[#C8D9C2] transform rotate-45" />
             </div>
 
             {/* Main Center Phone Mockup */}
-            <div className="relative z-20 w-[270px] xs:w-[290px] sm:w-[310px] bg-black rounded-[46px] p-3 shadow-2xl border-[3px] border-[#2D3E33]">
+            <div className="relative z-20 w-[270px] xs:w-[290px] sm:w-[310px] bg-black rounded-[46px] p-3 app-phone-shadow border-[3px] border-[#2D3E33]">
               
               {/* Dynamic Island / Speaker */}
               <div className="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-4 bg-black rounded-full z-30 flex items-center justify-end px-2">

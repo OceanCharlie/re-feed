@@ -44,12 +44,13 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-24 bg-[#FFFFFF] relative">
+    <section className="py-24 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E8F4DA] text-[#105e3a] text-xs font-black uppercase tracking-wider">
+          <div className="badge-glow px-3.5 py-1.5 rounded-full text-[#105e3a] text-xs font-black uppercase tracking-wider">
+            <span className="badge-glow-dot" />
             ⭐ Cerita Pengguna & Mitra
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#16241C] tracking-tight">
@@ -65,7 +66,7 @@ export default function Testimonials() {
           {reviews.map((item, idx) => (
             <div
               key={idx}
-              className="p-6 rounded-3xl bg-[#F6F5F0] border border-[#DCE4D3] shadow-md hover:shadow-xl hover:border-[#105e3a]/40 hover:-translate-y-1 transition-all flex flex-col justify-between"
+              className="app-card p-6 rounded-3xl flex flex-col justify-between"
             >
               <div>
                 {/* Rating stars */}

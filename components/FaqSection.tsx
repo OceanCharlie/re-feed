@@ -30,12 +30,13 @@ export default function FaqSection() {
   };
 
   return (
-    <section id="faq" className="py-16 sm:py-20 bg-[#F6F5F0] relative">
+    <section id="faq" className="py-16 sm:py-20 relative">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12 space-y-2">
-          <span className="inline-block px-3 py-1 rounded-full bg-[#E8F4DA] text-[#105e3a] text-xs font-black uppercase tracking-wider">
+          <span className="badge-glow inline-flex px-3 py-1 rounded-full text-[#105e3a] text-xs font-black uppercase tracking-wider">
+            <span className="badge-glow-dot" />
             FAQ
           </span>
           <h2 className="text-2xl sm:text-3xl font-black text-[#16241C] tracking-tight">
@@ -50,7 +51,7 @@ export default function FaqSection() {
             return (
               <div
                 key={idx}
-                className="rounded-2xl border border-[#DCE4D3] bg-white overflow-hidden transition-all duration-200 shadow-2xs"
+                className="glass-panel rounded-2xl overflow-hidden shadow-[0_10px_28px_-12px_rgba(16,94,58,0.14)] transition-all duration-200"
               >
                 <button
                   onClick={() => toggleFaq(idx)}

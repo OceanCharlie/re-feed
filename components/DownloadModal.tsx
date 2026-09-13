@@ -13,9 +13,9 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3.5 sm:p-4 bg-black/75 animate-in fade-in duration-200" onClick={onClose}>
-      <div 
-        className="relative w-full max-w-lg p-5 sm:p-8 bg-white rounded-[28px] sm:rounded-[32px] shadow-2xl border border-[#DCE4D3] overflow-hidden max-h-[92vh] overflow-y-auto no-scrollbar text-[#16241C]"
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3.5 sm:p-4 bg-black/75 backdrop-blur-sm animate-in fade-in duration-200" onClick={onClose}>
+      <div
+        className="relative w-full max-w-lg p-5 sm:p-8 bg-white/90 backdrop-blur-2xl rounded-[28px] sm:rounded-[32px] shadow-[0_30px_80px_-20px_rgba(16,94,58,0.35),0_0_0_1px_rgba(143,194,42,0.15)] border border-white/80 overflow-hidden max-h-[92vh] overflow-y-auto no-scrollbar text-[#16241C]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
@@ -41,7 +41,7 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
         </div>
 
         {/* Desktop QR Code View (Hidden on Mobile for cleaner experience) */}
-        <div className="hidden sm:flex items-center gap-5 p-4 rounded-2xl bg-[#F6F5F0] border border-[#DCE4D3] mb-5">
+        <div className="hidden sm:flex items-center gap-5 p-4 rounded-2xl glass-panel mb-5">
           {/* QR Code */}
           <div className="w-24 h-24 bg-white rounded-xl p-2 shadow-xs flex flex-col items-center justify-center border border-[#DCE4D3] shrink-0">
             <div className="grid grid-cols-5 gap-1 w-full h-full p-1 bg-[#16241C] rounded-lg">
@@ -81,7 +81,7 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
         </div>
 
         {/* Mobile Quick Direct Info Note */}
-        <div className="sm:hidden p-3 rounded-2xl bg-[#EBF5E4] border border-[#C8D9C2] mb-3.5 text-left flex items-center gap-2.5">
+        <div className="sm:hidden p-3 rounded-2xl glass-panel mb-3.5 text-left flex items-center gap-2.5">
           <div className="w-8 h-8 rounded-xl bg-[#105e3a] text-white flex items-center justify-center shrink-0">
             <Smartphone className="w-4 h-4" />
           </div>
@@ -122,7 +122,7 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
               e.preventDefault();
               window.open('https://play.google.com', '_blank');
             }}
-            className="w-full py-3.5 px-4 sm:px-5 bg-[#F6F5F0] hover:bg-[#E8F4DA] text-[#16241C] rounded-2xl flex items-center justify-between border border-[#DCE4D3] transition-all active:scale-98 group cursor-pointer"
+            className="btn-app-secondary w-full py-3.5 px-4 sm:px-5 rounded-2xl flex items-center justify-between active:scale-98 group cursor-pointer"
           >
             <div className="flex items-center gap-3.5">
               <div className="w-9 h-9 rounded-xl bg-white border border-[#DCE4D3] flex items-center justify-center shrink-0">

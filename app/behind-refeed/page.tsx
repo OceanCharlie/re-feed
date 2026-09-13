@@ -3,16 +3,16 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { 
-  ArrowLeft, 
-  ShieldCheck, 
-  Leaf, 
-  Zap, 
-  HeartHandshake, 
-  ShoppingBag, 
-  Cpu, 
-  BarChart3, 
-  Play, 
+import {
+  ArrowLeft,
+  ShieldCheck,
+  Leaf,
+  Zap,
+  HeartHandshake,
+  ShoppingBag,
+  Cpu,
+  BarChart3,
+  Play,
   Store,
   Compass,
   CheckCircle2,
@@ -43,7 +43,7 @@ export default function BehindReFeedPage() {
       role: 'Front End Developer',
       image: '/images/ocean.png',
       icon: Code2,
-      skills: ['Expo', 'NextJs', 'React Native', 'Tailwind CSS'],
+      skills: ['React Native', 'NextJs', 'Expo', 'Tailwind CSS'],
       bio: 'Mengembangkan antarmuka interaktif yang responsif, performa tinggi, dan ramah pengguna.',
     },
     {
@@ -165,20 +165,20 @@ export default function BehindReFeedPage() {
       />
 
       <main className="flex-grow">
-        
+
         {/* 1. Header Section */}
         <section className="pt-24 pb-12 sm:pt-32 sm:pb-16 md:pt-40 md:pb-20 text-center border-b border-[#E8EDE5]/70">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3 sm:space-y-4">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E8EDE5] text-[#57655B] text-xs font-bold hover:text-[#105e3a] transition-all shadow-2xs"
+              className="glass-panel inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-[#57655B] text-xs font-bold hover:text-[#105e3a] hover:border-[#8fc22a]/60 transition-all"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
               <span>Kembali ke Beranda</span>
             </Link>
 
             <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#141A16] leading-tight">
-              Di Balik Gerakan <span className="text-[#105e3a]">ReFeed</span>
+              Di Balik Gerakan <span className="text-gradient-brand">ReFeed</span>
             </h1>
 
             <p className="text-xs sm:text-base md:text-lg text-[#57655B] max-w-2xl mx-auto leading-relaxed">
@@ -190,7 +190,7 @@ export default function BehindReFeedPage() {
               <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#57655B] mb-3.5">
                 Didukung & Dibina Oleh
               </span>
-              <div className="inline-flex flex-wrap items-center justify-center gap-5 sm:gap-7 md:gap-9 px-6 sm:px-9 py-3.5 rounded-2xl bg-white border border-[#E8EDE5] shadow-2xs">
+              <div className="inline-flex flex-wrap items-center justify-center gap-5 sm:gap-7 md:gap-9 px-6 sm:px-9 py-3.5 rounded-2xl glass-panel">
                 {/* Kemendikbudristek / Ministry */}
                 <div className="relative h-8 sm:h-9 w-8 sm:w-9 flex items-center justify-center">
                   <Image
@@ -253,7 +253,7 @@ export default function BehindReFeedPage() {
         {/* 2. Team & Advisor Section */}
         <section className="py-20 sm:py-28 border-b border-[#E8EDE5]/70 relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
+
             {/* Clean Section Header */}
             <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20 space-y-3">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF5E4] text-[#105e3a] text-xs font-bold border border-[#C8D9C2]">
@@ -369,7 +369,7 @@ export default function BehindReFeedPage() {
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
 
               <div className="md:col-span-7 space-y-4 sm:space-y-5 text-left">
-                <span className="inline-block px-3.5 py-1.5 rounded-full bg-[#EBF5E4] text-[#105e3a] text-xs font-bold uppercase tracking-wider border border-[#C8D9C2]">
+                <span className="badge-glow inline-flex px-3.5 py-1.5 rounded-full text-[#105e3a] text-xs font-bold uppercase tracking-wider">
                   Paradoks Pangan
                 </span>
 
@@ -414,7 +414,7 @@ export default function BehindReFeedPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16 space-y-2.5 sm:space-y-3">
-              <span className="inline-block px-3.5 py-1.5 rounded-full bg-[#EBF5E4] text-[#105e3a] text-xs font-bold uppercase tracking-wider border border-[#C8D9C2]">
+              <span className="badge-glow inline-flex px-3.5 py-1.5 rounded-full text-[#105e3a] text-xs font-bold uppercase tracking-wider">
                 Model Ekosistem Sirkular
               </span>
               <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-black text-[#141A16] tracking-tight">
@@ -481,7 +481,7 @@ export default function BehindReFeedPage() {
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16 space-y-2.5 sm:space-y-3">
-              <span className="inline-block px-3.5 py-1.5 rounded-full bg-[#EBF5E4] text-[#105e3a] text-xs font-bold uppercase tracking-wider border border-[#C8D9C2]">
+              <span className="badge-glow inline-flex px-3.5 py-1.5 rounded-full text-[#105e3a] text-xs font-bold uppercase tracking-wider">
                 Inovasi Teknologi
               </span>
               <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-black text-[#141A16] tracking-tight">
@@ -522,7 +522,7 @@ export default function BehindReFeedPage() {
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16 space-y-2.5 sm:space-y-3">
-              <span className="inline-block px-3.5 py-1.5 rounded-full bg-[#EBF5E4] text-[#105e3a] text-xs font-bold uppercase tracking-wider border border-[#C8D9C2]">
+              <span className="badge-glow inline-flex px-3.5 py-1.5 rounded-full text-[#105e3a] text-xs font-bold uppercase tracking-wider">
                 Prinsip Kami
               </span>
               <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-black text-[#141A16] tracking-tight">
@@ -553,8 +553,10 @@ export default function BehindReFeedPage() {
         </section>
 
         {/* 7. CTA */}
-        <section className="py-14 sm:py-20 bg-gradient-to-br from-[#105e3a] to-[#0b4d2e] text-white text-center">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 sm:space-y-6">
+        <section className="py-14 sm:py-20 bg-gradient-hero text-white text-center relative overflow-hidden">
+          <div className="glow-orb -top-20 left-1/4 w-72 h-72 opacity-40" />
+          <div className="glow-orb -bottom-24 right-1/4 w-80 h-80 opacity-30 [animation-delay:2.2s]" />
+          <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 sm:space-y-6">
             <h2 className="text-2xl xs:text-3xl sm:text-4xl font-black tracking-tight text-white">
               Jadilah Bagian dari Gerakan Food Hero
             </h2>

@@ -44,9 +44,9 @@ export default function PartnerModal({ isOpen, onClose }: PartnerModalProps) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3.5 sm:p-4 bg-black/75 animate-in fade-in duration-200" onClick={onClose}>
-      <div 
-        className="relative w-full max-w-xl p-5 sm:p-8 bg-white rounded-[28px] sm:rounded-3xl shadow-2xl border border-[#DCE4D3] max-h-[92vh] overflow-y-auto no-scrollbar text-[#16241C]"
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3.5 sm:p-4 bg-black/75 backdrop-blur-sm animate-in fade-in duration-200" onClick={onClose}>
+      <div
+        className="relative w-full max-w-xl p-5 sm:p-8 bg-white/90 backdrop-blur-2xl rounded-[28px] sm:rounded-3xl shadow-[0_30px_80px_-20px_rgba(16,94,58,0.35),0_0_0_1px_rgba(143,194,42,0.15)] border border-white/80 max-h-[92vh] overflow-y-auto no-scrollbar text-[#16241C]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
@@ -87,7 +87,7 @@ export default function PartnerModal({ isOpen, onClose }: PartnerModalProps) {
                     placeholder="Contoh: Roti Manis Bakery"
                     value={formData.businessName}
                     onChange={(e) => setFormData({ ...formData, businessName: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#DCE4D3] bg-[#F6F5F0] text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#105e3a]"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#DCE4D3] bg-white/70 backdrop-blur-sm text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#8fc22a] focus:border-[#8fc22a] transition-all"
                   />
                 </div>
 
@@ -98,7 +98,7 @@ export default function PartnerModal({ isOpen, onClose }: PartnerModalProps) {
                   <select
                     value={formData.category}
                     onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#DCE4D3] bg-[#F6F5F0] text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#105e3a]"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#DCE4D3] bg-white/70 backdrop-blur-sm text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#8fc22a] focus:border-[#8fc22a] transition-all"
                   >
                     <option value="bakery">Bakery & Pastry</option>
                     <option value="restaurant">Restoran & Rumah Makan</option>
@@ -120,7 +120,7 @@ export default function PartnerModal({ isOpen, onClose }: PartnerModalProps) {
                     placeholder="Nama Lengkap Anda"
                     value={formData.ownerName}
                     onChange={(e) => setFormData({ ...formData, ownerName: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#DCE4D3] bg-[#F6F5F0] text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#105e3a]"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#DCE4D3] bg-white/70 backdrop-blur-sm text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#8fc22a] focus:border-[#8fc22a] transition-all"
                   />
                 </div>
 
@@ -134,7 +134,7 @@ export default function PartnerModal({ isOpen, onClose }: PartnerModalProps) {
                     placeholder="081234567890"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#DCE4D3] bg-[#F6F5F0] text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#105e3a]"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#DCE4D3] bg-white/70 backdrop-blur-sm text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#8fc22a] focus:border-[#8fc22a] transition-all"
                   />
                 </div>
               </div>
@@ -149,7 +149,7 @@ export default function PartnerModal({ isOpen, onClose }: PartnerModalProps) {
                     placeholder="mitra@usaha.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#DCE4D3] bg-[#F6F5F0] text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#105e3a]"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#DCE4D3] bg-white/70 backdrop-blur-sm text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#8fc22a] focus:border-[#8fc22a] transition-all"
                   />
                 </div>
 
@@ -163,7 +163,7 @@ export default function PartnerModal({ isOpen, onClose }: PartnerModalProps) {
                     placeholder="Jakarta, Bandung, Surabaya, dll"
                     value={formData.city}
                     onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#DCE4D3] bg-[#F6F5F0] text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#105e3a]"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#DCE4D3] bg-white/70 backdrop-blur-sm text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#8fc22a] focus:border-[#8fc22a] transition-all"
                   />
                 </div>
               </div>

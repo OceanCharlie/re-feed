@@ -11,11 +11,11 @@ interface ScenicStoryBannerProps {
 
 export default function ScenicStoryBanner({ onOpenPartnerModal }: ScenicStoryBannerProps) {
   return (
-    <section className="py-8 sm:py-12 bg-[#FAF9F6] relative">
+    <section className="py-8 sm:py-12 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Scenic Panoramic Card */}
-        <div className="relative rounded-[32px] sm:rounded-[44px] overflow-hidden min-h-[420px] sm:min-h-[480px] flex flex-col justify-between p-6 sm:p-10 lg:p-14 text-white shadow-xl border border-[#E8EDE5]">
+        <div className="relative rounded-[32px] sm:rounded-[44px] overflow-hidden min-h-[420px] sm:min-h-[480px] flex flex-col justify-between p-6 sm:p-10 lg:p-14 text-white shadow-[0_24px_60px_-20px_rgba(16,94,58,0.4)] border border-white/10">
           
           {/* Background Image */}
           <div className="absolute inset-0 z-0">

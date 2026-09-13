@@ -36,15 +36,15 @@ export default function ImpactStats() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Clean 4-Column Horizontal Floating Strip Card */}
-        <div className="rounded-[28px] sm:rounded-[36px] bg-white border border-[#E8EDE5] p-5 sm:p-7 shadow-sm grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 divide-y sm:divide-y-0 lg:divide-x divide-[#E8EDE5]">
+        <div className="app-card rounded-[28px] sm:rounded-[36px] p-5 sm:p-7 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 divide-y sm:divide-y-0 lg:divide-x divide-[#E8EDE5]/70">
           {stats.map((stat, idx) => {
             const Icon = stat.icon;
             return (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className={`flex items-center gap-3.5 sm:gap-4 ${idx > 0 ? 'pt-4 sm:pt-0' : ''} ${idx > 0 ? 'lg:pl-6' : ''}`}
               >
-                <div className={`w-11 h-11 sm:w-13 sm:h-13 rounded-2xl ${stat.iconBg} flex items-center justify-center shrink-0 shadow-2xs`}>
+                <div className={`w-11 h-11 sm:w-13 sm:h-13 rounded-2xl ${stat.iconBg} flex items-center justify-center shrink-0 shadow-[0_0_0_1px_rgba(143,194,42,0.2),0_4px_12px_-4px_rgba(16,94,58,0.3)]`}>
                   <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div className="text-left min-w-0">

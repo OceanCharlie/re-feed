@@ -23,7 +23,7 @@ export default function FloatingCta({ onOpenDownloadModal }: FloatingCtaProps) {
 
   return (
     <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 animate-in fade-in slide-in-from-bottom-4 duration-300 pb-[env(safe-area-inset-bottom)]">
-      <div className="flex items-center gap-1.5 p-1.5 bg-[#111c15]/95 backdrop-blur-md border border-white/20 rounded-full shadow-2xl shadow-black/40">
+      <div className="flex items-center gap-1.5 p-1.5 bg-[#111c15]/95 backdrop-blur-md border border-[#8fc22a]/30 rounded-full shadow-2xl shadow-black/40 [box-shadow:0_0_24px_-4px_rgba(143,194,42,0.4)]">
         <a
           href="https://play.google.com"
           target="_blank"
