@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { ShoppingBag, Leaf, Recycle, ArrowRight } from 'lucide-react';
 
 interface DualEcosystemProps {
@@ -23,10 +24,10 @@ export default function DualEcosystem({ onOpenDownloadModal }: DualEcosystemProp
     },
     {
       id: 2,
-      title: 'Kurangi Limbah',
-      desc: 'Bantu mengurangi makanan yang terbuang sia-sia dan dukung lingkungan yang lebih bersih.',
+      title: 'Kurangi Jejak Karbon',
+      desc: 'Setiap kilogram makanan yang diselamatkan mengurangi emisi gas rumah kaca.',
       icon: Leaf,
-      iconColor: 'text-[#105e3a]',
+      iconColor: 'text-[#8fc22a]',
       iconBg: 'bg-gradient-to-br from-[#EAEEDF] to-[#D5E2CB]',
       image: '/images/earth_leaves.webp',
       badge: null,
@@ -50,7 +51,13 @@ export default function DualEcosystem({ onOpenDownloadModal }: DualEcosystemProp
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 sm:gap-12 items-center">
           
           {/* LEFT COLUMN: Section Header & Narrative */}
-          <div className="lg:col-span-4 text-left space-y-4 sm:space-y-5">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-4 text-left space-y-4 sm:space-y-5"
+          >
             <h2 className="text-3xl xs:text-4xl sm:text-5xl font-black text-[#141A16] tracking-tight leading-[1.15]">
               Langkah Kecil, <br />
               Dampak Besar
@@ -69,15 +76,20 @@ export default function DualEcosystem({ onOpenDownloadModal }: DualEcosystemProp
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>
-          </div>
+          </motion.div>
 
-          {/* RIGHT COLUMN: 3 Clean Feature Cards */}
+          {/* RIGHT COLUMN: 3 Clean Feature Cards with stagger motion */}
           <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
-            {cards.map((card) => {
+            {cards.map((card, idx) => {
               const Icon = card.icon;
               return (
-                <div
+                <motion.div
                   key={card.id}
+                  initial={{ opacity: 0, y: 25 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-40px" }}
+                  transition={{ duration: 0.5, delay: idx * 0.12, ease: [0.16, 1, 0.3, 1] }}
+                  whileHover={{ y: -6 }}
                   className="app-card rounded-3xl p-5 sm:p-6 flex flex-col justify-between text-left group"
                 >
                   <div className="space-y-3">
@@ -95,22 +107,22 @@ export default function DualEcosystem({ onOpenDownloadModal }: DualEcosystemProp
                     </p>
                   </div>
 
-                    {/* Image Container with Badge */}
-                    <div className="mt-5 relative h-36 xs:h-40 w-full rounded-2xl overflow-hidden bg-white/70 border border-white/60 shadow-2xs">
-                      <Image
-                        src={card.image}
-                        alt={card.title}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 33vw"
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                      {card.badge && (
-                        <div className="absolute bottom-2 right-2 floating-badge px-2.5 py-1 rounded-xl text-[#105e3a] text-[10px] font-black">
-                          {card.badge}
-                        </div>
-                      )}
-                    </div>
-                </div>
+                  {/* Image Container with Badge */}
+                  <div className="mt-5 relative h-36 xs:h-40 w-full rounded-2xl overflow-hidden bg-white/70 border border-white/60 shadow-2xs">
+                    <Image
+                      src={card.image}
+                      alt={card.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    {card.badge && (
+                      <div className="absolute bottom-2 right-2 floating-badge px-2.5 py-1 rounded-xl text-[#105e3a] text-[10px] font-black">
+                        {card.badge}
+                      </div>
+                    )}
+                  </div>
+                </motion.div>
               );
             })}
           </div>

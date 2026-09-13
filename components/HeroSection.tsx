@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { QrCode } from 'lucide-react';
 import { GooglePlayIcon } from './BrandLogo';
 
@@ -36,8 +37,13 @@ export default function HeroSection({ onOpenDownloadModal }: HeroSectionProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           
-          {/* LEFT COLUMN: Main Typography & CTAs */}
-          <div className="lg:col-span-6 text-left space-y-5 sm:space-y-6">
+          {/* LEFT COLUMN: Main Typography & CTAs with entrance motion */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-6 text-left space-y-5 sm:space-y-6"
+          >
             
             {/* Bold Headline */}
             <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#141A16] leading-[1.12]">
@@ -53,29 +59,33 @@ export default function HeroSection({ onOpenDownloadModal }: HeroSectionProps) {
 
             {/* CTA Buttons Row */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1">
-              <a
+              <motion.a
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 href="https://play.google.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="h-14 px-6 bg-black hover:bg-neutral-900 text-white rounded-2xl flex items-center justify-center gap-3 shadow-md hover:shadow-lg transition-all active:scale-98 cursor-pointer group"
+                className="h-14 px-6 bg-black hover:bg-neutral-900 text-white rounded-2xl flex items-center justify-center gap-3 shadow-md hover:shadow-lg transition-all cursor-pointer group"
               >
                 <GooglePlayIcon size={24} className="shrink-0" />
                 <div className="text-left">
                   <div className="text-[10px] text-neutral-300 font-bold uppercase tracking-wider leading-none">Download di</div>
                   <div className="text-sm sm:text-base font-black leading-tight text-white mt-0.5">Google Play Store</div>
                 </div>
-              </a>
+              </motion.a>
 
-              <button
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 onClick={onOpenDownloadModal}
-                className="btn-app-secondary h-14 px-6 rounded-2xl flex items-center justify-center gap-2.5 active:scale-98 cursor-pointer font-bold text-xs sm:text-sm"
+                className="btn-app-secondary h-14 px-6 rounded-2xl flex items-center justify-center gap-2.5 cursor-pointer font-bold text-xs sm:text-sm"
               >
                 <QrCode className="w-5 h-5 text-[#105e3a] shrink-0" />
                 <span>Pindai QR / Unduh APK</span>
-              </button>
+              </motion.button>
             </div>
 
-          </div>
+          </motion.div>
 
           {/* RIGHT COLUMN: Interactive Smartphone Mockup + Hero Mascot */}
           <div className="lg:col-span-6 relative flex items-center justify-center pt-6 lg:pt-0">
@@ -83,14 +93,24 @@ export default function HeroSection({ onOpenDownloadModal }: HeroSectionProps) {
             {/* Ambient glow halo behind the phone for a futuristic energy feel */}
             <div className="glow-orb w-64 h-64 sm:w-80 sm:h-80 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10" />
 
-            {/* Doodle Speech Bubble (Top Right of Mascot) */}
-            <div className="absolute -top-4 right-0 sm:right-4 lg:right-6 z-40 max-w-[170px] text-[11px] font-bold text-[#141A16] floating-badge px-3 py-2 rounded-2xl transform rotate-2 hidden xs:block">
+            {/* Doodle Speech Bubble (Top Right of Mascot) with spring pop */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.7, rotate: -4 }}
+              animate={{ opacity: 1, scale: 1, rotate: 2 }}
+              transition={{ delay: 0.45, type: "spring", stiffness: 260, damping: 18 }}
+              className="absolute -top-4 right-0 sm:right-4 lg:right-6 z-40 max-w-[170px] text-[11px] font-bold text-[#141A16] floating-badge px-3 py-2 rounded-2xl transform rotate-2 hidden xs:block"
+            >
               <span>Lebih hemat, lebih berdampak bersama ReFeed!</span>
               <div className="absolute -bottom-1.5 left-6 w-3 h-3 bg-white border-b border-r border-[#C8D9C2] transform rotate-45" />
-            </div>
+            </motion.div>
 
             {/* Main Center Phone Mockup */}
-            <div className="relative z-20 w-[270px] xs:w-[290px] sm:w-[310px] bg-black rounded-[46px] p-3 app-phone-shadow border-[3px] border-[#2D3E33]">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.92, y: 25 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+              className="relative z-20 w-[270px] xs:w-[290px] sm:w-[310px] bg-black rounded-[46px] p-3 app-phone-shadow border-[3px] border-[#2D3E33]"
+            >
               
               {/* Dynamic Island / Speaker */}
               <div className="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-4 bg-black rounded-full z-30 flex items-center justify-end px-2">
@@ -108,10 +128,30 @@ export default function HeroSection({ onOpenDownloadModal }: HeroSectionProps) {
                   className="object-cover object-top"
                 />
               </div>
-            </div>
+            </motion.div>
 
-            {/* Floating ReFeed Hero Mascot Character (Feede) */}
-            <div className="absolute -right-6 xs:-right-10 sm:-right-16 lg:-right-20 -bottom-2 sm:bottom-0 lg:bottom-2 z-30 w-44 xs:w-52 sm:w-64 md:w-72 lg:w-80 h-64 xs:h-72 sm:h-88 md:h-96 lg:h-[420px] pointer-events-none drop-shadow-2xl">
+            {/* Floating ReFeed Hero Mascot Character (Feede) with smooth breathing float */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.85, x: 20 }}
+              animate={{
+                opacity: 1,
+                scale: 1,
+                x: 0,
+                y: [0, -10, 0],
+              }}
+              transition={{
+                opacity: { duration: 0.6, delay: 0.3 },
+                scale: { duration: 0.6, delay: 0.3, ease: [0.16, 1, 0.3, 1] },
+                x: { duration: 0.6, delay: 0.3 },
+                y: {
+                  repeat: Infinity,
+                  duration: 4.5,
+                  ease: "easeInOut",
+                  delay: 0.9,
+                },
+              }}
+              className="absolute -right-6 xs:-right-10 sm:-right-16 lg:-right-20 -bottom-2 sm:bottom-0 lg:bottom-2 z-30 w-44 xs:w-52 sm:w-64 md:w-72 lg:w-80 h-64 xs:h-72 sm:h-88 md:h-96 lg:h-[420px] pointer-events-none drop-shadow-2xl"
+            >
               <Image
                 src="/images/feede.png"
                 alt="Feede - Maskot Resmi ReFeed"
@@ -120,7 +160,7 @@ export default function HeroSection({ onOpenDownloadModal }: HeroSectionProps) {
                 sizes="(max-width: 640px) 210px, (max-width: 1024px) 280px, 320px"
                 className="object-contain object-bottom"
               />
-            </div>
+            </motion.div>
 
           </div>
 

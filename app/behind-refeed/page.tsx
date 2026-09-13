@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import {
   ArrowLeft,
   ShieldCheck,
@@ -590,8 +591,12 @@ export default function BehindReFeedPage() {
               {pillars.map((pillar, idx) => {
                 const Icon = pillar.icon;
                 return (
-                  <div
+                  <motion.div
                     key={idx}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-40px" }}
+                    transition={{ duration: 0.6, delay: idx * 0.15, ease: [0.16, 1, 0.3, 1] }}
                     className="group flex flex-col items-center text-center sm:text-left transition-all duration-300"
                   >
                     {/* Visual Mascot di Atas (Bukan Card, Full View, Ambient Halo Glow) */}
@@ -666,7 +671,7 @@ export default function BehindReFeedPage() {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
                 );
               })}
             </div>

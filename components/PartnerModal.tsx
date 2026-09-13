@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { X, Store, CheckCircle, Send, Loader2, AlertCircle, MailCheck } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
@@ -31,8 +32,6 @@ export default function PartnerModal({ isOpen, onClose }: PartnerModalProps) {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isNeedsActivation, setIsNeedsActivation] = useState(false);
-
-  if (!isOpen) return null;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -103,15 +102,11 @@ export default function PartnerModal({ isOpen, onClose }: PartnerModalProps) {
     } catch (err: unknown) {
       console.error('Error submitting partner form:', err);
       const errText = err instanceof Error ? err.message : '';
-      if (errText.toLowerCase().includes('activation')) {
-        setErrorMessage(
-          'Form ini memerlukan aktivasi 1 kali. Cek inbox pkmkc.refeed@gmail.com dan klik tombol Activate Form.'
-        );
-      } else {
-        setErrorMessage(
-          errText ? `${errText}. Silakan coba lagi atau hubungi kami via email langsung.` : 'Maaf, terjadi kendala saat mengirim pendaftaran. Silakan coba sesaat lagi.'
-        );
-      }
+      setErrorMessage(
+        err instanceof Error
+          ? err.message
+          : 'Terjadi kesalahan sistem. Silakan coba lagi atau hubungi kami via WhatsApp.'
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -121,29 +116,53 @@ export default function PartnerModal({ isOpen, onClose }: PartnerModalProps) {
     setIsSubmitted(false);
     setIsNeedsActivation(false);
     setErrorMessage(null);
+    setFormData({
+      businessName: '',
+      category: 'bakery',
+      ownerName: '',
+      phone: '',
+      email: '',
+      city: 'Jakarta',
+      estimatedPortions: '15',
+    });
     onClose();
   };
 
   const handleClose = () => {
     setErrorMessage(null);
+    setIsSubmitted(false);
     setIsNeedsActivation(false);
     onClose();
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3.5 sm:p-4 bg-black/75 backdrop-blur-sm animate-in fade-in duration-200" onClick={handleClose}>
-      <div
-        className="relative w-full max-w-xl p-5 sm:p-8 bg-white/90 backdrop-blur-2xl rounded-[28px] sm:rounded-3xl shadow-[0_30px_80px_-20px_rgba(16,94,58,0.35),0_0_0_1px_rgba(143,194,42,0.15)] border border-white/80 max-h-[92vh] overflow-y-auto no-scrollbar text-[#16241C]"
-        onClick={(e) => e.stopPropagation()}
-      >
-        {/* Close Button */}
-        <button
-          onClick={handleClose}
-          className="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 p-2 text-slate-400 hover:text-[#16241C] rounded-full hover:bg-[#F6F5F0] transition-colors cursor-pointer active:scale-90 z-20"
-          aria-label="Tutup Modal"
-        >
-          <X className="w-5 h-5" />
-        </button>
+    <AnimatePresence>
+      {isOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-3.5 sm:p-4">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            onClick={handleClose}
+            className="fixed inset-0 bg-black/75 backdrop-blur-sm"
+          />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.94, y: 16 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.94, y: 16 }}
+            transition={{ type: "spring", duration: 0.35, bounce: 0.12 }}
+            className="relative z-10 w-full max-w-xl p-5 sm:p-8 bg-white/90 backdrop-blur-2xl rounded-[28px] sm:rounded-3xl shadow-[0_30px_80px_-20px_rgba(16,94,58,0.35),0_0_0_1px_rgba(143,194,42,0.15)] border border-white/80 max-h-[92vh] overflow-y-auto no-scrollbar text-[#16241C]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              onClick={handleClose}
+              className="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 p-2 text-slate-400 hover:text-[#16241C] rounded-full hover:bg-[#F6F5F0] transition-colors cursor-pointer active:scale-90 z-20"
+              aria-label="Tutup Modal"
+            >
+              <X className="w-5 h-5" />
+            </button>
 
         {!isSubmitted ? (
           <>
@@ -362,7 +381,9 @@ export default function PartnerModal({ isOpen, onClose }: PartnerModalProps) {
             </div>
           </div>
         )}
-      </div>
-    </div>
+          </motion.div>
+        </div>
+      )}
+    </AnimatePresence>
   );
 }

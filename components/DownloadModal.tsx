@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { X, QrCode, CheckCircle2, ShieldCheck, Download, Smartphone, ArrowRight } from 'lucide-react';
 import { BrandMarkSvg, GooglePlayIcon } from './BrandLogo';
 
@@ -10,14 +11,26 @@ interface DownloadModalProps {
 }
 
 export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
-  if (!isOpen) return null;
-
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3.5 sm:p-4 bg-black/75 backdrop-blur-sm animate-in fade-in duration-200" onClick={onClose}>
-      <div
-        className="relative w-full max-w-lg p-5 sm:p-8 bg-white/90 backdrop-blur-2xl rounded-[28px] sm:rounded-[32px] shadow-[0_30px_80px_-20px_rgba(16,94,58,0.35),0_0_0_1px_rgba(143,194,42,0.15)] border border-white/80 overflow-hidden max-h-[92vh] overflow-y-auto no-scrollbar text-[#16241C]"
-        onClick={(e) => e.stopPropagation()}
-      >
+    <AnimatePresence>
+      {isOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-3.5 sm:p-4">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            onClick={onClose}
+            className="fixed inset-0 bg-black/75 backdrop-blur-sm"
+          />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.94, y: 16 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.94, y: 16 }}
+            transition={{ type: "spring", duration: 0.35, bounce: 0.12 }}
+            className="relative z-10 w-full max-w-lg p-5 sm:p-8 bg-white/90 backdrop-blur-2xl rounded-[28px] sm:rounded-[32px] shadow-[0_30px_80px_-20px_rgba(16,94,58,0.35),0_0_0_1px_rgba(143,194,42,0.15)] border border-white/80 overflow-hidden max-h-[92vh] overflow-y-auto no-scrollbar text-[#16241C]"
+            onClick={(e) => e.stopPropagation()}
+          >
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -151,7 +164,9 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
             <CheckCircle2 className="w-3.5 h-3.5 text-[#105e3a]" /> Eco-Points Harian
           </span>
         </div>
-      </div>
-    </div>
+          </motion.div>
+        </div>
+      )}
+    </AnimatePresence>
   );
 }

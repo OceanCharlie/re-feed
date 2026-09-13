@@ -229,6 +229,7 @@ export default function RootLayout({
   return (
     <html
       lang="id"
+      data-scroll-behavior="smooth"
       className={`${bricolage.variable} ${inter.variable} h-full antialiased scroll-smooth`}
       suppressHydrationWarning
     >
