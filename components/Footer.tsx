@@ -33,9 +33,6 @@ export default function Footer({}: FooterProps) {
             <Link href="/behind-refeed" className="hover:text-[#105e3a] transition-colors py-1">
               Tentang Kami
             </Link>
-            <Link href="/behind-refeed" className="hover:text-[#105e3a] transition-colors py-1">
-              Karir
-            </Link>
             <Link href="/#faq" className="hover:text-[#105e3a] transition-colors py-1">
               FAQ
             </Link>
