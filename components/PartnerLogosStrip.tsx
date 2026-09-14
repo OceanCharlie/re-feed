@@ -33,7 +33,6 @@ export default function PartnerLogosStrip({ onOpenPartnerModal }: PartnerLogosSt
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-10 sm:mb-12">
           <div className="badge-glow px-3.5 py-1.5 rounded-full text-[#105e3a] text-xs font-bold">
             <span className="badge-glow-dot" />
-            <Store className="w-3.5 h-3.5" />
             <span>Peluang Kemitraan Kuliner</span>
           </div>
 
