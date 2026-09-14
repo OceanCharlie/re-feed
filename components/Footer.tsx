@@ -30,7 +30,7 @@ export default function Footer({}: FooterProps) {
 
           {/* Center Links */}
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs sm:text-sm font-semibold text-[#141A16]">
-            <Link href="/behind-refeed" className="hover:text-[#105e3a] transition-colors py-1">
+            <Link href="/behind-refeed/" className="hover:text-[#105e3a] transition-colors py-1">
               Tentang Kami
             </Link>
             <Link href="/#faq" className="hover:text-[#105e3a] transition-colors py-1">

@@ -45,8 +45,15 @@ export default function HeroSection({ onOpenDownloadModal }: HeroSectionProps) {
             className="lg:col-span-6 text-left space-y-5 sm:space-y-6"
           >
             
+            {/* Official Brand Eyebrow Badge for SEO & Trust */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF5E4] text-[#105e3a] text-xs font-bold border border-[#C8D9C2]">
+              <span className="w-2 h-2 rounded-full bg-[#105e3a] animate-pulse" />
+              <span>Aplikasi Resmi Re-Feed Indonesia</span>
+            </div>
+
             {/* Bold Headline */}
             <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#141A16] leading-[1.12]">
+              <span className="sr-only">Re-Feed Indonesia: </span>
               Selamatkan <br />
               Makanan Lezat, <br />
               <span className="text-gradient-brand">Hemat hingga 70%</span>

@@ -581,6 +581,90 @@ export default function BehindReFeedPage() {
               </div>
 
             </div>
+
+            {/* UN SDGs Alignment Highlight Banner */}
+            <div className="mt-10 sm:mt-14 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-[#F5F9F2] to-[#EAF3E6] border border-[#C8D9C2]/80 space-y-5">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-left">
+                <div>
+                  <span className="badge-glow inline-flex px-3.5 py-1.5 rounded-full text-[#105e3a] text-xs font-bold uppercase tracking-wider mb-2">
+                    <span className="badge-glow-dot" />
+                    Inovasi PKM-KC Untar untuk SDGs PBB
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-black text-[#141A16] tracking-tight">
+                    Menjawab Sasaran Pembangunan Berkelanjutan (SDGs 2030)
+                  </h3>
+                </div>
+                <div className="text-xs font-bold text-[#57655B] bg-white/70 px-3 py-1.5 rounded-xl border border-[#C8D9C2]/60 self-start sm:self-auto">
+                  PBB Agenda 2030
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 text-left">
+                <div className="p-3.5 sm:p-4 rounded-2xl bg-white border border-[#E8EDE5] shadow-xs space-y-2 hover:border-[#DDA63A]/60 transition-all hover:shadow-sm">
+                  <div className="relative w-full aspect-square rounded-xl overflow-hidden bg-slate-50 border border-black/5">
+                    <Image
+                      src="/images/sdg/sdg-2.png"
+                      alt="SDG 2 Tanpa Kelaparan"
+                      fill
+                      sizes="(max-width: 640px) 50vw, 25vw"
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="text-xs sm:text-sm font-black text-[#141A16] pt-0.5">Tanpa Kelaparan</div>
+                  <p className="text-[11px] text-[#57655B] leading-snug">
+                    Akses pangan bergizi diskon 50–70% bagi masyarakat luas.
+                  </p>
+                </div>
+
+                <div className="p-3.5 sm:p-4 rounded-2xl bg-white border border-[#E8EDE5] shadow-xs space-y-2 hover:border-[#FDB713]/60 transition-all hover:shadow-sm">
+                  <div className="relative w-full aspect-square rounded-xl overflow-hidden bg-slate-50 border border-black/5">
+                    <Image
+                      src="/images/sdg/sdg-7.png"
+                      alt="SDG 7 Energi Bersih dan Terjangkau"
+                      fill
+                      sizes="(max-width: 640px) 50vw, 25vw"
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="text-xs sm:text-sm font-black text-[#141A16] pt-0.5">Energi Bersih</div>
+                  <p className="text-[11px] text-[#57655B] leading-snug">
+                    Konversi sampah organik ke energi biogas & pupuk kompos.
+                  </p>
+                </div>
+
+                <div className="p-3.5 sm:p-4 rounded-2xl bg-white border border-[#E8EDE5] shadow-xs space-y-2 hover:border-[#CF8D2A]/60 transition-all hover:shadow-sm">
+                  <div className="relative w-full aspect-square rounded-xl overflow-hidden bg-slate-50 border border-black/5">
+                    <Image
+                      src="/images/sdg/sdg-12.png"
+                      alt="SDG 12 Konsumsi dan Produksi Bertanggung Jawab"
+                      fill
+                      sizes="(max-width: 640px) 50vw, 25vw"
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="text-xs sm:text-sm font-black text-[#141A16] pt-0.5">Konsumsi Bertanggung Jawab</div>
+                  <p className="text-[11px] text-[#57655B] leading-snug">
+                    Target 12.3: Pangkas 50% food waste hulu ke hilir.
+                  </p>
+                </div>
+
+                <div className="p-3.5 sm:p-4 rounded-2xl bg-white border border-[#E8EDE5] shadow-xs space-y-2 hover:border-[#3F7E44]/60 transition-all hover:shadow-sm">
+                  <div className="relative w-full aspect-square rounded-xl overflow-hidden bg-slate-50 border border-black/5">
+                    <Image
+                      src="/images/sdg/sdg-13.png"
+                      alt="SDG 13 Penanganan Perubahan Iklim"
+                      fill
+                      sizes="(max-width: 640px) 50vw, 25vw"
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="text-xs sm:text-sm font-black text-[#141A16] pt-0.5">Penanganan Iklim</div>
+                  <p className="text-[11px] text-[#57655B] leading-snug">
+                    Reduksi gas metana (CH₄) TPA yang 28x lebih berbahaya dari CO₂.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 

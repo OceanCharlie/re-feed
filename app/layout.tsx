@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, Inter } from "next/font/google";
 import "./globals.css";
 
@@ -14,8 +14,16 @@ const inter = Inter({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  themeColor: "#105e3a",
+  colorScheme: "light",
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://refeed-indonesia.com"),
+  manifest: "/manifest.json",
   title: {
     default: "Re-Feed Indonesia - Selamatkan Makanan Lezat, Hemat Hingga 70% & Jaga Bumi",
     template: "%s | Re-Feed Indonesia",
@@ -45,6 +53,12 @@ export const metadata: Metadata = {
     "Akemi Belva Sutanto",
     "Danniel",
     "Tony Untar",
+    "SDGs Indonesia",
+    "Sustainable Development Goals",
+    "SDG 12 Food Waste",
+    "SDG 2 Zero Hunger",
+    "SDG 13 Climate Action",
+    "SDG 7 Energi Terbarukan",
   ],
   authors: [
     { name: "Ocean Charlie Gunawan", url: "https://www.linkedin.com/in/oceancharliegunawan/" },
@@ -233,6 +247,15 @@ const jsonLd = {
           "name": "Universitas Tarumanagara",
           "url": "https://untar.ac.id",
         },
+      ],
+      "knowsAbout": [
+        "Sustainable Development Goals (SDGs)",
+        "SDG 2 Zero Hunger",
+        "SDG 7 Clean Energy",
+        "SDG 12 Responsible Consumption",
+        "SDG 13 Climate Action",
+        "Food Waste Reduction",
+        "Circular Economy"
       ],
     },
     {

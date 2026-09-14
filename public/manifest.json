@@ -1,0 +1,23 @@
+{
+  "name": "Re-Feed Indonesia",
+  "short_name": "Re-Feed",
+  "description": "Aplikasi penyelamat surplus makanan dan pengolahan limbah organik circular economy di Indonesia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#105e3a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 24x24 32x32 48x48 64x64",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/images/feede.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
