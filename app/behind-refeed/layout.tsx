@@ -25,10 +25,11 @@ export const metadata: Metadata = {
     type: 'article',
     images: [
       {
-        url: '/images/nature_story_banner.webp',
-        width: 1200,
-        height: 630,
-        alt: 'Tim ReFeed Indonesia - Behind the Scenes PKM-KC',
+        url: '/images/opengraph.png',
+        width: 1920,
+        height: 1080,
+        type: 'image/png',
+        alt: 'Tim ReFeed Indonesia - Behind the Scenes PKM-KC Untar',
       },
     ],
   },
@@ -37,7 +38,16 @@ export const metadata: Metadata = {
     title: 'Tentang ReFeed - Inovasi Circular Economy PKM-KC Untar',
     description:
       'Kenali tim mahasiswa Universitas Tarumanagara dan dedikasi di balik platform penyelamat surplus makanan ReFeed.',
-    images: ['/images/nature_story_banner.webp'],
+    site: '@pkmkc.refeed',
+    creator: '@pkmkc.refeed',
+    images: [
+      {
+        url: '/images/opengraph.png',
+        width: 1920,
+        height: 1080,
+        alt: 'Tim ReFeed Indonesia - Behind the Scenes PKM-KC Untar',
+      },
+    ],
   },
 };
 

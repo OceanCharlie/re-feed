@@ -63,10 +63,11 @@ export const metadata: Metadata = {
     siteName: "ReFeed Indonesia",
     images: [
       {
-        url: "/images/nature_story_banner.webp",
-        width: 1200,
-        height: 630,
-        alt: "ReFeed Indonesia - Gerakan Penyelamat Surplus Makanan & Circular Economy",
+        url: "/images/opengraph.png",
+        width: 1920,
+        height: 1080,
+        type: "image/png",
+        alt: "ReFeed Indonesia - Integrated Circular Food System & Resource Recovery Application",
       },
     ],
   },
@@ -75,8 +76,16 @@ export const metadata: Metadata = {
     title: "ReFeed - Solusi Penyelamat Surplus Makanan Indonesia",
     description:
       "Hemat hingga 70% belanja kuliner & kurangi jejak karbon bersama aplikasi mobile ReFeed.",
+    site: "@pkmkc.refeed",
     creator: "@pkmkc.refeed",
-    images: ["/images/nature_story_banner.webp"],
+    images: [
+      {
+        url: "/images/opengraph.png",
+        width: 1920,
+        height: 1080,
+        alt: "ReFeed Indonesia - Integrated Circular Food System & Resource Recovery Application",
+      },
+    ],
   },
   robots: {
     index: true,
