@@ -6,6 +6,10 @@
   RewriteCond %{HTTPS} off
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+  # Canonicalize: Redirect www to non-www
+  RewriteCond %{HTTP_HOST} ^www\.refeed-indonesia\.com$ [NC]
+  RewriteRule ^(.*)$ https://refeed-indonesia.com/$1 [L,R=301]
+
   # Redirect robot.txt (typo/singular) to robots.txt (standard SEO)
   RewriteRule ^robot\.txt$ /robots.txt [L,R=301]
 

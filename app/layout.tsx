@@ -17,12 +17,14 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://refeed-indonesia.com"),
   title: {
-    default: "ReFeed - Selamatkan Makanan Lezat, Hemat Hingga 70% & Jaga Bumi",
-    template: "%s | ReFeed Indonesia",
+    default: "Re-Feed Indonesia - Selamatkan Makanan Lezat, Hemat Hingga 70% & Jaga Bumi",
+    template: "%s | Re-Feed Indonesia",
   },
   description:
     "Aplikasi mobile resmi ReFeed: Hubungkan restoran, bakery, dan supermarket favoritmu untuk menyelamatkan surplus makanan lezat diskon 50-70%, penukaran sampah organik ke Waste Hub, dan aksi nyata nol sampah makanan (Zero Food Waste) di Indonesia.",
   keywords: [
+    "Re-Feed",
+    "Re-Feed Indonesia",
     "ReFeed",
     "ReFeed Indonesia",
     "Aplikasi Surplus Makanan",
@@ -37,10 +39,24 @@ export const metadata: Metadata = {
     "Circular Economy Makanan",
     "Eco Points Indonesia",
     "Kuliner Hemat Ramah Lingkungan",
+    "Ocean Charlie Gunawan",
+    "Chandra Wijaya",
+    "Jessica",
+    "Akemi Belva Sutanto",
+    "Danniel",
+    "Tony Untar",
   ],
-  authors: [{ name: "ReFeed Indonesia", url: "https://refeed-indonesia.com" }],
+  authors: [
+    { name: "Ocean Charlie Gunawan", url: "https://www.linkedin.com/in/oceancharliegunawan/" },
+    { name: "Chandra Wijaya", url: "https://www.linkedin.com/in/chandra-wijaya" },
+    { name: "Jessica", url: "https://www.linkedin.com/in/jessica-jessica" },
+    { name: "Akemi Belva Sutanto", url: "https://www.linkedin.com/in/akemi-belva-sutanto-064061296/" },
+    { name: "Danniel", url: "https://www.linkedin.com/in/danniel-a5a918252/" },
+    { name: "Tony, Ph.D.", url: "https://www.linkedin.com/in/tony-lie-b57a195/" },
+    { name: "Re-Feed Indonesia", url: "https://refeed-indonesia.com" },
+  ],
   creator: "Tim PKM-KC ReFeed Universitas Tarumanagara",
-  publisher: "ReFeed Indonesia",
+  publisher: "Re-Feed Indonesia",
   formatDetection: {
     email: false,
     address: false,
@@ -60,20 +76,20 @@ export const metadata: Metadata = {
     type: "website",
     locale: "id_ID",
     url: "https://refeed-indonesia.com/",
-    siteName: "ReFeed Indonesia",
+    siteName: "Re-Feed Indonesia",
     images: [
       {
         url: "/images/opengraph.png",
         width: 1920,
         height: 1080,
         type: "image/png",
-        alt: "ReFeed Indonesia - Integrated Circular Food System & Resource Recovery Application",
+        alt: "Re-Feed Indonesia - Integrated Circular Food System & Resource Recovery Application",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ReFeed - Solusi Penyelamat Surplus Makanan Indonesia",
+    title: "Re-Feed - Solusi Penyelamat Surplus Makanan Indonesia",
     description:
       "Hemat hingga 70% belanja kuliner & kurangi jejak karbon bersama aplikasi mobile ReFeed.",
     site: "@pkmkc.refeed",
@@ -83,7 +99,7 @@ export const metadata: Metadata = {
         url: "/images/opengraph.png",
         width: 1920,
         height: 1080,
-        alt: "ReFeed Indonesia - Integrated Circular Food System & Resource Recovery Application",
+        alt: "Re-Feed Indonesia - Integrated Circular Food System & Resource Recovery Application",
       },
     ],
   },
@@ -120,8 +136,14 @@ const jsonLd = {
     {
       "@type": "WebSite",
       "@id": "https://refeed-indonesia.com/#website",
-      "url": "https://refeed-indonesia.com",
-      "name": "ReFeed Indonesia",
+      "url": "https://refeed-indonesia.com/",
+      "name": "Re-Feed Indonesia",
+      "alternateName": [
+        "ReFeed Indonesia",
+        "Re-Feed",
+        "ReFeed",
+        "refeed-indonesia.com"
+      ],
       "description":
         "Platform digital circular economy penyelamat surplus makanan dan pengolahan limbah organik terintegrasi di Indonesia.",
       "inLanguage": "id-ID",
@@ -134,12 +156,17 @@ const jsonLd = {
     {
       "@type": "Organization",
       "@id": "https://refeed-indonesia.com/#organization",
-      "name": "ReFeed Indonesia",
-      "url": "https://refeed-indonesia.com",
+      "name": "Re-Feed Indonesia",
+      "alternateName": [
+        "ReFeed Indonesia",
+        "Re-Feed",
+        "ReFeed"
+      ],
+      "url": "https://refeed-indonesia.com/",
       "logo": {
         "@type": "ImageObject",
         "url": "https://refeed-indonesia.com/favicon.ico",
-        "caption": "ReFeed Indonesia Logo",
+        "caption": "Re-Feed Indonesia Logo",
       },
       "description":
         "Inovasi platform digital penyelamat surplus makanan dan pengelolaan limbah organik berbasis circular economy oleh mahasiswa Universitas Tarumanagara yang didanai Kemendikbudristek PKM-KC.",
@@ -151,6 +178,50 @@ const jsonLd = {
         "addressCountry": "ID",
       },
       "sameAs": ["https://www.instagram.com/pkmkc.refeed/"],
+      "member": [
+        {
+          "@type": "Person",
+          "name": "Ocean Charlie Gunawan",
+          "jobTitle": "Front End Developer",
+          "sameAs": "https://www.linkedin.com/in/oceancharliegunawan/",
+          "image": "https://refeed-indonesia.com/images/ocean.webp"
+        },
+        {
+          "@type": "Person",
+          "name": "Chandra Wijaya",
+          "jobTitle": "UI/UX Designer",
+          "sameAs": "https://www.linkedin.com/in/chandra-wijaya",
+          "image": "https://refeed-indonesia.com/images/chandra.webp"
+        },
+        {
+          "@type": "Person",
+          "name": "Jessica",
+          "jobTitle": "Project Manager",
+          "sameAs": "https://www.linkedin.com/in/jessica-jessica",
+          "image": "https://refeed-indonesia.com/images/jes.webp"
+        },
+        {
+          "@type": "Person",
+          "name": "Akemi Belva Sutanto",
+          "jobTitle": "Integration Engineer",
+          "sameAs": "https://www.linkedin.com/in/akemi-belva-sutanto-064061296/",
+          "image": "https://refeed-indonesia.com/images/akemi.webp"
+        },
+        {
+          "@type": "Person",
+          "name": "Danniel",
+          "jobTitle": "Back End Developer",
+          "sameAs": "https://www.linkedin.com/in/danniel-a5a918252/",
+          "image": "https://refeed-indonesia.com/images/danniel.webp"
+        },
+        {
+          "@type": "Person",
+          "name": "Tony, Ph.D.",
+          "jobTitle": "Strategic Advisor & Dosen Pembimbing",
+          "sameAs": "https://www.linkedin.com/in/tony-lie-b57a195/",
+          "image": "https://refeed-indonesia.com/images/tony.webp"
+        }
+      ],
       "sponsor": [
         {
           "@type": "Organization",

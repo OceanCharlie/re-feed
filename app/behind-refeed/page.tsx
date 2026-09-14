@@ -47,6 +47,7 @@ export default function BehindReFeedPage() {
   const teamMembers = [
     {
       name: 'Ocean Charlie Gunawan',
+      slug: 'ocean-charlie-gunawan',
       role: 'Front End Developer',
       image: '/images/ocean.webp',
       icon: Code2,
@@ -56,6 +57,7 @@ export default function BehindReFeedPage() {
     },
     {
       name: 'Chandra Wijaya',
+      slug: 'chandra-wijaya',
       role: 'UI/UX Designer',
       image: '/images/chandra.webp',
       icon: Palette,
@@ -65,6 +67,7 @@ export default function BehindReFeedPage() {
     },
     {
       name: 'Jessica',
+      slug: 'jessica',
       role: 'Project Manager',
       image: '/images/jes.webp',
       icon: Sparkles,
@@ -74,6 +77,7 @@ export default function BehindReFeedPage() {
     },
     {
       name: 'Akemi Belva Sutanto',
+      slug: 'akemi-belva-sutanto',
       role: 'Integration Engineer',
       image: '/images/akemi.webp',
       icon: Layers,
@@ -83,6 +87,7 @@ export default function BehindReFeedPage() {
     },
     {
       name: 'Danniel',
+      slug: 'danniel',
       role: 'Back End Developer',
       image: '/images/danniel.webp',
       icon: Database,
@@ -94,6 +99,7 @@ export default function BehindReFeedPage() {
 
   const advisor = {
     name: 'Tony, Ph.D.',
+    slug: 'tony-lie',
     role: 'Strategic Advisor',
     faculty: 'Fakultas Teknologi Informasi',
     university: 'Universitas Tarumanagara (UNTAR)',
@@ -375,6 +381,9 @@ export default function BehindReFeedPage() {
 
               <div className="flex justify-center">
                 <a
+                  id={advisor.slug}
+                  itemScope
+                  itemType="https://schema.org/Person"
                   href={advisor.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -385,6 +394,7 @@ export default function BehindReFeedPage() {
                     <Image
                       src={advisor.image}
                       alt={advisor.name}
+                      itemProp="image"
                       fill
                       priority
                       unoptimized
@@ -413,12 +423,12 @@ export default function BehindReFeedPage() {
 
                   <div className="space-y-1 w-full px-0.5">
                     <div className="flex items-center justify-center gap-1">
-                      <h4 className="text-xs xs:text-sm sm:text-base font-black text-[#141A16] tracking-tight group-hover:text-[#0A66C2] transition-colors leading-snug">
+                      <h4 itemProp="name" className="text-xs xs:text-sm sm:text-base font-black text-[#141A16] tracking-tight group-hover:text-[#0A66C2] transition-colors leading-snug">
                         {advisor.name}
                       </h4>
                       <ExternalLink className="w-3 h-3 text-[#57655B] group-hover:text-[#0A66C2] shrink-0" />
                     </div>
-                    <p className="text-[11px] sm:text-sm font-bold text-[#105e3a]">
+                    <p itemProp="jobTitle" className="text-[11px] sm:text-sm font-bold text-[#105e3a]">
                       {advisor.role}
                     </p>
                     <div className="flex flex-wrap items-center justify-center gap-1 pt-0.5">
@@ -453,6 +463,9 @@ export default function BehindReFeedPage() {
                   return (
                     <a
                       key={idx}
+                      id={member.slug}
+                      itemScope
+                      itemType="https://schema.org/Person"
                       href={member.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -469,6 +482,7 @@ export default function BehindReFeedPage() {
                         <Image
                           src={member.image}
                           alt={member.name}
+                          itemProp="image"
                           fill
                           unoptimized
                           className="object-contain object-bottom group-hover:scale-105 transition-transform duration-500 ease-out"
@@ -496,12 +510,12 @@ export default function BehindReFeedPage() {
 
                       <div className="space-y-1 w-full px-0.5">
                         <div className="flex items-center justify-center gap-1">
-                          <h4 className="text-xs xs:text-sm sm:text-base font-black text-[#141A16] tracking-tight group-hover:text-[#0A66C2] transition-colors leading-snug">
+                          <h4 itemProp="name" className="text-xs xs:text-sm sm:text-base font-black text-[#141A16] tracking-tight group-hover:text-[#0A66C2] transition-colors leading-snug">
                             {member.name}
                           </h4>
                           <ExternalLink className="w-3 h-3 text-[#57655B] group-hover:text-[#0A66C2] shrink-0" />
                         </div>
-                        <p className="text-[11px] sm:text-sm font-bold text-[#105e3a]">
+                        <p itemProp="jobTitle" className="text-[11px] sm:text-sm font-bold text-[#105e3a]">
                           {member.role}
                         </p>
                         <div className="flex flex-wrap items-center justify-center gap-1 pt-0.5">
