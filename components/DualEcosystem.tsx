@@ -17,30 +17,21 @@ export default function DualEcosystem({ onOpenDownloadModal }: DualEcosystemProp
       title: 'Hemat & Nikmati',
       desc: 'Dapatkan makanan lezat dari brand favorit dengan harga hingga 70% lebih murah.',
       icon: ShoppingBag,
-      iconColor: 'text-[#105e3a]',
-      iconBg: 'bg-gradient-to-br from-[#E2EED9] to-[#C8DFBC]',
       image: '/images/croissant_food.webp',
-      badge: '🥐 Hemat hingga 70%',
     },
     {
       id: 2,
       title: 'Kurangi Jejak Karbon',
       desc: 'Setiap kilogram makanan yang diselamatkan mengurangi emisi gas rumah kaca.',
       icon: Leaf,
-      iconColor: 'text-[#8fc22a]',
-      iconBg: 'bg-gradient-to-br from-[#EAEEDF] to-[#D5E2CB]',
       image: '/images/earth_leaves.webp',
-      badge: null,
     },
     {
       id: 3,
       title: 'Ubah Jadi Energi',
       desc: 'Sisa organik yang tidak dapat dikonsumsi akan disalurkan untuk diolah menjadi biogas.',
       icon: Recycle,
-      iconColor: 'text-[#1e8939]',
-      iconBg: 'bg-gradient-to-br from-[#E2EED9] to-[#C8DFBC]',
       image: '/images/biogas_dome.webp',
-      badge: null,
     },
   ];
 
@@ -94,7 +85,7 @@ export default function DualEcosystem({ onOpenDownloadModal }: DualEcosystemProp
                 >
                   <div className="space-y-3">
                     {/* Round Icon Header */}
-                    <div className={`w-11 h-11 rounded-2xl ${card.iconBg} ${card.iconColor} flex items-center justify-center font-bold shadow-[0_0_0_1px_rgba(143,194,42,0.2)]`}>
+                    <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#E2EED9] to-[#C8DFBC] text-[#105e3a] flex items-center justify-center font-bold shadow-[0_0_0_1px_rgba(143,194,42,0.2)]">
                       <Icon className="w-5 h-5" />
                     </div>
 
@@ -107,7 +98,7 @@ export default function DualEcosystem({ onOpenDownloadModal }: DualEcosystemProp
                     </p>
                   </div>
 
-                  {/* Image Container with Badge */}
+                  {/* Image Container */}
                   <div className="mt-5 relative h-36 xs:h-40 w-full rounded-2xl overflow-hidden bg-white/70 border border-white/60 shadow-2xs">
                     <Image
                       src={card.image}
@@ -116,11 +107,6 @@ export default function DualEcosystem({ onOpenDownloadModal }: DualEcosystemProp
                       sizes="(max-width: 768px) 100vw, 33vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    {card.badge && (
-                      <div className="absolute bottom-2 right-2 floating-badge px-2.5 py-1 rounded-xl text-[#105e3a] text-[10px] font-black">
-                        {card.badge}
-                      </div>
-                    )}
                   </div>
                 </motion.div>
               );

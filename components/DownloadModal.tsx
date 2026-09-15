@@ -1,9 +1,11 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, QrCode, CheckCircle2, ShieldCheck, Download, Smartphone, ArrowRight } from 'lucide-react';
-import { BrandMarkSvg, GooglePlayIcon } from './BrandLogo';
+import { X, Download, ShieldCheck } from 'lucide-react';
+import { BrandMarkSvg } from './BrandLogo';
+import { APK_DOWNLOAD_URL } from '@/lib/download-link';
 
 interface DownloadModalProps {
   isOpen: boolean;
@@ -49,120 +51,47 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
             Unduh Aplikasi ReFeed
           </h3>
           <p className="text-xs sm:text-sm text-[#5A6960] mt-1 max-w-sm mx-auto">
-            Mulai selamatkan makanan lezat, hemat s.d 70%, dan salurkan sisa organik dapur jadi energi bersih!
+            Pindai kode QR dengan kamera HP untuk instal
           </p>
         </div>
 
-        {/* Desktop QR Code View (Hidden on Mobile for cleaner experience) */}
-        <div className="hidden sm:flex items-center gap-5 p-4 rounded-2xl glass-panel mb-5">
-          {/* QR Code */}
-          <div className="w-24 h-24 bg-white rounded-xl p-2 shadow-xs flex flex-col items-center justify-center border border-[#DCE4D3] shrink-0">
-            <div className="grid grid-cols-5 gap-1 w-full h-full p-1 bg-[#16241C] rounded-lg">
-              <div className="bg-white rounded-xs col-span-2 row-span-2 flex items-center justify-center">
-                <div className="w-2 h-2 bg-[#105e3a] rounded-xs"></div>
-              </div>
-              <div className="bg-[#8fc22a] rounded-xs"></div>
-              <div className="bg-white rounded-xs col-span-2 row-span-2 flex items-center justify-center">
-                <div className="w-2 h-2 bg-[#105e3a] rounded-xs"></div>
-              </div>
-              <div className="bg-[#8fc22a] rounded-xs"></div>
-              <div className="bg-white rounded-xs"></div>
-              <div className="bg-[#105e3a] rounded-xs"></div>
-              <div className="bg-white rounded-xs col-span-2 row-span-2 flex items-center justify-center">
-                <div className="w-2 h-2 bg-[#105e3a] rounded-xs"></div>
-              </div>
-              <div className="bg-[#8fc22a] rounded-xs"></div>
-              <div className="bg-white rounded-xs"></div>
-              <div className="bg-[#8fc22a] rounded-xs"></div>
-            </div>
-            <span className="text-[8px] font-black text-[#5A6960] mt-1 uppercase tracking-wider">Scan Kamera</span>
-          </div>
-
-          <div className="text-left space-y-1">
-            <div className="flex items-center gap-1.5 text-xs font-black text-[#105e3a]">
-              <QrCode className="w-4 h-4 text-[#105e3a]" />
-              <span>Pindai langsung lewat kamera smartphone</span>
-            </div>
-            <p className="text-xs text-[#5A6960] leading-relaxed">
-              Arahkan kamera smartphone Android Anda ke kode QR untuk membuka halaman instalasi ReFeed.
-            </p>
-            <div className="flex items-center gap-1 text-[11px] text-[#105e3a] font-bold">
-              <ShieldCheck className="w-3.5 h-3.5" />
-              <span>Aplikasi Bebas Iklan, Aman & Terverifikasi</span>
+        {/* Big QR Code */}
+        <div className="flex flex-col items-center mb-5">
+          <div className="w-52 h-52 sm:w-60 sm:h-60 bg-white rounded-2xl p-3 shadow-xs border border-[#DCE4D3]">
+            <div className="relative w-full h-full">
+              <Image
+                src="/images/qr-refeed-apk.svg"
+                alt="QR Code untuk mengunduh aplikasi ReFeed"
+                fill
+                className="object-contain"
+              />
             </div>
           </div>
+          <span className="text-[11px] font-bold text-[#5A6960] mt-2 uppercase tracking-wider">Scan dengan Kamera HP</span>
         </div>
 
-        {/* Mobile Quick Direct Info Note */}
-        <div className="sm:hidden p-3 rounded-2xl glass-panel mb-3.5 text-left flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-xl bg-[#105e3a] text-white flex items-center justify-center shrink-0">
-            <Smartphone className="w-4 h-4" />
-          </div>
-          <div>
-            <div className="text-xs font-bold text-[#105e3a]">Instal Langsung di HP Android</div>
-            <div className="text-[11px] text-[#57655B]">Pilih metode instalasi di bawah ini</div>
-          </div>
+        {/* Divider */}
+        <div className="flex items-center gap-3 mb-5">
+          <div className="h-px flex-1 bg-[#E8E4DA]" />
+          <span className="text-[11px] font-bold text-[#8A968D] uppercase tracking-wider">atau</span>
+          <div className="h-px flex-1 bg-[#E8E4DA]" />
         </div>
 
-        {/* Download Options List (Android Only) */}
-        <div className="space-y-3">
-          {/* 1. Google Play Store (Primary) */}
-          <a
-            href="https://play.google.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full py-4 px-4 sm:px-5 bg-gradient-btn hover:opacity-95 text-white rounded-2xl flex items-center justify-between shadow-md hover:shadow-lg transition-all active:scale-98 group cursor-pointer"
-          >
-            <div className="flex items-center gap-3.5">
-              <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-xs">
-                <GooglePlayIcon size={24} />
-              </div>
-              <div className="text-left">
-                <div className="text-[10px] uppercase tracking-wider text-[#DCE4D3] font-bold">Resmi & Terverifikasi</div>
-                <div className="text-sm sm:text-base font-black tracking-wide leading-tight">Google Play Store</div>
-              </div>
-            </div>
-            <span className="text-xs bg-white/20 px-3.5 py-1.5 rounded-xl font-black flex items-center gap-1 shrink-0">
-              <span>Unduh</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </span>
-          </a>
+        {/* Direct Download Button */}
+        <a
+          href={APK_DOWNLOAD_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full py-4 px-4 sm:px-5 bg-gradient-btn hover:opacity-95 text-white rounded-2xl flex items-center justify-center gap-2.5 shadow-md hover:shadow-lg transition-all active:scale-98 cursor-pointer"
+        >
+          <Download className="w-5 h-5" />
+          <span className="text-sm sm:text-base font-black tracking-wide">Unduh APK Langsung</span>
+        </a>
 
-          {/* 2. Direct APK Download (Alternative) */}
-          <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              window.open('https://play.google.com', '_blank');
-            }}
-            className="btn-app-secondary w-full py-3.5 px-4 sm:px-5 rounded-2xl flex items-center justify-between active:scale-98 group cursor-pointer"
-          >
-            <div className="flex items-center gap-3.5">
-              <div className="w-9 h-9 rounded-xl bg-white border border-[#DCE4D3] flex items-center justify-center shrink-0">
-                <Download className="w-4 h-4 text-[#105e3a] group-hover:scale-110 transition-transform" />
-              </div>
-              <div className="text-left">
-                <div className="text-[10px] uppercase tracking-wider text-[#5A6960] font-semibold">Instal Manual</div>
-                <div className="text-xs sm:text-sm font-black">Unduh Paket APK Langsung (.apk)</div>
-              </div>
-            </div>
-            <span className="text-[10px] bg-white border border-[#DCE4D3] px-2.5 py-1 rounded-lg font-bold text-[#105e3a] shrink-0">
-              v1.0 Ready
-            </span>
-          </a>
-        </div>
-
-        {/* Bottom trust note */}
-        <div className="mt-5 pt-3.5 border-t border-[#F6F5F0] flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-[11px] sm:text-xs text-[#5A6960] font-bold">
-          <span className="flex items-center gap-1">
-            <CheckCircle2 className="w-3.5 h-3.5 text-[#105e3a]" /> 100% Gratis
-          </span>
-          <span className="flex items-center gap-1">
-            <CheckCircle2 className="w-3.5 h-3.5 text-[#105e3a]" /> Diskon s.d 70%
-          </span>
-          <span className="flex items-center gap-1">
-            <CheckCircle2 className="w-3.5 h-3.5 text-[#105e3a]" /> Eco-Points Harian
-          </span>
+        {/* Trust note */}
+        <div className="mt-4 flex items-center justify-center gap-1.5 text-[11px] sm:text-xs text-[#5A6960] font-bold">
+          <ShieldCheck className="w-3.5 h-3.5 text-[#105e3a]" />
+          <span>100% Gratis &middot; Aman untuk Android</span>
         </div>
           </motion.div>
         </div>

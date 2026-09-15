@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { QrCode, CheckCircle2 } from 'lucide-react';
 import { GooglePlayIcon } from './BrandLogo';
+import { APK_DOWNLOAD_URL } from '@/lib/download-link';
 
 interface DownloadCtaProps {
   onOpenDownloadModal: () => void;
@@ -67,7 +68,7 @@ export default function DownloadCta({ onOpenDownloadModal }: DownloadCtaProps) {
           <div className="lg:col-span-3 flex flex-col sm:flex-row lg:flex-col items-center justify-center gap-3">
             {/* Google Play Button */}
             <a
-              href="https://play.google.com"
+              href={APK_DOWNLOAD_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full h-14 px-5 bg-black hover:bg-neutral-900 text-white rounded-2xl flex items-center justify-center gap-3 shadow-md hover:shadow-lg transition-all active:scale-98 cursor-pointer group"

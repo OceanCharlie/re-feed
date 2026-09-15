@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { QrCode } from 'lucide-react';
 import { GooglePlayIcon } from './BrandLogo';
+import { APK_DOWNLOAD_URL } from '@/lib/download-link';
 
 interface HeroSectionProps {
   onOpenDownloadModal: () => void;
@@ -69,7 +70,7 @@ export default function HeroSection({ onOpenDownloadModal }: HeroSectionProps) {
               <motion.a
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                href="https://play.google.com"
+                href={APK_DOWNLOAD_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="h-14 px-6 bg-black hover:bg-neutral-900 text-white rounded-2xl flex items-center justify-center gap-3 shadow-md hover:shadow-lg transition-all cursor-pointer group"

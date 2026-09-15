@@ -30,6 +30,7 @@ import DownloadModal from '@/components/DownloadModal';
 import PartnerModal from '@/components/PartnerModal';
 import FloatingCta from '@/components/FloatingCta';
 import { GooglePlayIcon } from '@/components/BrandLogo';
+import { APK_DOWNLOAD_URL } from '@/lib/download-link';
 
 function LinkedinIcon({ className = "w-3.5 h-3.5" }: { className?: string }) {
   return (
@@ -867,7 +868,7 @@ export default function BehindReFeedPage() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-3.5 pt-2">
               <a
-                href="https://play.google.com"
+                href={APK_DOWNLOAD_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-7 py-3.5 sm:py-4 bg-white text-[#105e3a] font-black text-xs sm:text-sm rounded-2xl shadow-lg flex items-center justify-center gap-2.5 hover:bg-[#FCFAF7] transition-all active:scale-98"
