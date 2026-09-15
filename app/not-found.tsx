@@ -5,8 +5,8 @@ import { Home, Mail } from 'lucide-react';
 import { BrandLogo } from '@/components/BrandLogo';
 
 export const metadata: Metadata = {
-  title: '404 - Halaman Tidak Ditemukan | ReFeed Indonesia',
-  description: 'Halaman yang Anda tuju tidak ditemukan atau telah dipindahkan di ReFeed Indonesia.',
+  title: '404 - Halaman Tidak Ditemukan | Re-Feed Indonesia',
+  description: 'Halaman yang Anda tuju tidak ditemukan atau telah dipindahkan di Re-Feed Indonesia.',
   robots: {
     index: false,
     follow: true,
@@ -20,7 +20,7 @@ function EmptyPlateSvg({ className = '' }: { className?: string }) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      aria-label="Ilustrasi Piring Kosong ReFeed"
+      aria-label="Ilustrasi Piring Kosong Re-Feed"
       role="img"
     >
       <defs>
@@ -137,7 +137,7 @@ export default function NotFound() {
 
       {/* Top Navigation / Brand */}
       <header className="max-w-5xl mx-auto w-full flex items-center justify-between z-10">
-        <Link href="/" className="group transition-transform active:scale-95" aria-label="Kembali ke Beranda ReFeed">
+        <Link href="/" className="group transition-transform active:scale-95" aria-label="Kembali ke Beranda Re-Feed">
           <BrandLogo markSize={32} showTagline={true} />
         </Link>
       </header>
@@ -205,7 +205,7 @@ export default function NotFound() {
           </a>
         </p>
         <p className="text-[11px] text-[#57655B]/70 mt-1">
-          &copy; {new Date().getFullYear()} ReFeed Indonesia. What we recover today, feeds tomorrow!
+          &copy; {new Date().getFullYear()} Re-Feed Indonesia. What we recover today, feeds tomorrow!
         </p>
       </footer>
     </main>

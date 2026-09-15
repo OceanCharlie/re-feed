@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import {
   Store,
   Menu,
@@ -15,12 +16,13 @@ import { BrandLogo } from './BrandLogo';
 
 interface NavbarProps {
   onOpenDownloadModal?: () => void;
-  onOpenPartnerModal: () => void;
+  onOpenPartnerModal?: () => void;
 }
 
 export default function Navbar({ onOpenPartnerModal }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,8 +36,35 @@ export default function Navbar({ onOpenPartnerModal }: NavbarProps) {
     { label: 'Solusi', href: '/#solutions', icon: ShoppingBag },
     { label: 'Dampak Lingkungan', href: '/#impact', icon: Leaf },
     { label: 'Mitra Resto', href: '/#merchant', icon: Store },
-    { label: 'Behind ReFeed', href: '/behind-refeed', icon: Users },
+    { label: 'Behind Re-Feed', href: '/behind-refeed', icon: Users },
   ];
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('/#')) {
+      const targetId = href.replace('/#', '');
+      if (pathname === '/') {
+        e.preventDefault();
+        const el = document.getElementById(targetId);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+          window.history.pushState(null, '', `/#${targetId}`);
+        }
+        setMobileMenuOpen(false);
+      } else {
+        setMobileMenuOpen(false);
+      }
+    } else {
+      setMobileMenuOpen(false);
+    }
+  };
+
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (pathname === '/') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    setMobileMenuOpen(false);
+  };
 
   return (
     <header 
@@ -49,7 +78,7 @@ export default function Navbar({ onOpenPartnerModal }: NavbarProps) {
         
         {/* Brand Logo */}
         <div className="flex items-center gap-2.5 sm:gap-3">
-          <Link href="/" className="group" onClick={() => setMobileMenuOpen(false)}>
+          <Link href="/" className="group" onClick={handleLogoClick}>
             <BrandLogo markSize={30} textColor="#141A16" showTagline={false} />
           </Link>
         </div>
@@ -60,7 +89,12 @@ export default function Navbar({ onOpenPartnerModal }: NavbarProps) {
             <Link
               key={link.href}
               href={link.href}
-              className="text-xs sm:text-sm font-semibold text-[#57655B] hover:text-[#105e3a] transition-colors"
+              onClick={(e) => handleNavClick(e, link.href)}
+              className={`text-xs sm:text-sm font-semibold transition-colors ${
+                (link.href === '/behind-refeed' && pathname === '/behind-refeed')
+                  ? 'text-[#105e3a] font-bold'
+                  : 'text-[#57655B] hover:text-[#105e3a]'
+              }`}
             >
               {link.label}
             </Link>
@@ -69,25 +103,25 @@ export default function Navbar({ onOpenPartnerModal }: NavbarProps) {
 
         {/* Desktop Right Action Buttons */}
         <div className="hidden sm:flex items-center gap-3">
-          <button
-            onClick={onOpenPartnerModal}
+          <Link
+            href="/daftar-mitra"
             className="btn-app-primary px-4 py-2 text-xs sm:text-sm font-bold rounded-xl shadow-xs transition-all flex items-center gap-1.5 cursor-pointer"
           >
             <Store className="w-4 h-4" />
             <span>Gabung Mitra</span>
-          </button>
+          </Link>
         </div>
 
         {/* Mobile Menu Toggle & Action Button */}
         <div className="flex items-center gap-2 md:hidden">
-          <button
-            onClick={onOpenPartnerModal}
+          <Link
+            href="/daftar-mitra"
             className="btn-app-primary px-3 py-1.5 text-xs font-bold rounded-xl flex items-center gap-1.5 shadow-2xs cursor-pointer active:scale-95"
             aria-label="Gabung Mitra"
           >
             <Store className="w-3.5 h-3.5" />
             <span>Mitra</span>
-          </button>
+          </Link>
           
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -106,12 +140,17 @@ export default function Navbar({ onOpenPartnerModal }: NavbarProps) {
           <div className="grid grid-cols-1 gap-1">
             {navLinks.map((link) => {
               const Icon = link.icon;
+              const isActive = link.href === '/behind-refeed' && pathname === '/behind-refeed';
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="px-3.5 py-2.5 text-sm font-bold text-[#141A16] hover:text-[#105e3a] hover:bg-[#EBF5E4] rounded-xl transition-all flex items-center justify-between group"
+                  onClick={(e) => handleNavClick(e, link.href)}
+                  className={`px-3.5 py-2.5 text-sm font-bold rounded-xl transition-all flex items-center justify-between group ${
+                    isActive
+                      ? 'bg-[#EBF5E4] text-[#105e3a]'
+                      : 'text-[#141A16] hover:text-[#105e3a] hover:bg-[#EBF5E4]'
+                  }`}
                 >
                   <div className="flex items-center gap-3">
                     <div className="w-7 h-7 rounded-lg bg-[#EBF5E4] text-[#105e3a] flex items-center justify-center group-hover:bg-[#105e3a] group-hover:text-white transition-colors">
@@ -126,16 +165,14 @@ export default function Navbar({ onOpenPartnerModal }: NavbarProps) {
           </div>
 
           <div className="pt-3 border-t border-[#E8EDE5] flex flex-col gap-2.5">
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenPartnerModal();
-              }}
+            <Link
+              href="/daftar-mitra"
+              onClick={() => setMobileMenuOpen(false)}
               className="btn-app-primary w-full py-3 px-4 text-xs font-bold rounded-xl flex items-center justify-center gap-2 shadow-2xs cursor-pointer active:scale-98"
             >
               <Store className="w-4 h-4 text-white" />
               <span>Gabung Mitra Usaha Kuliner</span>
-            </button>
+            </Link>
           </div>
         </div>
       )}

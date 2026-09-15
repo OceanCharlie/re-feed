@@ -53,7 +53,7 @@ export default function PartnerModal({ isOpen, onClose }: PartnerModalProps) {
           'Accept': 'application/json',
         },
         body: JSON.stringify({
-          _subject: `[ReFeed Mitra] Pendaftaran Baru - ${formData.businessName}`,
+          _subject: `[Re-Feed Mitra] Pendaftaran Baru - ${formData.businessName}`,
           _template: 'table',
           _captcha: 'false',
           'Nama Usaha / Brand': formData.businessName,
@@ -173,7 +173,7 @@ export default function PartnerModal({ isOpen, onClose }: PartnerModalProps) {
                 Kemitraan Merchant
               </div>
               <h3 className="text-xl sm:text-2xl font-black text-[#16241C] tracking-tight">
-                Daftar Jadi Mitra ReFeed
+                Daftar Jadi Mitra Re-Feed
               </h3>
               <p className="text-xs sm:text-sm text-[#5A6960] mt-1">
                 Ubah surplus makanan menjadi omzet baru & dapatkan sertifikasi bisnis ramah lingkungan.
@@ -301,7 +301,7 @@ export default function PartnerModal({ isOpen, onClose }: PartnerModalProps) {
                     <p className="text-[11px] text-red-600">
                       Anda juga dapat mendaftar langsung via email ke{' '}
                       <a
-                        href="mailto:pkmkc.refeed@gmail.com?subject=Pendaftaran%20Mitra%20ReFeed"
+                        href="mailto:pkmkc.refeed@gmail.com?subject=Pendaftaran%20Mitra%20Re-Feed"
                         className="font-bold underline hover:text-red-900"
                       >
                         pkmkc.refeed@gmail.com
@@ -320,7 +320,7 @@ export default function PartnerModal({ isOpen, onClose }: PartnerModalProps) {
                   {isSubmitting ? (
                     <>
                       <Loader2 className="w-4 h-4 animate-spin" />
-                      <span>Mengirim Pendaftaran ke Tim ReFeed...</span>
+                      <span>Mengirim Pendaftaran ke Tim Re-Feed...</span>
                     </>
                   ) : (
                     <>
@@ -332,7 +332,7 @@ export default function PartnerModal({ isOpen, onClose }: PartnerModalProps) {
               </div>
 
               <p className="text-[11px] text-center text-[#5A6960] mt-1.5 leading-tight">
-                Tanpa biaya pendaftaran. Tim ReFeed akan menghubungi via WhatsApp dalam 1x24 jam kerja.
+                Tanpa biaya pendaftaran. Tim Re-Feed akan menghubungi via WhatsApp dalam 1x24 jam kerja.
               </p>
             </form>
           </>
@@ -367,7 +367,7 @@ export default function PartnerModal({ isOpen, onClose }: PartnerModalProps) {
               </div>
             ) : (
               <p className="text-xs sm:text-sm text-[#5A6960] max-w-md mx-auto leading-relaxed">
-                Terima kasih <strong className="text-[#105e3a]">{formData.ownerName}</strong> dari <strong className="text-[#105e3a]">{formData.businessName}</strong>. Tim onboarding ReFeed akan segera menghubungi nomor <strong className="text-[#16241C]">{formData.phone}</strong> untuk verifikasi dan aktivasi dashboard merchant.
+                Terima kasih <strong className="text-[#105e3a]">{formData.ownerName}</strong> dari <strong className="text-[#105e3a]">{formData.businessName}</strong>. Tim onboarding Re-Feed akan segera menghubungi nomor <strong className="text-[#16241C]">{formData.phone}</strong> untuk verifikasi dan aktivasi dashboard merchant.
               </p>
             )}
 

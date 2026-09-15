@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { QrCode } from 'lucide-react';
 import { GooglePlayIcon } from './BrandLogo';
-import { APK_DOWNLOAD_URL } from '@/lib/download-link';
+import { PLAY_STORE_URL } from '@/lib/download-link';
 
 interface HeroSectionProps {
   onOpenDownloadModal: () => void;
@@ -19,7 +19,7 @@ export default function HeroSection({ onOpenDownloadModal }: HeroSectionProps) {
       <div className="absolute inset-0 pointer-events-none z-0">
         <Image
           src="/bg.webp"
-          alt="ReFeed Eco Green Landscape Background"
+          alt="Re-Feed Eco Green Landscape Background"
           fill
           priority
           sizes="100vw"
@@ -70,7 +70,7 @@ export default function HeroSection({ onOpenDownloadModal }: HeroSectionProps) {
               <motion.a
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                href={APK_DOWNLOAD_URL}
+                href={PLAY_STORE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="h-14 px-6 bg-black hover:bg-neutral-900 text-white rounded-2xl flex items-center justify-center gap-3 shadow-md hover:shadow-lg transition-all cursor-pointer group"
@@ -108,7 +108,7 @@ export default function HeroSection({ onOpenDownloadModal }: HeroSectionProps) {
               transition={{ delay: 0.45, type: "spring", stiffness: 260, damping: 18 }}
               className="absolute -top-4 right-0 sm:right-4 lg:right-6 z-40 max-w-[170px] text-[11px] font-bold text-[#141A16] floating-badge px-3 py-2 rounded-2xl transform rotate-2 hidden xs:block"
             >
-              <span>Lebih hemat, lebih berdampak bersama ReFeed!</span>
+              <span>Lebih hemat, lebih berdampak bersama Re-Feed!</span>
               <div className="absolute -bottom-1.5 left-6 w-3 h-3 bg-white border-b border-r border-[#C8D9C2] transform rotate-45" />
             </motion.div>
 
@@ -129,7 +129,7 @@ export default function HeroSection({ onOpenDownloadModal }: HeroSectionProps) {
               <div className="relative w-full h-[560px] xs:h-[590px] bg-white rounded-[38px] overflow-hidden">
                 <Image
                   src="/images/1.webp"
-                  alt="ReFeed Mobile App Screen"
+                  alt="Re-Feed Mobile App Screen"
                   fill
                   priority
                   sizes="(max-width: 640px) 290px, 310px"
@@ -138,7 +138,7 @@ export default function HeroSection({ onOpenDownloadModal }: HeroSectionProps) {
               </div>
             </motion.div>
 
-            {/* Floating ReFeed Hero Mascot Character (Feede) with smooth breathing float */}
+            {/* Floating Re-Feed Hero Mascot Character (Feede) with smooth breathing float */}
             <motion.div
               initial={{ opacity: 0, scale: 0.85, x: 20 }}
               animate={{
@@ -162,7 +162,7 @@ export default function HeroSection({ onOpenDownloadModal }: HeroSectionProps) {
             >
               <Image
                 src="/images/feede.png"
-                alt="Feede - Maskot Resmi ReFeed"
+                alt="Feede - Maskot Resmi Re-Feed"
                 fill
                 priority
                 sizes="(max-width: 640px) 210px, (max-width: 1024px) 280px, 320px"

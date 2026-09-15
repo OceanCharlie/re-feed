@@ -30,8 +30,11 @@ export default function Footer({}: FooterProps) {
 
           {/* Center Links */}
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs sm:text-sm font-semibold text-[#141A16]">
-            <Link href="/behind-refeed/" className="hover:text-[#105e3a] transition-colors py-1">
+            <Link href="/behind-refeed" className="hover:text-[#105e3a] transition-colors py-1">
               Tentang Kami
+            </Link>
+            <Link href="/daftar-mitra" className="hover:text-[#105e3a] transition-colors py-1">
+              Daftar Mitra
             </Link>
             <Link href="/#faq" className="hover:text-[#105e3a] transition-colors py-1">
               FAQ
@@ -109,7 +112,7 @@ export default function Footer({}: FooterProps) {
             </div>
           </div>
           <span className="text-[11px] text-[#57655B]/80 text-center sm:text-right">
-            &copy; {new Date().getFullYear()} ReFeed. All rights reserved.
+            &copy; {new Date().getFullYear()} Re-Feed. All rights reserved.
           </span>
         </div>
 

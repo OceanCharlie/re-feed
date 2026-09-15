@@ -32,7 +32,7 @@ export default function ImpactStats() {
   ];
 
   return (
-    <section id="impact" className="py-6 sm:py-8">
+    <section id="impact" className="scroll-mt-20 sm:scroll-mt-24 py-6 sm:py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Clean 4-Column Horizontal Floating Strip Card */}

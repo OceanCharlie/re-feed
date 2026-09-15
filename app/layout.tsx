@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: "%s | Re-Feed Indonesia",
   },
   description:
-    "Aplikasi mobile resmi ReFeed: Hubungkan restoran, bakery, dan supermarket favoritmu untuk menyelamatkan surplus makanan lezat diskon 50-70%, penukaran sampah organik ke Waste Hub, dan aksi nyata nol sampah makanan (Zero Food Waste) di Indonesia.",
+    "Aplikasi mobile resmi Re-Feed: Hubungkan restoran, bakery, dan supermarket favoritmu untuk menyelamatkan surplus makanan lezat diskon 50-70%, penukaran sampah organik ke Waste Hub, dan aksi nyata nol sampah makanan (Zero Food Waste) di Indonesia.",
   keywords: [
     "Re-Feed",
     "Re-Feed Indonesia",
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
     "Zero Food Waste",
     "Waste Hub Jakarta",
     "Makanan Diskon 70%",
-    "Mitra ReFeed Resto",
-    "PKM-KC ReFeed",
+    "Mitra Re-Feed Resto",
+    "PKM-KC Re-Feed",
     "Circular Economy Makanan",
     "Eco Points Indonesia",
     "Kuliner Hemat Ramah Lingkungan",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     { name: "Tony, Ph.D.", url: "https://www.linkedin.com/in/tony-lie-b57a195/" },
     { name: "Re-Feed Indonesia", url: "https://refeed-indonesia.com" },
   ],
-  creator: "Tim PKM-KC ReFeed Universitas Tarumanagara",
+  creator: "Tim PKM-KC Re-Feed Universitas Tarumanagara",
   publisher: "Re-Feed Indonesia",
   formatDetection: {
     email: false,
@@ -84,9 +84,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "ReFeed - Save Food, Share Good, Protect Our Planet",
+    title: "Re-Feed - Save Food, Share Good, Protect Our Planet",
     description:
-      "Selamatkan makanan surplus berkualitas dari bakery & restoran favorit dengan potongan harga hingga 70% di aplikasi ReFeed.",
+      "Selamatkan makanan surplus berkualitas dari bakery & restoran favorit dengan potongan harga hingga 70% di aplikasi Re-Feed.",
     type: "website",
     locale: "id_ID",
     url: "https://refeed-indonesia.com/",
@@ -105,7 +105,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Re-Feed - Solusi Penyelamat Surplus Makanan Indonesia",
     description:
-      "Hemat hingga 70% belanja kuliner & kurangi jejak karbon bersama aplikasi mobile ReFeed.",
+      "Hemat hingga 70% belanja kuliner & kurangi jejak karbon bersama aplikasi mobile Re-Feed.",
     site: "@pkmkc.refeed",
     creator: "@pkmkc.refeed",
     images: [
@@ -261,7 +261,7 @@ const jsonLd = {
     {
       "@type": "MobileApplication",
       "@id": "https://refeed-indonesia.com/#app",
-      "name": "ReFeed",
+      "name": "Re-Feed",
       "operatingSystem": "Android, iOS",
       "applicationCategory": "Food & Drink, LifestyleApplication",
       "description":
@@ -285,20 +285,20 @@ const jsonLd = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Apa itu ReFeed dan bagaimana cara kerjanya?",
+          "name": "Apa itu Re-Feed dan bagaimana cara kerjanya?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text":
-              "ReFeed adalah aplikasi mobile penyelamat surplus makanan dan pengelolaan limbah organik. Konsumen dapat membeli makanan lezat layak makan dari restoran & bakery mitra dengan diskon 50-70%, serta menyalurkan sampah organik ke Waste Hub untuk diolah jadi energi terbarukan.",
+              "Re-Feed adalah aplikasi mobile penyelamat surplus makanan dan pengelolaan limbah organik. Konsumen dapat membeli makanan lezat layak makan dari restoran & bakery mitra dengan diskon 50-70%, serta menyalurkan sampah organik ke Waste Hub untuk diolah jadi energi terbarukan.",
           },
         },
         {
           "@type": "Question",
-          "name": "Apakah makanan surplus di ReFeed terjamin aman dan higienis?",
+          "name": "Apakah makanan surplus di Re-Feed terjamin aman dan higienis?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text":
-              "Sangat aman 100%. Makanan yang dijual di ReFeed adalah kelebihan produksi atau stok display hari itu yang belum terjual, BUKAN sisa piring atau makanan basi. Semua mitra wajib mematuhi standar higienitas dan keamanan pangan.",
+              "Sangat aman 100%. Makanan yang dijual di Re-Feed adalah kelebihan produksi atau stok display hari itu yang belum terjual, BUKAN sisa piring atau makanan basi. Semua mitra wajib mematuhi standar higienitas dan keamanan pangan.",
           },
         },
         {
@@ -307,7 +307,7 @@ const jsonLd = {
           "acceptedAnswer": {
             "@type": "Answer",
             "text":
-              'Buka menu "Waste" di aplikasi ReFeed, pilih Drop Point terdekat atau jadwalkan penjemputan. Anda akan menerima Eco-Points setelah setoran ditimbang dan diverifikasi oleh tim Waste Hub.',
+              'Buka menu "Waste" di aplikasi Re-Feed, pilih Drop Point terdekat atau jadwalkan penjemputan. Anda akan menerima Eco-Points setelah setoran ditimbang dan diverifikasi oleh tim Waste Hub.',
           },
         },
         {
@@ -316,7 +316,7 @@ const jsonLd = {
           "acceptedAnswer": {
             "@type": "Answer",
             "text":
-              'Pendaftaran merchant gratis dan tanpa biaya bulanan. Klik tombol "Gabung Mitra" di website ini, dan tim ReFeed akan menghubungi via WhatsApp dalam 1x24 jam untuk aktivasi.',
+              'Pendaftaran merchant gratis dan tanpa biaya bulanan. Klik tombol "Gabung Mitra" di website ini, dan tim Re-Feed akan menghubungi via WhatsApp dalam 1x24 jam untuk aktivasi.',
           },
         },
       ],

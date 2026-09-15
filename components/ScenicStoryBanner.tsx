@@ -65,7 +65,7 @@ export default function ScenicStoryBanner({ }: ScenicStoryBannerProps) {
           <div className="absolute inset-0 z-0">
             <Image
               src="/images/nature_story_banner.webp"
-              alt="ReFeed Nature Impact Landscape"
+              alt="Re-Feed Nature Impact Landscape"
               fill
               priority
               sizes="(max-width: 1280px) 100vw, 1280px"
@@ -139,7 +139,7 @@ export default function ScenicStoryBanner({ }: ScenicStoryBannerProps) {
               </div>
             </div>
 
-            {/* Action Link to Behind ReFeed */}
+            {/* Action Link to Behind Re-Feed */}
             <Link
               href="/behind-refeed/"
               className="px-5 py-3 rounded-2xl bg-black/50 hover:bg-black/70 backdrop-blur-md border border-white/30 text-white font-bold text-xs sm:text-sm flex items-center gap-2 transition-all active:scale-95 shadow-md shrink-0 cursor-pointer group"

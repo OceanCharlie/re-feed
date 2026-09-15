@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import ImpactStats from '@/components/ImpactStats';
@@ -17,6 +17,18 @@ import FloatingCta from '@/components/FloatingCta';
 export default function HomePage() {
   const [isDownloadModalOpen, setIsDownloadModalOpen] = useState(false);
   const [isPartnerModalOpen, setIsPartnerModalOpen] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.location.hash) {
+      const id = window.location.hash.replace('#', '');
+      const el = document.getElementById(id);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }, 150);
+      }
+    }
+  }, []);
 
   return (
     <div className="min-h-screen flex flex-col selection:bg-[#105e3a] selection:text-white">

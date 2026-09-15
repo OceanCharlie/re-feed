@@ -8,20 +8,20 @@ export default function FaqSection() {
 
   const faqs = [
     {
-      q: 'Apa itu ReFeed dan bagaimana cara kerjanya?',
-      a: 'ReFeed adalah aplikasi mobile penyelamat surplus makanan dan pengelolaan limbah organik. Konsumen dapat membeli makanan lezat layak makan dari restoran & bakery mitra dengan diskon 50-70%, serta menyalurkan sampah organik ke Waste Hub untuk diolah jadi energi terbarukan.',
+      q: 'Apa itu Re-Feed dan bagaimana cara kerjanya?',
+      a: 'Re-Feed adalah aplikasi mobile penyelamat surplus makanan dan pengelolaan limbah organik. Konsumen dapat membeli makanan lezat layak makan dari restoran & bakery mitra dengan diskon 50-70%, serta menyalurkan sampah organik ke Waste Hub untuk diolah jadi energi terbarukan.',
     },
     {
-      q: 'Apakah makanan surplus di ReFeed terjamin aman dan higienis?',
-      a: 'Sangat aman 100%. Makanan yang dijual di ReFeed adalah kelebihan produksi atau stok display hari itu yang belum terjual, BUKAN sisa piring atau makanan basi. Semua mitra wajib mematuhi standar higienitas dan keamanan pangan.',
+      q: 'Apakah makanan surplus di Re-Feed terjamin aman dan higienis?',
+      a: 'Sangat aman 100%. Makanan yang dijual di Re-Feed adalah kelebihan produksi atau stok display hari itu yang belum terjual, BUKAN sisa piring atau makanan basi. Semua mitra wajib mematuhi standar higienitas dan keamanan pangan.',
     },
     {
       q: 'Bagaimana cara menyetor sampah organik ke Waste Hub?',
-      a: 'Buka menu "Waste" di aplikasi ReFeed, pilih Drop Point terdekat atau jadwalkan penjemputan. Anda akan menerima Eco-Points setelah setoran ditimbang dan diverifikasi oleh tim Waste Hub.',
+      a: 'Buka menu "Waste" di aplikasi Re-Feed, pilih Drop Point terdekat atau jadwalkan penjemputan. Anda akan menerima Eco-Points setelah setoran ditimbang dan diverifikasi oleh tim Waste Hub.',
     },
     {
       q: 'Bagaimana cara mendaftarkan usaha kuliner menjadi mitra?',
-      a: 'Pendaftaran merchant gratis dan tanpa biaya bulanan. Klik tombol "Gabung Mitra" di website ini, dan tim ReFeed akan menghubungi via WhatsApp dalam 1x24 jam untuk aktivasi.',
+      a: 'Pendaftaran merchant gratis dan tanpa biaya bulanan. Klik tombol "Gabung Mitra" di website ini, dan tim Re-Feed akan menghubungi via WhatsApp dalam 1x24 jam untuk aktivasi.',
     },
   ];
 
@@ -30,7 +30,7 @@ export default function FaqSection() {
   };
 
   return (
-    <section id="faq" className="py-16 sm:py-20 relative">
+    <section id="faq" className="scroll-mt-20 sm:scroll-mt-24 py-16 sm:py-20 relative">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}

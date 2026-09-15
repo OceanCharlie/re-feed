@@ -30,7 +30,7 @@ import DownloadModal from '@/components/DownloadModal';
 import PartnerModal from '@/components/PartnerModal';
 import FloatingCta from '@/components/FloatingCta';
 import { GooglePlayIcon } from '@/components/BrandLogo';
-import { APK_DOWNLOAD_URL } from '@/lib/download-link';
+import { PLAY_STORE_URL } from '@/lib/download-link';
 
 function LinkedinIcon({ className = "w-3.5 h-3.5" }: { className?: string }) {
   return (
@@ -125,7 +125,7 @@ export default function BehindReFeedPage() {
         },
         {
           label: 'Flash Sale Terjangkau',
-          detail: 'Menjual makanan berkualitas prima ke masyarakat sekitar dengan diskon 50–70% via aplikasi ReFeed.',
+          detail: 'Menjual makanan berkualitas prima ke masyarakat sekitar dengan diskon 50–70% via aplikasi Re-Feed.',
         },
         {
           label: 'Pencegahan Kerugian Mitra',
@@ -252,7 +252,7 @@ export default function BehindReFeedPage() {
             </Link>
 
             <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#141A16] leading-tight">
-              Di Balik Gerakan <span className="text-gradient-brand">ReFeed</span>
+              Di Balik Gerakan <span className="text-gradient-brand">Re-Feed</span>
             </h1>
 
             <p className="text-xs sm:text-base md:text-lg text-[#57655B] max-w-2xl mx-auto leading-relaxed">
@@ -365,7 +365,7 @@ export default function BehindReFeedPage() {
                 <span>Universitas Tarumanagara</span>
               </div>
               <h2 className="text-3xl xs:text-4xl sm:text-5xl font-black text-[#141A16] tracking-tight">
-                Orang-Orang di Balik <span className="whitespace-nowrap text-[#105e3a]">RE-FEED</span>
+                Orang-Orang di Balik <span className="whitespace-nowrap text-[#105e3a]">Re-Feed</span>
               </h2>
               <p className="text-xs sm:text-base text-[#57655B] leading-relaxed">
                 Inisiatif inovasi mahasiswa dan dosen pembimbing dari Fakultas Teknologi Informasi, Universitas Tarumanagara (UNTAR).
@@ -550,7 +550,7 @@ export default function BehindReFeedPage() {
                 </span>
 
                 <h2 className="text-2xl xs:text-3xl sm:text-4xl font-black text-[#141A16] tracking-tight">
-                  Mengapa ReFeed Harus Ada?
+                  Mengapa Re-Feed Harus Ada?
                 </h2>
 
                 <p className="text-xs sm:text-sm md:text-base text-[#57655B] leading-relaxed">
@@ -563,7 +563,7 @@ export default function BehindReFeedPage() {
 
                 <div className="p-3.5 sm:p-4 rounded-2xl bg-white border border-[#E8EDE5] text-xs sm:text-sm text-[#105e3a] font-bold flex items-center gap-3 shadow-2xs">
                   <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6 text-[#105e3a] shrink-0" />
-                  <span>ReFeed hadir menghubungkan surplus makanan dengan konsumen secara cepat, higienis, dan terjangkau.</span>
+                  <span>Re-Feed hadir menghubungkan surplus makanan dengan konsumen secara cepat, higienis, dan terjangkau.</span>
                 </div>
               </div>
 
@@ -787,7 +787,7 @@ export default function BehindReFeedPage() {
                 Inovasi Teknologi
               </span>
               <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-black text-[#141A16] tracking-tight">
-                Teknologi di Balik ReFeed
+                Teknologi di Balik Re-Feed
               </h2>
               <p className="text-xs sm:text-base text-[#57655B]">
                 Memadukan kecerdasan buatan dan geolokasi mikro untuk penyelamatan makanan yang efisien.
@@ -863,12 +863,12 @@ export default function BehindReFeedPage() {
               Jadilah Bagian dari Gerakan Food Hero
             </h2>
             <p className="text-xs sm:text-base text-[#EBF5E4]/90 max-w-lg mx-auto leading-relaxed">
-              Unduh aplikasi ReFeed sekarang di Google Play atau daftarkan gerai kuliner Anda menjadi mitra resmi ReFeed.
+              Unduh aplikasi Re-Feed sekarang di Google Play atau daftarkan gerai kuliner Anda menjadi mitra resmi Re-Feed.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-3.5 pt-2">
               <a
-                href={APK_DOWNLOAD_URL}
+                href={PLAY_STORE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-7 py-3.5 sm:py-4 bg-white text-[#105e3a] font-black text-xs sm:text-sm rounded-2xl shadow-lg flex items-center justify-center gap-2.5 hover:bg-[#FCFAF7] transition-all active:scale-98"
@@ -877,13 +877,13 @@ export default function BehindReFeedPage() {
                 <span>Unduh di Google Play</span>
               </a>
 
-              <button
-                onClick={() => setIsPartnerModalOpen(true)}
+              <Link
+                href="/daftar-mitra"
                 className="w-full sm:w-auto px-6 py-3.5 sm:py-4 bg-white/15 hover:bg-white/25 border border-white/30 text-white font-bold text-xs sm:text-sm rounded-2xl transition-all flex items-center justify-center gap-2 active:scale-98"
               >
                 <Store className="w-4 h-4 text-[#8fc22a]" />
                 <span>Daftar Mitra Resto</span>
-              </button>
+              </Link>
             </div>
           </div>
         </section>

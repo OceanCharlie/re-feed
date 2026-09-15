@@ -48,7 +48,7 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
             <BrandMarkSvg size={26} color="#ffffff" />
           </div>
           <h3 className="text-xl sm:text-2xl font-black text-[#16241C] tracking-tight">
-            Unduh Aplikasi ReFeed
+            Unduh Aplikasi Re-Feed
           </h3>
           <p className="text-xs sm:text-sm text-[#5A6960] mt-1 max-w-sm mx-auto">
             Pindai kode QR dengan kamera HP untuk instal
@@ -61,7 +61,7 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
             <div className="relative w-full h-full">
               <Image
                 src="/images/qr-refeed-apk.svg"
-                alt="QR Code untuk mengunduh aplikasi ReFeed"
+                alt="QR Code untuk mengunduh aplikasi Re-Feed"
                 fill
                 className="object-contain"
               />

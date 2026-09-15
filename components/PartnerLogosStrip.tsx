@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { Store, TrendingUp, Users, Leaf, ArrowRight } from 'lucide-react';
 
 interface PartnerLogosStripProps {
@@ -27,7 +28,7 @@ export default function PartnerLogosStrip({ onOpenPartnerModal }: PartnerLogosSt
   ];
 
   return (
-    <section id="merchant" className="py-16 sm:py-24 border-y border-[#E8EDE5]/60 relative overflow-hidden">
+    <section id="merchant" className="scroll-mt-20 sm:scroll-mt-24 py-16 sm:py-24 border-y border-[#E8EDE5]/60 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-10 sm:mb-12">
@@ -37,7 +38,7 @@ export default function PartnerLogosStrip({ onOpenPartnerModal }: PartnerLogosSt
           </div>
 
           <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#141A16] tracking-tight">
-            Jadilah Mitra Pelopor ReFeed
+            Jadilah Mitra Pelopor Re-Feed
           </h3>
 
           <p className="text-xs sm:text-sm md:text-base text-[#57655B] leading-relaxed max-w-2xl mx-auto">
@@ -66,14 +67,14 @@ export default function PartnerLogosStrip({ onOpenPartnerModal }: PartnerLogosSt
 
         {/* Call to action bar */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
-          <button
-            onClick={onOpenPartnerModal}
+          <Link
+            href="/daftar-mitra"
             className="btn-app-primary px-7 py-3.5 text-sm sm:text-base font-bold rounded-2xl shadow-sm hover:shadow-md transition-all flex items-center gap-2.5 cursor-pointer active:scale-98"
           >
             <Store className="w-4 h-4" />
             <span>Daftar Sebagai Mitra Pelopor</span>
             <ArrowRight className="w-4 h-4" />
-          </button>
+          </Link>
         </div>
 
         {/* Categories tags */}

@@ -1,14 +1,10 @@
 /**
- * Single source of truth for the ReFeed app install link.
+ * Single source of truth for the Re-Feed app install and store links.
  *
- * Every "Download" / "Install" button across the site (Hero, Download CTA,
- * Download Modal, Floating CTA, Behind ReFeed page) imports this constant
- * instead of hardcoding a URL, so the link only needs to be updated here.
- *
- * TODO: Replace with the real APK URL once it's hosted (e.g. a GitHub
- * Release asset, or a file placed at `public/downloads/refeed-app.apk`
- * and referenced here as `/downloads/refeed-app.apk`).
+ * Every "Google Play" direct button across the site imports `PLAY_STORE_URL`,
+ * while APK download modal / QR code flows use `APK_DOWNLOAD_URL`.
  */
+export const PLAY_STORE_URL = 'https://play.google.com';
 export const APK_DOWNLOAD_URL = '/downloads/refeed-app.apk';
 
 /** Production site origin, used to build absolute URLs (e.g. for the QR code). */

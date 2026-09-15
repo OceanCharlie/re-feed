@@ -56,9 +56,9 @@ export function BrandLogo({
       </div>
       <div className="flex flex-col">
         <div className="flex items-baseline tracking-tight font-black leading-none text-2xl" style={{ color: textColor }}>
-          <span>re</span>
-          <span className="text-[#fe6708] font-bold mx-0.5">·</span>
-          <span>feed</span>
+          <span>Re</span>
+          <span className="text-[#fe6708] font-bold mx-0.5">-</span>
+          <span>Feed</span>
         </div>
         {showTagline && (
           <span className="text-[10px] font-semibold text-[#1e8939] uppercase tracking-wider mt-0.5">

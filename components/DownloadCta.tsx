@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { QrCode, CheckCircle2 } from 'lucide-react';
 import { GooglePlayIcon } from './BrandLogo';
-import { APK_DOWNLOAD_URL } from '@/lib/download-link';
+import { PLAY_STORE_URL } from '@/lib/download-link';
 
 interface DownloadCtaProps {
   onOpenDownloadModal: () => void;
@@ -27,7 +27,7 @@ export default function DownloadCta({ onOpenDownloadModal }: DownloadCtaProps) {
             <div className="relative w-40 sm:w-48 lg:w-56 h-40 sm:h-48 lg:h-56">
               <Image
                 src="/images/mitra.webp"
-                alt="ReFeed Sprout Mascot with Grocery Bag"
+                alt="Re-Feed Sprout Mascot with Grocery Bag"
                 fill
                 priority
                 sizes="(max-width: 1024px) 200px, 240px"
@@ -44,7 +44,7 @@ export default function DownloadCta({ onOpenDownloadModal }: DownloadCtaProps) {
             </h2>
 
             <p className="text-xs sm:text-sm md:text-base text-[#57655B] leading-relaxed max-w-lg">
-              Download aplikasi ReFeed sekarang dan jadi bagian dari perubahan untuk bumi yang lebih baik.
+              Download aplikasi Re-Feed sekarang dan jadi bagian dari perubahan untuk bumi yang lebih baik.
             </p>
 
             {/* Checklist */}
@@ -68,7 +68,7 @@ export default function DownloadCta({ onOpenDownloadModal }: DownloadCtaProps) {
           <div className="lg:col-span-3 flex flex-col sm:flex-row lg:flex-col items-center justify-center gap-3">
             {/* Google Play Button */}
             <a
-              href={APK_DOWNLOAD_URL}
+              href={PLAY_STORE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full h-14 px-5 bg-black hover:bg-neutral-900 text-white rounded-2xl flex items-center justify-center gap-3 shadow-md hover:shadow-lg transition-all active:scale-98 cursor-pointer group"

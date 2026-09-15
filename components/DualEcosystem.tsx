@@ -36,7 +36,7 @@ export default function DualEcosystem({ onOpenDownloadModal }: DualEcosystemProp
   ];
 
   return (
-    <section id="solutions" className="py-16 sm:py-24 relative">
+    <section id="solutions" className="scroll-mt-20 sm:scroll-mt-24 py-16 sm:py-24 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 sm:gap-12 items-center">
@@ -55,7 +55,7 @@ export default function DualEcosystem({ onOpenDownloadModal }: DualEcosystemProp
             </h2>
 
             <p className="text-xs sm:text-sm md:text-base text-[#57655B] leading-relaxed">
-              ReFeed menghubungkan kamu dengan makanan berkualitas yang masih layak konsumsi, membantu mengurangi limbah makanan, dan menciptakan masa depan yang lebih berkelanjutan.
+              Re-Feed menghubungkan kamu dengan makanan berkualitas yang masih layak konsumsi, membantu mengurangi limbah makanan, dan menciptakan masa depan yang lebih berkelanjutan.
             </p>
 
             <div className="pt-2">
