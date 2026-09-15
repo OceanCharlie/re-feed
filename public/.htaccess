@@ -54,3 +54,9 @@ ErrorDocument 404 /404.html
   ExpiresByType image/png "access plus 1 year"
   ExpiresByType image/svg+xml "access plus 1 year"
 </IfModule>
+
+# Android APK MIME Type for Seamless Web Downloads
+<IfModule mod_mime.c>
+  AddType application/vnd.android.package-archive .apk
+</IfModule>
+

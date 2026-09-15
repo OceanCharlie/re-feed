@@ -13,6 +13,8 @@ interface DownloadModalProps {
 }
 
 export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
+  const [showGuide, setShowGuide] = React.useState(false);
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -80,18 +82,61 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
         {/* Direct Download Button */}
         <a
           href={APK_DOWNLOAD_URL}
+          download="refeed-app.apk"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full py-4 px-4 sm:px-5 bg-gradient-btn hover:opacity-95 text-white rounded-2xl flex items-center justify-center gap-2.5 shadow-md hover:shadow-lg transition-all active:scale-98 cursor-pointer"
+          className="w-full py-4 px-4 sm:px-5 bg-gradient-btn hover:opacity-95 text-white rounded-2xl flex items-center justify-center gap-2.5 shadow-md hover:shadow-lg transition-all active:scale-98 cursor-pointer group"
         >
-          <Download className="w-5 h-5" />
+          <Download className="w-5 h-5 group-hover:-translate-y-0.5 transition-transform" />
           <span className="text-sm sm:text-base font-black tracking-wide">Unduh APK Langsung</span>
         </a>
 
         {/* Trust note */}
-        <div className="mt-4 flex items-center justify-center gap-1.5 text-[11px] sm:text-xs text-[#5A6960] font-bold">
+        <div className="mt-3.5 flex items-center justify-center gap-1.5 text-[11px] sm:text-xs text-[#5A6960] font-bold">
           <ShieldCheck className="w-3.5 h-3.5 text-[#105e3a]" />
           <span>100% Gratis &middot; Aman untuk Android</span>
+        </div>
+
+        {/* Install Guide Accordion */}
+        <div className="mt-4 pt-3.5 border-t border-[#E8E4DA]/80">
+          <button
+            type="button"
+            onClick={() => setShowGuide(!showGuide)}
+            className="w-full flex items-center justify-between text-xs font-bold text-[#105e3a] hover:text-[#0b462a] transition-colors py-1 cursor-pointer"
+          >
+            <span className="flex items-center gap-1.5">
+              <span>❓ Cara instal APK di HP Android</span>
+            </span>
+            <span className="text-[10px] uppercase font-bold tracking-wider text-[#5A6960] bg-[#F4F2EC] px-2 py-0.5 rounded-md">
+              {showGuide ? 'Tutup' : 'Lihat'}
+            </span>
+          </button>
+
+          {showGuide && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="mt-2.5 p-3 sm:p-3.5 bg-[#F6F5F0] rounded-xl text-left text-xs text-[#3E4D43] space-y-2 border border-[#E8E4DA]"
+            >
+              <div className="flex items-start gap-2">
+                <span className="w-4 h-4 rounded-full bg-[#105e3a] text-white text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">1</span>
+                <p>Klik <strong>Unduh APK</strong> atau scan QR, tunggu unduhan selesai.</p>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="w-4 h-4 rounded-full bg-[#105e3a] text-white text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">2</span>
+                <p>Buka notifikasi unduhan atau buka file <strong>refeed-app.apk</strong> di Pengelola File.</p>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="w-4 h-4 rounded-full bg-[#105e3a] text-white text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">3</span>
+                <p>Jika muncul peringatan keamanan, pilih <strong>Setelan</strong> lalu aktifkan <strong>Izinkan dari sumber ini</strong>.</p>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="w-4 h-4 rounded-full bg-[#105e3a] text-white text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">4</span>
+                <p>Tekan <strong>Instal</strong> dan aplikasi Re-Feed siap digunakan!</p>
+              </div>
+            </motion.div>
+          )}
         </div>
           </motion.div>
         </div>
